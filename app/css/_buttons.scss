@@ -1,0 +1,17 @@
+.btn {
+	color: #6923c5; font-size: 22px; line-height: 27px; font-family: $ms-500;
+	display: inline-block; padding: 15px 30px 16px;
+	background: #ffffff; border-radius: 100px;
+
+	&-gradient {
+		color: #ffffff; font-size: 15px; line-height: 18px; font-family: $ms-500;
+		display: inline-block; padding: 13px 16px;
+		background: radial-gradient(circle 113px at 12.2198% 8.0911%, #dd669b 0%, #6024af 100%); border-radius: 100px;
+	}
+
+	&-transparent {
+		color: $white; font-size: 17px; line-height: 20px; font-family: $ms-500;
+		display: inline-block; padding: 11px 20px 9px;
+		border: 2px solid $white; border-radius: 100px;
+	}
+}

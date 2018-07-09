@@ -1,0 +1,241 @@
+.app {
+	min-width: 320px;
+	overflow-x: hidden;
+	background: #ffffff;
+
+	&.agreement-page {
+		padding-top: 0;
+	}
+
+	.wr {
+		&-header {
+			height: 70px; position: fixed; top: 0; left: 0; width: 100%; padding: 0 45px; z-index: 1000;
+			background: transparent;
+			// box-shadow: 0 0 20px 0 rgba(0,0,0,0.15);
+			@include respond-to(lg) {
+				padding: 0 15px;
+			}
+			@include respond-to(md) {
+				padding: 0 30px;
+			}
+			@include respond-to(sm) {
+				padding: 0 15px;
+			}
+		}
+
+		&-intro {
+			padding: 128px 0 0; position: relative;
+			background: radial-gradient(circle 700px at 68.53% 28%, #dd669b 0%, #5d25a8 100%);
+		}
+
+		&-about {
+			padding: 102px 0 103px;
+		}
+
+		&-counter {
+			padding: 86px 0 44px;
+			background: linear-gradient(245deg, #9c5eff 0%, #4489ff 100%);
+			@include respond-to(xs) {
+				padding-top: 60px;
+			}
+		}
+
+		&-partners, &-listing {
+			padding: 62px 0 53px;
+			background: $white;
+			@include respond-to(sm) {
+				padding: 60px 0;
+			}
+		}
+
+		&-how_works {
+			padding: 196px 0 162px;
+			background: url('../img/how-works-bg.png') center top no-repeat, linear-gradient(245deg, #8336fe 0%, #4776c6 100%); background-size: cover;
+			@include respond-to(xs) {
+				padding: 100px 0 120px;
+			}
+		}
+
+		&-infrastructure {
+			padding: 93px 0 69px;
+			background: #f4f4ff;
+		}
+
+		&-emission {
+			padding: 70px 0 92px;
+			background: $white;
+		}
+
+		&-for-clients {
+			padding: 111px 0 61px;
+			background: #fbfbfe;
+		}
+
+		&-benefits {
+			padding: 64px 0 116px;
+		}
+
+		&-why-need {
+			background: radial-gradient(circle 1200px at -14.27% 3.6643%, #dd669b 0%, #553d97 100%);
+		}
+
+		&-scheme {
+			background: #fbfbfe;
+		}
+
+		&-worldmap {
+			padding: 326px 0 160px; margin-top: -160px; position: relative;
+			background: linear-gradient(to bottom, #ffffff 0%, #e8e8f3 160px, #e8e8f3 100%);
+
+			&:before {
+				content: '';
+				display: block; width: 1436px; height: 693px; position: absolute; right: 0; bottom: -54px; z-index: 1;
+				background: url('../img/map.svg');
+			}
+
+			& > * {
+				position: relative; z-index: 2;
+			}
+		}
+
+		&-mvp {
+			background: linear-gradient(180deg, #f8f8ff 0%, #fbfbfe 100%);
+		}
+
+		&-platform {
+
+			&-pros {
+				padding: 104px 0 191px;
+				background: url('../img/platform-bg-1.svg') left 9% bottom 36px no-repeat, 
+				url('../img/platform-bg-2.svg') left 48% bottom 31px no-repeat, 
+				url('../img/platform-bg-3.svg') right 0% bottom 52px no-repeat, 
+				linear-gradient(225deg, #9c5eff 0%, #4489ff 100%);
+				@include respond-to(md) {
+					background: url('../img/platform-bg-1.svg') left 0% bottom 36px no-repeat, 
+					url('../img/platform-bg-3.svg') right 0% bottom 52px no-repeat, 
+					linear-gradient(225deg, #9c5eff 0%, #4489ff 100%);
+				}
+				@include respond-to(sm) {
+					padding: 80px 0 100px;
+				}
+				@include respond-to(xs) {
+					background: url('../img/platform-bg-1.svg') center bottom 41px no-repeat, 
+					linear-gradient(225deg, #9c5eff 0%, #4489ff 100%);
+				}
+			}
+
+			&-intro {
+				padding: 80px 0 74px;
+				background: linear-gradient(225deg, #816bff 0%, #144290 100%);
+				@include respond-to(sm) {
+					padding: 60px 0;
+				}
+			}
+		}
+
+		&-business {
+			padding: 77px 0 78px;
+			background: $white;
+			@include respond-to(sm) {
+				padding: 60px 0;
+			}
+		}
+
+		&-nco {
+			padding: 77px 0 78px;
+			background: $white;
+			@include respond-to(sm) {
+				padding: 60px 0;
+			}
+		}
+
+		&-ico {
+			padding: 39px 0 70px;
+			background-image: radial-gradient(circle 1005px at 74.76% 14.1684%, #dd669b 0%, #5e25a8 100%); background-size: cover;
+		}
+
+		&-discount {
+			padding: 79px 0 132px;
+			background: $white;
+			@include respond-to(md) {
+				padding-bottom: 110px;
+			}
+			@include respond-to(669px) {
+				padding-bottom: 90px;
+			}
+			@include respond-to(xs) {
+				padding-bottom: 70px;
+			}
+			@include respond-to(419px) {
+				padding: 60px 0;
+			}
+			@include respond-to(379px) {
+				padding: 60px 0 40px;
+			}
+		}
+
+		&-countdown {
+			padding: 75px 0 70px;
+			background: #fafafa;
+		}
+
+		&-road-map {
+			padding: 85px 0;
+			background: $white;
+			// background: linear-gradient(225deg, #816bff 0%, #4956c6 52%, #4956c6 52%, #144290 100%);
+		}
+
+		&-goals {
+			background: #fafafa;
+		}
+
+		&-team {
+			padding: 129px 0 76px;
+			background: #f4f4ff;
+			@include respond-to(sm) {
+				padding: 60px 0;
+			}
+		}
+
+		&-massmedia {
+			padding: 85px 0 75px;
+			background: $white;
+		}
+
+		&-videos {
+			padding: 76px 0 83px;
+			background: linear-gradient(212deg, #9c5eff 0%, #4489ff 100%);
+		}
+
+		&-whitepaper {
+			padding: 80px 0 73px;
+			background: linear-gradient(210deg, #816bff 0%, #144290 100%);
+			@include respond-to(sm) {
+				padding: 60px 0;
+			}
+		}
+
+		&-subscription {
+			padding: 30px 0 38px;
+			background: radial-gradient(852px 426px at 66.53% 59.108%, #dd669b 0%, #5d25a8 100%);
+		}
+
+		&-buy {
+			padding: 175px 0 205px;
+			background: url('../img/buy-bg.png') 40% top no-repeat, linear-gradient(245deg, #743ccd 0%, #144290 100%); background-size: cover;
+			@include respond-to(xs) {
+				padding: 120px 0 140px;
+			}
+		}
+
+		&-agreement {
+			padding: 80px 0 100px;
+			background: #f4f4ff;
+		}
+		
+		&-footer {
+			padding: 34px 0 26px;
+			background: $white;
+		}
+	}
+}

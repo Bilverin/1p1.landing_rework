@@ -1,0 +1,123 @@
+.footer {
+	h3 {
+		color: $black; font-family: $ms-500; font-size: 11px; line-height: 24px; text-transform: uppercase; letter-spacing: 1px;
+		margin-bottom: 5px;
+	}
+	& > div {
+		display: flex;
+		&:first-child {
+			margin-bottom: 42px;
+			@include respond-to(md) {
+				flex-wrap: wrap; margin-bottom: 24px;
+			}
+			@include respond-to(sm) {
+				flex-direction: column;
+			}
+			div {
+				@include respond-to(md) {
+					margin-bottom: 20px;
+				}
+			}
+		}
+		&:last-child {
+			justify-content: space-between; align-items: center; margin-bottom: 0;
+			@include respond-to(sm) {
+				flex-direction: column; align-items: flex-start;
+			}
+		}
+		div {
+			padding-right: 34px; margin-right: 25px;
+			// border-right: 1px solid rgba(216, 220, 228, 0.75);
+			@include respond-to(sm) {
+				border-right: none; margin-right: 0; padding-right: 0;
+			}
+			&:last-child {
+				margin-right: 0; padding-right: 0;
+				border-right: none;
+			}
+			ul {
+				display: flex; align-items: center; padding-top: 6px;
+				&.socials {
+					padding-top: 0;
+					li {
+						margin-right: 21px;
+						@include respond-to(sm) {
+							margin-right: 20px;
+						}
+						&:last-child {
+							margin-right: 0;
+						}
+						a {
+							 font-family: $ms-300;
+							i {
+								font-size: 20px; line-height: 24px;
+								margin-right: 0;
+							}
+						}
+					}
+				}
+				&:not(.socials) {
+					@include respond-to(sm) {
+						flex-wrap: wrap; margin-bottom: -10px;
+					}
+					li {
+						@include respond-to(sm) {
+							margin-bottom: 10px;
+						}
+						a {
+							i {
+								&.fab {
+									font-size: 16px;
+								}
+							}
+						}
+					}
+				}
+				li {
+					margin-right: 30px; display: flex; align-items: center;
+					@include respond-to(sm) {
+						margin-right: 20px;
+					}
+					&:last-child {
+						margin-right: 0;
+					}
+					a {
+						color: $black; font-family: $ms-700; font-size: 14px; line-height: 17px;
+						display: inline-flex; align-items: center;
+						i {
+							margin-right: 7px;
+						}
+					}
+				}
+			}
+		}
+		small {
+			color: $black; font-family: $ms-500; font-size: 14px; line-height: 17px;
+			display: inline-flex; align-items: center;
+			@include respond-to(sm) {
+				order: 1;
+			}
+			img {
+				margin-right: 11px; position: relative; top: -2px;
+			}
+		}
+		& > ul {
+			display: flex; align-items: center;
+			@include respond-to(sm) {
+				order: 0; margin-bottom: 20px;
+			}
+			li {
+				line-height: 15px;
+				padding-right: 15px; margin-right: 15px;
+				border-right: solid 1px $black;
+				&:last-child {
+					margin-right: 0; padding-right: 0;
+					border-right: none;
+				}
+				a {
+					color: $black; font-family: $ms-500; font-size: 14px; line-height: 15px;
+				}
+			}
+		}
+	}
+}

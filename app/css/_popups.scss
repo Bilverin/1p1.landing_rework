@@ -1,0 +1,63 @@
+.popup {
+	background: $white; border-radius: 10px; border: 1px solid #979797; display: none;
+
+	.b-close {position: absolute; top: 10px; right: 15px; color: #3b4f72;}
+
+	&-sale {
+		padding: 56px;
+		@include respond-to(sm) {
+			width: calc(100% - 30px); padding: 25px 30px;
+		}
+		& > * {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		figure {
+			text-align: center;
+			margin-bottom: 48px;
+			img {
+
+			}
+		}
+		h2 {
+			color: #3b4f72; font-family: $ms-500; font-size: 32px; text-align: center; line-height: 34px;
+			margin-bottom: 31px;
+		}
+		h3 {
+			color: #3b4f72; font-family: $ms-500; font-size: 18px; text-align: center;
+			margin-bottom: 13px;
+		}
+		p {
+			color: #3b4f72; font-family: $ms-500; font-size: 14px; text-align: center; word-wrap: break-word; 
+			margin-bottom: 30px;
+		}
+	}
+
+	&-video {
+		padding-top: 40px;
+		background: transparent; border-color: transparent;
+		@include respond-to(sm) {
+			width: 100%;
+		}
+		iframe {
+			width: 720px; height: 480px;
+			@include respond-to(sm) {
+				width: 100%; max-width: 720px; height: 300px; max-height: 80vh; margin: 0 auto; display: block;
+			}
+			@include respond-to(xs) {
+				height: 290px;
+			}
+			@include respond-to(360px) {
+				height: 230px;
+			}
+		}
+		.b-close {
+			color: $white; text-align: center; font-size: 16px;
+			top: 15px; right: -20px; width: 20px; height: 20px;
+			@include respond-to(sm) {
+				right: 10px;
+			}
+		}
+	}
+}

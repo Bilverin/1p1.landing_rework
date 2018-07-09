@@ -1,0 +1,163 @@
+.icon {
+    font-size: 10px;
+    &:before {
+      content:' ';
+      vertical-align:middle;
+      display: inline-block;
+      background-image: url("../img/sprite.svg");
+      background-repeat: no-repeat;
+      background-size: 6.5em 38.3em;
+
+      .no-svg & {
+        background-image: url("../img/sprite.png");
+      }
+    }
+}
+
+
+
+
+.icon.blockchain_system {
+  &:before {
+      background-position: 0em 0em;
+      width: 3.3em;
+      height: 2.9em;
+    }
+  }
+
+  @mixin icon-blockchain_system(){
+    @extend .blockchain_system;
+  }
+
+
+.icon.documents {
+  &:before {
+      background-position: 0em -2.9em;
+      width: 1em;
+      height: 1.5em;
+    }
+  }
+
+  @mixin icon-documents(){
+    @extend .documents;
+  }
+
+
+.icon.for_cryptomarket {
+  &:before {
+      background-position: 0em -4.4em;
+      width: 2.2em;
+      height: 2.3em;
+    }
+  }
+
+  @mixin icon-for_cryptomarket(){
+    @extend .for_cryptomarket;
+  }
+
+
+.icon.for_retail {
+  &:before {
+      background-position: 0em -6.7em;
+      width: 2.2em;
+      height: 2.6em;
+    }
+  }
+
+  @mixin icon-for_retail(){
+    @extend .for_retail;
+  }
+
+
+.icon.hight_cost {
+  &:before {
+      background-position: 0em -9.3em;
+      width: 3.6em;
+      height: 3em;
+    }
+  }
+
+  @mixin icon-hight_cost(){
+    @extend .hight_cost;
+  }
+
+
+.icon.how_chek_works {
+  &:before {
+      background-position: 0em -12.3em;
+      width: 6.5em;
+      height: 6.5em;
+    }
+  }
+
+  @mixin icon-how_chek_works(){
+    @extend .how_chek_works;
+  }
+
+
+.icon.illigal_of_crypto {
+  &:before {
+      background-position: 0em -18.8em;
+      width: 3.6em;
+      height: 3.7em;
+    }
+  }
+
+  @mixin icon-illigal_of_crypto(){
+    @extend .illigal_of_crypto;
+  }
+
+
+.icon.limited_opportunites {
+  &:before {
+      background-position: 0em -22.5em;
+      width: 2.9em;
+      height: 2.6em;
+    }
+  }
+
+  @mixin icon-limited_opportunites(){
+    @extend .limited_opportunites;
+  }
+
+
+.icon.loyality_system {
+  &:before {
+      background-position: 0em -25.1em;
+      width: 3.5em;
+      height: 3.6em;
+    }
+  }
+
+  @mixin icon-loyality_system(){
+    @extend .loyality_system;
+  }
+
+
+.icon.more_then_150k {
+  &:before {
+      background-position: 0em -28.7em;
+      width: 3.2em;
+      height: 3.1em;
+    }
+  }
+
+  @mixin icon-more_then_150k(){
+    @extend .more_then_150k;
+  }
+
+
+.icon.play {
+  &:before {
+      background-position: 0em -31.8em;
+      width: 6.5em;
+      height: 6.5em;
+    }
+  }
+
+  @mixin icon-play(){
+    @extend .play;
+  }
+
+
+
