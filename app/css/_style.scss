@@ -76,21 +76,31 @@
 		}
 
 		&-why-need {
+			padding: 38px 0 58px;
 			background: radial-gradient(circle 1200px at -14.27% 3.6643%, #dd669b 0%, #553d97 100%);
 		}
 
+		&-problems-solutions {
+			padding: 102px 0 65px;
+		}
+
 		&-scheme {
+			padding: 68px 0 70px;
 			background: #fbfbfe;
 		}
 
+		&-market {
+			padding: 66px 0 20px;
+		}
+
 		&-worldmap {
-			padding: 326px 0 160px; margin-top: -160px; position: relative;
+			padding: 305px 0 160px; margin-top: -160px; position: relative;
 			background: linear-gradient(to bottom, #ffffff 0%, #e8e8f3 160px, #e8e8f3 100%);
 
 			&:before {
 				content: '';
-				display: block; width: 1436px; height: 693px; position: absolute; right: 0; bottom: -54px; z-index: 1;
-				background: url('../img/map.svg');
+				display: block; width: 1436px; height: 693px; position: absolute; right: -136px; bottom: -54px; z-index: 1;
+				background: url('../img/map.svg') center center no-repeat;
 			}
 
 			& > * {
@@ -99,63 +109,21 @@
 		}
 
 		&-mvp {
+			padding: 27px 0 74px;
 			background: linear-gradient(180deg, #f8f8ff 0%, #fbfbfe 100%);
 		}
 
-		&-platform {
-
-			&-pros {
-				padding: 104px 0 191px;
-				background: url('../img/platform-bg-1.svg') left 9% bottom 36px no-repeat, 
-				url('../img/platform-bg-2.svg') left 48% bottom 31px no-repeat, 
-				url('../img/platform-bg-3.svg') right 0% bottom 52px no-repeat, 
-				linear-gradient(225deg, #9c5eff 0%, #4489ff 100%);
-				@include respond-to(md) {
-					background: url('../img/platform-bg-1.svg') left 0% bottom 36px no-repeat, 
-					url('../img/platform-bg-3.svg') right 0% bottom 52px no-repeat, 
-					linear-gradient(225deg, #9c5eff 0%, #4489ff 100%);
-				}
-				@include respond-to(sm) {
-					padding: 80px 0 100px;
-				}
-				@include respond-to(xs) {
-					background: url('../img/platform-bg-1.svg') center bottom 41px no-repeat, 
-					linear-gradient(225deg, #9c5eff 0%, #4489ff 100%);
-				}
-			}
-
-			&-intro {
-				padding: 80px 0 74px;
-				background: linear-gradient(225deg, #816bff 0%, #144290 100%);
-				@include respond-to(sm) {
-					padding: 60px 0;
-				}
-			}
-		}
-
-		&-business {
-			padding: 77px 0 78px;
-			background: $white;
-			@include respond-to(sm) {
-				padding: 60px 0;
-			}
-		}
-
-		&-nco {
-			padding: 77px 0 78px;
-			background: $white;
-			@include respond-to(sm) {
-				padding: 60px 0;
-			}
+		&-testimonials {
+			padding: 96px 0;
 		}
 
 		&-ico {
-			padding: 39px 0 70px;
+			padding: 71px 0 103px; position: relative;
 			background-image: radial-gradient(circle 1005px at 74.76% 14.1684%, #dd669b 0%, #5e25a8 100%); background-size: cover;
 		}
 
 		&-discount {
-			padding: 79px 0 132px;
+			padding: 86px 0 78px;
 			background: $white;
 			@include respond-to(md) {
 				padding-bottom: 110px;
@@ -175,57 +143,41 @@
 		}
 
 		&-countdown {
-			padding: 75px 0 70px;
+			padding: 55px 0 57px;
 			background: #fafafa;
 		}
 
 		&-road-map {
-			padding: 85px 0;
+			padding: 79px 0 81px;
 			background: $white;
 			// background: linear-gradient(225deg, #816bff 0%, #4956c6 52%, #4956c6 52%, #144290 100%);
 		}
 
 		&-goals {
+			padding: 15px 0 60px;
 			background: #fafafa;
 		}
 
 		&-team {
-			padding: 129px 0 76px;
-			background: #f4f4ff;
+			padding: 62px 0 60px;
+			background: $white;
 			@include respond-to(sm) {
 				padding: 60px 0;
 			}
+		}
+
+		&-news {
+			padding: 48px 0 49px;
 		}
 
 		&-massmedia {
-			padding: 85px 0 75px;
+			padding: 70px 0 81px;
 			background: $white;
 		}
 
-		&-videos {
-			padding: 76px 0 83px;
-			background: linear-gradient(212deg, #9c5eff 0%, #4489ff 100%);
-		}
-
-		&-whitepaper {
-			padding: 80px 0 73px;
-			background: linear-gradient(210deg, #816bff 0%, #144290 100%);
-			@include respond-to(sm) {
-				padding: 60px 0;
-			}
-		}
-
 		&-subscription {
-			padding: 30px 0 38px;
+			padding: 45px 0 49px; position: relative;
 			background: radial-gradient(852px 426px at 66.53% 59.108%, #dd669b 0%, #5d25a8 100%);
-		}
-
-		&-buy {
-			padding: 175px 0 205px;
-			background: url('../img/buy-bg.png') 40% top no-repeat, linear-gradient(245deg, #743ccd 0%, #144290 100%); background-size: cover;
-			@include respond-to(xs) {
-				padding: 120px 0 140px;
-			}
 		}
 
 		&-agreement {
@@ -234,7 +186,7 @@
 		}
 		
 		&-footer {
-			padding: 34px 0 26px;
+			padding: 15px 0 50px;
 			background: $white;
 		}
 	}

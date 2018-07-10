@@ -6,7 +6,7 @@
 	& > div {
 		display: flex;
 		&:first-child {
-			margin-bottom: 42px;
+			margin-bottom: 48px;
 			@include respond-to(md) {
 				flex-wrap: wrap; margin-bottom: 24px;
 			}

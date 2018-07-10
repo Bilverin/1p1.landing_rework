@@ -21,6 +21,7 @@
     "bPopup": "bpopup#^0.11.0",
     "goodshare": "^4.1.2",
     "moment": "momentjs#^2.20.1",
-    "moment-timezone": "^0.5.14"
+    "moment-timezone": "^0.5.14",
+    "particles.js": "^2.0.0"
   }
 }

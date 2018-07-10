@@ -66,7 +66,8 @@ gulp.task('js:libs', function () {
 		'bower_components/goodshare/goodshare.min.js',
 		'bower_components/moment/min/moment.min.js',
 		'bower_components/moment/min/moment-with-locales.min.js',
-		'bower_components/moment-timezone/builds/moment-timezone-with-data-2012-2022.min.js'
+		'bower_components/moment-timezone/builds/moment-timezone-with-data-2012-2022.min.js',
+		'bower_components/particles.js/particles.min.js'
 		])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())
