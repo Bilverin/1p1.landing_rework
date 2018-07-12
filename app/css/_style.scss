@@ -76,6 +76,10 @@
 			padding: 305px 0 160px; margin-top: -160px; position: relative;
 			background: linear-gradient(to bottom, #ffffff 0%, #e8e8f3 160px, #e8e8f3 100%);
 
+			@include respond-to(md) {
+				padding: 570px 0 160px; margin-top: -560px;
+			}
+
 			&:before {
 				content: '';
 				display: block; width: 1436px; height: 693px; position: absolute; right: -136px; bottom: -54px; z-index: 1;
@@ -85,6 +89,10 @@
 			& > * {
 				position: relative; z-index: 2;
 			}
+		}
+
+		&-partners {
+			
 		}
 
 		&-mvp {

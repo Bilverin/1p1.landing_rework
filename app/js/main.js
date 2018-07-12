@@ -270,6 +270,19 @@ $(document).ready(function() {
 		$('.wr-header').removeClass('background');
 	}
 
+	// partners switch
+	var slideWidth = 0;
+	$('.js-partners > div').click(function(e) {
+		var this_ = $(this);
+		if(!$(this).hasClass('active')) {
+
+			$('.js-partners').toggleClass('first second');
+
+			$('.js-partners > div.active').removeClass('active');
+			this_.addClass('active');
+		}
+	});
+
 });
 
 $(window).scroll(function () {
