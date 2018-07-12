@@ -9,9 +9,8 @@
 
 	.wr {
 		&-header {
-			height: 70px; position: fixed; top: 0; left: 0; width: 100%; padding: 0 45px; z-index: 1000;
+			height: 64px; position: fixed; top: 0; left: 0; width: 100%; padding: 0 53px 0 41px; z-index: 1000;
 			background: transparent;
-			// box-shadow: 0 0 20px 0 rgba(0,0,0,0.15);
 			@include respond-to(lg) {
 				padding: 0 15px;
 			}
@@ -21,6 +20,20 @@
 			@include respond-to(sm) {
 				padding: 0 15px;
 			}
+
+			&:before {
+				content: '';
+				display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0; z-index: -1;
+				background: radial-gradient(circle 700px at 68.53% 200%, #dd669b 0%, #5d25a8 100%); box-shadow: 0 0 20px 0 rgba(0,0,0,0.15);
+				opacity: 0;
+				transition: opacity 0.2s ease-out;
+			}
+
+			&.background {
+				&:before {
+					opacity: 1;
+				}	
+			}
 		}
 
 		&-intro {
@@ -29,50 +42,16 @@
 		}
 
 		&-about {
-			padding: 102px 0 103px;
-		}
-
-		&-counter {
-			padding: 86px 0 44px;
-			background: linear-gradient(245deg, #9c5eff 0%, #4489ff 100%);
-			@include respond-to(xs) {
-				padding-top: 60px;
-			}
-		}
-
-		&-partners, &-listing {
-			padding: 62px 0 53px;
-			background: $white;
-			@include respond-to(sm) {
-				padding: 60px 0;
-			}
-		}
-
-		&-how_works {
-			padding: 196px 0 162px;
-			background: url('../img/how-works-bg.png') center top no-repeat, linear-gradient(245deg, #8336fe 0%, #4776c6 100%); background-size: cover;
-			@include respond-to(xs) {
-				padding: 100px 0 120px;
-			}
-		}
-
-		&-infrastructure {
-			padding: 93px 0 69px;
-			background: #f4f4ff;
-		}
-
-		&-emission {
-			padding: 70px 0 92px;
-			background: $white;
+			padding: 92px 0 82px;
 		}
 
 		&-for-clients {
-			padding: 111px 0 61px;
+			padding: 110px 0 75px;
 			background: #fbfbfe;
 		}
 
 		&-benefits {
-			padding: 64px 0 116px;
+			padding: 82px 0 111px;
 		}
 
 		&-why-need {
@@ -159,7 +138,7 @@
 		}
 
 		&-team {
-			padding: 62px 0 60px;
+			padding: 62px 0 40px;
 			background: $white;
 			@include respond-to(sm) {
 				padding: 60px 0;
@@ -167,7 +146,7 @@
 		}
 
 		&-news {
-			padding: 48px 0 49px;
+			padding: 32px 0 49px;
 		}
 
 		&-massmedia {

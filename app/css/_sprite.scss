@@ -6,7 +6,7 @@
       display: inline-block;
       background-image: url("../img/sprite.svg");
       background-repeat: no-repeat;
-      background-size: 6.5em 38.3em;
+      background-size: 6.5em 41.3em;
 
       .no-svg & {
         background-image: url("../img/sprite.png");
@@ -157,6 +157,19 @@
 
   @mixin icon-play(){
     @extend .play;
+  }
+
+
+.icon.whyblockchain {
+  &:before {
+      background-position: 0em -38.3em;
+      width: 2.7em;
+      height: 3em;
+    }
+  }
+
+  @mixin icon-whyblockchain(){
+    @extend .whyblockchain;
   }
 
 

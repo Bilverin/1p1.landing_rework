@@ -1,10 +1,13 @@
 .popup {
-	background: $white; border-radius: 10px; border: 1px solid #979797; display: none;
+	display: none;
+	background: $white; border-radius: 10px;
+	border: 1px solid #979797;
 
 	.b-close {position: absolute; top: 10px; right: 15px; color: #3b4f72;}
 
 	&-sale {
 		padding: 56px;
+		border: none;
 		@include respond-to(sm) {
 			width: calc(100% - 30px); padding: 25px 30px;
 		}
@@ -57,6 +60,49 @@
 			top: 15px; right: -20px; width: 20px; height: 20px;
 			@include respond-to(sm) {
 				right: 10px;
+			}
+		}
+	}
+
+	&-read-more {
+		width: 687px; padding: 78px 46px 53px 53px;
+		border: none;
+
+		@include respond-to(sm) {
+			width: calc(100% - 30px);
+		}
+
+		.b-close {
+			position: absolute; right: 31px; top: 34px; display: block; width: 20px; height: 20px;
+			opacity: 0.3;
+
+			&:hover {
+				opacity: 0.7;
+			}
+
+			&:before, &:after {
+				content: '';
+				display: block; height: 2px; width: 19px; position: absolute; left: 50%; top: 50%;
+				background: $black;
+			}
+			&:before {
+				transform: translate(-50%, -50%) rotate(45deg);
+			}
+			&:after {
+				transform: translate(-50%, -50%) rotate(-45deg);
+			}
+		}
+
+		figure {
+			margin-bottom: 38px;
+		}
+
+		p {
+			color: $black; font-family: $ms-300; font-size: 18px; line-height: 26px;
+			margin-bottom: 26px;
+
+			&:last-child {
+				margin-bottom: 0;
 			}
 		}
 	}

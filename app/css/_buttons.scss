@@ -7,6 +7,10 @@
 		color: #ffffff; font-size: 15px; line-height: 18px; font-family: $ms-500;
 		display: inline-block; padding: 13px 16px;
 		background: radial-gradient(circle 113px at 12.2198% 8.0911%, #dd669b 0%, #6024af 100%); border-radius: 100px;
+
+		@include respond-to(xs) {
+			background: radial-gradient(circle 500px at 12.2198% -38.0911%, #dd669b 0%, #6024af 100%);
+		}
 	}
 
 	&-transparent {

@@ -59,7 +59,10 @@ $(document).ready(function() {
 	$('.js-salePopup').click(function(e) {
 		e.preventDefault();
 
-		$('.popup-sale').bPopup();
+		$('.popup-sale').bPopup({
+			modalColor: '#6d6d8c',
+			opacity: 0.4
+		});
 	});
 
 	// mobile burger
@@ -96,6 +99,8 @@ $(document).ready(function() {
 		var self = $(this);
 
 		$('.popup-video').bPopup({
+			modalColor: '#6d6d8c',
+			opacity: 0.4,
 	        onOpen: function() {
 	            content.html(self.attr('data-bpopup'));
 	        },
@@ -103,6 +108,16 @@ $(document).ready(function() {
 	            content.empty();
 	        }
 	    });
+	});
+
+	// readmore popup
+	$('.js-readmore').click(function(e) {
+		e.preventDefault();
+
+		$('.popup-read-more').bPopup({
+			modalColor: '#6d6d8c',
+			opacity: 0.4
+		});
 	});
 
 	// owl carousel
@@ -249,6 +264,12 @@ $(document).ready(function() {
 		$($(this).attr('href')).addClass('active');
 	});
 
+	if($(window).scrollTop() > 10) {
+		$('.wr-header').addClass('background');
+	} else {
+		$('.wr-header').removeClass('background');
+	}
+
 });
 
 $(window).scroll(function () {
@@ -281,6 +302,21 @@ $(window).scroll(function () {
 			$(this).removeClass('animate js-scrollAnimate');
 		}
 	});
+
+	if(windowTopScroll > 10) {
+		$('.wr-header').addClass('background');
+	} else {
+		$('.wr-header').removeClass('background');
+	}
+
+	// hovered team card
+	$('.js-teamHover article header').hover(
+		function() {
+			$(this).parent().addClass("hovered");
+		}, function() {
+			$( this ).parent().removeClass("hovered");
+		}
+	);
 
 }).scroll();
 
@@ -518,16 +554,16 @@ particlesJS("subscribe-particles", {
 
 /* ---- stats.js config ---- */
 
-var count_particles, stats, update;
-stats = new Stats;
-stats.setMode(0);
-stats.domElement.style.position = 'absolute';
-stats.domElement.style.left = '0px';
-stats.domElement.style.top = '0px';
-document.body.appendChild(stats.domElement);
+var count_particles, stat, update;
+stat = new Stats;
+stat.setMode(0);
+stat.domElement.style.position = 'absolute';
+stat.domElement.style.left = '0px';
+stat.domElement.style.top = '0px';
+document.body.appendChild(stat.domElement);
 update = function() {
-  stats.begin();
-  stats.end();
+  stat.begin();
+  stat.end();
   requestAnimationFrame(update);
 };
 requestAnimationFrame(update);

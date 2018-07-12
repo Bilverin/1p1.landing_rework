@@ -8,18 +8,18 @@
 .container {
 	width: 1180px; margin: 0 auto;
 	@include respond-to(lg) {
-		width: 980px;
+		width: 980px; padding: 0 15px;
 	}
 	@include respond-to(md) {
 		width: 760px;
 	}
 	@include respond-to(sm) {
-		width: 100%; padding: 0 15px;
+		width: 100%;
 	}
 }
 
 .check-card {
-	background: linear-gradient(90deg, #4489ff 0%, #9c5eff 100%); box-shadow: 0 5px 40px rgba(0, 60, 124, 0.2); border-radius: 10px;
+	background: radial-gradient(circle 400px at right 55px top -176px, #ff77bb 0%, #c963a5 180px, #481478 100%); box-shadow: 0 5px 40px rgba(0, 60, 124, 0.2); border-radius: 10px;
 	img {
 		width: 79.51542%; max-height: 68.14815%;
 		position: relative;
@@ -56,35 +56,36 @@
 		color: $white; font-family: $ms-700; font-size: 18px; text-align: center;
 		margin-bottom: 10px;
 		@include respond-to(lg) {
-			margin-bottom: 40px;
+			
 		}
 		@include respond-to(md) {
-			margin-bottom: 40px;
+			
 		}
 		@include respond-to(669px) {
-			margin-bottom: 20px;
+			
 		}
 		@include respond-to(xs) {
-			margin-bottom: 10px;
+			
 		}
 		@include respond-to(419px) {
-			margin-bottom: 0;
+			
 		}
 	}
 	figure {
+		position: relative;
 		// padding-top: 54px;
-		@include respond-to(669px) {
-			transform: scale(0.75);
-		}
-		@include respond-to(xs) {
-			transform: scale(0.65); padding-top: 40px;
-		}
-		@include respond-to(419px) {
-			transform: scale(0.6); padding-top: 20px;
-		}
-		@include respond-to(379px) {
-			transform: scale(0.5); padding-top: 0;
-		}
+		// @include respond-to(669px) {
+		// 	transform: scale(0.75);
+		// }
+		// @include respond-to(xs) {
+		// 	transform: scale(0.65); padding-top: 40px;
+		// }
+		// @include respond-to(419px) {
+		// 	transform: scale(0.6); padding-top: 20px;
+		// }
+		// @include respond-to(379px) {
+		// 	transform: scale(0.5); padding-top: 0;
+		// }
 		img {
 			position: relative; width: 100%;
 			@include respond-to(lg) {
@@ -96,17 +97,13 @@
 			&.mob {
 				display: none;
 				@include respond-to(md) {
-					display: block; width: 640px;
+					display: block;
 				}
 			}
 		}
 		figcaption {
-			position: relative;
 			@include respond-to(md) {
-				width: 640px; margin: 0 auto;
-			}
-			@include respond-to(669px) {
-				left: 50%; transform: translateX(-50%);
+
 			}
 			p {
 				color: $white; font-family: $ms-700; font-size: 18px; line-height: 37px; text-align: center;
@@ -150,16 +147,16 @@
 					color: $white; font-family: $ms-500;
 				}
 				.discount, .dates {
-					position: absolute; left: 50%; transform: translateX(-50%); width: 100%; display: flex; justify-content: space-between;
+					position: absolute; left: 0; width: 100%; display: flex; justify-content: space-between;
 					
 				}
 				.discount {
-					padding: 0; top: -65px;
+					padding: 0; top: 0; transform: translateY(-100%);
 					@include respond-to(lg) {
-						top: -60px;
+						padding: 0 10px;
 					}
 					@include respond-to(md) {
-						top: -72px;
+						top: -5px; padding: 0 2px;
 					}
 
 					&.pause {
@@ -168,10 +165,29 @@
 							display: block; position: absolute; left: 39.74576%; bottom: -42px; transform: translateX(-50%);
 							border-bottom: solid 10px $white; border-left: solid 5px transparent; border-right: solid 5px transparent;
 							@include respond-to(lg) {
-								bottom: 28px; left: 39.35%;
+								left: 40%;
 							}
 							@include respond-to(md) {
-								bottom: 25px; left: 39.55%;
+								left: 22.62324%; bottom: -65px;
+							}
+							@include respond-to(660px) {
+								bottom: -58px;
+							}
+							@include respond-to(580px) {
+								bottom: -51px;
+							}
+							@include respond-to(500px) {
+								bottom: -47px;
+							}
+							@include respond-to(xs) {
+								bottom: -47px;
+								border-bottom: solid 8px $white; border-left: solid 4px transparent; border-right: solid 4px transparent;
+							}
+							@include respond-to(440px) {
+								bottom: -40px;
+							}
+							@include respond-to(360px) {
+								bottom: -35px;
 							}
 						}
 					}
@@ -181,19 +197,19 @@
 						&.discount-1 {
 							width: 443px;
 							@include respond-to(lg) {
-								width: 297px;
+								width: 350px;
 							}
 							@include respond-to(md) {
-								width: 169px;
+								width: 19.6%;
 							}
 						}
 						&.discount-2 {
 							width: 690px;
 							@include respond-to(lg) {
-								width: 524px;
+								width: 543px;
 							}
 							@include respond-to(md) {
-								width: 330px;
+								width: 74.1%;
 							}
 							li {
 								width: 33.333333%;
@@ -203,6 +219,13 @@
 							font-size: 18px; line-height: 37px; text-align: center;
 							position: relative; width: 100%;
 							opacity: 0.5;
+
+							@include respond-to(md) {
+								font-size: 24px;
+							}
+							@include respond-to(xs) {
+								font-size: 14px; line-height: 26px;
+							}
 
 							&.active {
 								opacity: 1;
@@ -228,24 +251,35 @@
 					}
 				}
 				.dates {
-					display: flex; top: -3px;
+					display: flex; bottom: -3px; transform: translateY(100%);
+
+					@include respond-to(md) {
+						bottom: -5px;
+					}
+
 					ul {
 						&.dates-1 {
 							width: 460px; padding: 0 0 0 3px;
 							@include respond-to(lg) {
-								padding: 0 15px 0 40px;
+								padding: 0 18px 0 11px;
 							}
 							@include respond-to(md) {
-								width: 40%; padding: 0 5px 0 40px;
+								width: 19.6%; padding: 0 0px 0 2px;
+							}
+
+							li {
+								&:nth-child(2) {
+									display: none;
+								}
 							}
 						}
 						&.dates-2 {
 							width: 700px; padding: 0 2px 0 0;
 							@include respond-to(lg) {
-								padding: 0 20px 0 15px;
+								padding: 0 12px 0 20px;
 							}
 							@include respond-to(md) {
-								width: 60%; padding: 0 20px 0 10px;
+								width: 74.1%; padding: 0 2px 0 0;
 							}
 						}
 						&.dates-1, &.dates-2 {
@@ -258,7 +292,22 @@
 							opacity: 0.5;
 
 							@include respond-to(md) {
-								font-size: 15px; line-height: 15px;
+								font-size: 15px; line-height: 20px; text-align: center;
+								width: 40px;
+							}
+							@include respond-to(xs) {
+								font-size: 10px; line-height: 15px;
+							}
+
+							&:first-child {
+								@include respond-to(md) {
+									text-align: left;
+								}
+							}
+							&:last-child {
+								@include respond-to(md) {
+									text-align: right;
+								}
 							}
 
 							&.active {
@@ -267,8 +316,7 @@
 
 							span {
 								@include respond-to(md) {
-									font-size: 25px; line-height: 30px;
-									display: block; margin-bottom: 2px;
+									display: block;
 								}
 							}
 						}
@@ -335,10 +383,17 @@
 		h2 {
 			color: $white; font-family: $ms-700; font-size: 38px; line-height: 50px; letter-spacing: 0.1px;
 			margin-bottom: 27px;
+
+			@include respond-to(sm) {
+				font-size: 32px; line-height: 44px;
+			}
+			@include respond-to(xs) {
+				font-size: 28px; line-height: 38px;
+			}
 		}
 		p {
-			color: $white; font-family: $ms-300; font-size: 23px; line-height: 33px; letter-spacing: 0.5px;
-			margin-bottom: 28px;
+			color: $white; font-family: $ms-300; font-size: 23px; line-height: 33px; letter-spacing: 0.05px;
+			margin-bottom: 48px;
 			transition: transform 0.4s 0.25s ease-out, opacity 0.4s 0.25s ease-out;
 
 			@include respond-to(lg) {
@@ -376,7 +431,7 @@
 				transition: transform 0.4s 1.1s ease-out, opacity 0.4s 1.1s ease-out;
 			}
 			@include respond-to(xs) {
-				flex-wrap: wrap;
+				flex-wrap: wrap; padding-left: 0;
 			}
 			&.socials {
 				@include respond-to(xs) {
@@ -431,6 +486,13 @@
 	&-progress {
 		display: flex; align-items: flex-start; flex-direction: column; padding-top: 51px;
 
+		@include respond-to(md) {
+			width: 100%; flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: center; padding-top: 14px;
+		}
+		@include respond-to(600px) {
+			flex-direction: column; align-items: flex-start; justify-content: flex-start;
+		}
+
 		.card {
 			width: 537px; padding: 41px 50px 44px; align-self: center; position: relative; margin-bottom: 38px;
 			background: #ffffff; border-radius: 70px; box-shadow: 0 2px 40px rgba(0, 0, 0, 0.15);
@@ -440,16 +502,13 @@
 				left: 0;
 			}
 			@include respond-to(lg) {
-				width: 490px; padding: 45px 35px 30px;
+				width: 460px; padding: 45px 35px 30px;
 			}
 			@include respond-to(md) {
-				max-width: 535px; width: 100%; padding: 25px 35px;
-			}
-			@include respond-to(sm) {
-				max-width: 450px;
+				width: 100%; padding: 25px 35px;
 			}
 			@include respond-to(xs) {
-				padding: 15px 20px 20px;
+				padding: 15px 15px 20px;
 				border-radius: 40px;
 			}
 
@@ -467,6 +526,7 @@
 					span {
 						margin-left: 5px;
 						@include respond-to(sm) {
+							text-align: center;
 							display: block; width: 100%;
 						}
 					}
@@ -525,9 +585,6 @@
 				@include respond-to(lg) {
 					width: 100%;
 				}
-				@include respond-to(xs) {
-					width: calc(100% + 20px);
-				}
 				.currentProgress {
 					position: absolute; left: 10%; transform: translate(-50%, -100%); top: -18px; z-index: 10;
 					&:after {
@@ -570,6 +627,10 @@
 						span {
 							color: $black; font-family: $ms-500; font-size: 11px; line-height: 13px; white-space: nowrap; text-transform: uppercase;
 							position: absolute; left: 50%; top: 6px; transform: translate(-50%, 100%);
+
+							@include respond-to(xs) {
+								font-size: 9px; top: 2px;
+							}
 						}
 					}
 					.start {
@@ -636,6 +697,16 @@
 		a.play_me {
 			display: inline-block; margin-left: 44px; position: relative; padding-left: 87px; padding-top: 10px; height: 65px; margin-bottom: 33px;
 
+			@include respond-to(md) {
+				margin-bottom: 0; margin-left: 0;
+			}
+			@include respond-to(600px) {
+				margin-bottom: 30px; margin-left: 30px;
+			}
+			@include respond-to(xs) {
+				margin-left: 0;
+			}
+
 			i {
 				position: absolute; left: 0; top: 50%; transform: translateY(-50%);
 			}
@@ -643,6 +714,10 @@
 			h4 {
 				color: $white; font-family: $ms-700; font-size: 28px;
 				margin-bottom: 8px;
+
+				@include respond-to(xs) {
+					font-size: 24px;
+				}
 			}
 			span {
 				color: $white; font-family: $ms-500; font-size: 14px;
@@ -651,18 +726,35 @@
 
 		a.btn-transparent {
 			text-transform: uppercase; text-align: left;
-			margin-left: 45px; padding: 8px 15px;
+			margin-left: 45px; padding: 8px 19px;
+
+			@include respond-to(600px) {
+				margin-left: 30px;
+			}
+			@include respond-to(xs) {
+				margin-left: 0;
+			}
 		}
 
 	}
 
 	.timeline-discount {
-		width: 100%; margin-top: 61px; margin-bottom: 36px;
+		width: 100%; margin-top: 41px; margin-bottom: 36px;
 		transition: transform 0.4s 1.5s ease-out, opacity 0.4s 1.5s ease-out;
 
 		h4 {
 			text-align: left;
 			padding-left: 3px;
+
+			@include respond-to(lg) {
+				padding-left: 11px;
+			}
+			@include respond-to(md) {
+				margin-bottom: 60px; padding-left: 2px;
+			}
+			@include respond-to(xs) {
+				margin-bottom: 40px;
+			}
 		}
 
 		figure {
@@ -672,6 +764,13 @@
 						justify-content: flex-end;
 						li {
 							width: 45%;
+
+							@include respond-to(lg) {
+								width: 32%;
+							}
+							@include respond-to(md) {
+								width: 100%;
+							}
 						}
 					}
 				}
@@ -731,7 +830,7 @@
 
 		p {
 			color: #000000; font-family: $ms-300; font-size: 24px; line-height: 32px;
-			width: calc(50% - 10px);
+			width: calc(50% - 10px); padding-right: 20px;
 
 			span {
 				text-decoration: underline;
@@ -754,7 +853,7 @@
 		display: flex; align-items: flex-start;
 
 		& > div {
-			width: 480px; margin-right: 120px;
+			width: 500px; margin-right: 100px;
 
 			&:last-child {
 				margin-right: 0;
@@ -775,14 +874,14 @@
 			}
 
 			a {
-				display: inline-flex; margin-top: 5px; margin-left: 8px; margin-bottom: 15px;
+				display: inline-flex; margin-top: 23px; margin-left: 3px; margin-bottom: 26px;
 
 				i {
-					margin-right: 23px;
+					margin-right: 22px;
 				}
 
 				div {
-					padding-top: 10px;
+					padding-top: 13px;
 				}
 
 				h4 {
@@ -796,7 +895,54 @@
 			}
 
 			.why-tooltip {
+				padding-left: 40px; position: relative;
 
+				& > span {
+					color: $black; font-family: $ms-700; font-size: 18px; line-height: 22px;
+					display: inline-flex; align-items: center;
+					cursor: pointer;
+
+					&:hover + div {
+						opacity: 1;
+						pointer-events: auto;
+					}
+
+					i {
+						margin-right: 21px; position: relative; top: -2px;
+					}
+				}
+
+				div {
+					padding: 19px 23px 28px; width: 463px; position: absolute; left: 50px; bottom: -16px; transform: translateY(100%);
+					background: $white; border-radius: 6px; box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+					transition: opacity 0.2s ease-out;
+					opacity: 0;
+					pointer-events: none;
+
+					&:before {
+						content: '';
+						display: block; position: absolute; left: 29px; top: -15px; z-index: -1;
+						border-left: solid 16px transparent; border-right: solid 16px transparent; border-bottom: solid 15px $white;
+					}
+
+					p, li {
+						color: $black; font-family: $ms-300; font-size: 14px; line-height: 19px;
+					}
+
+					p, ul {
+						margin-bottom: 19px;
+
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+
+					ul {
+						li {
+
+						}
+					}
+				}
 			}
 		}
 	}
@@ -818,7 +964,7 @@
 			display: flex;
 
 			li {
-				width: 380px; margin-right: 20px; padding: 7px 0;
+				width: 380px; margin-right: 20px; padding: 7px 10px 7px 0;
 				border-right: 1px solid rgba(0,0,0,0.1);
 
 				&:last-child {
@@ -1115,7 +1261,7 @@
 								&:after {
 									content: '';
 									display: block; width: 160px; height: calc(100% + 30px); position: absolute; right: -135px; bottom: -39px;
-									border-right: 2px solid #9fc2ff; border-bottom: 2px solid #9fc2ff; border-radius: 0 0 20px 0;
+									border-right: 2px solid #DBC9E5; border-bottom: 2px solid #DBC9E5; border-radius: 0 0 20px 0;
 									transition: opacity 0.4s 1.3s ease-out;
 
 									@include respond-to(md) {
@@ -1138,7 +1284,7 @@
 								&:before {
 									content: '';
 									display: block; width: 184px; height: calc(100% + 75px); position: absolute; left: -209px; top: 10px; transform: translateY(-100%);
-									border-left: 2px solid #9fc2ff; border-bottom: 2px solid #9fc2ff; border-radius: 0 0 0 20px;
+									border-left: 2px solid #DBC9E5; border-bottom: 2px solid #DBC9E5; border-radius: 0 0 0 20px;
 
 									@include respond-to(lg) {
 										left: - 124px; width: 99px;
@@ -1156,7 +1302,7 @@
 									&:after {
 										content: none;
 										display: block; width: calc( 100% - 200px); height: 141px; position: absolute; right: 0; top: 8px;
-										border-right: 2px solid #9fc2ff; border-top: 2px solid #9fc2ff; border-bottom: 2px solid #9fc2ff; border-radius: 0 20px 20px 0;
+										border-right: 2px solid #DBC9E5; border-top: 2px solid #DBC9E5; border-bottom: 2px solid #DBC9E5; border-radius: 0 20px 20px 0;
 										transition: opacity 0.4s 1.3s ease-out;
 
 										@include respond-to(md) {
@@ -1182,7 +1328,7 @@
 							&:after {
 								content: none;
 								display: block; width: calc( 100% - 200px); height: 133px; position: absolute; right: 0; top: -32px; transform: translateY(-100%);
-								border-right: 2px solid #9fc2ff; border-top: 2px solid #9fc2ff; border-bottom: 2px solid #9fc2ff; border-radius: 0 20px 20px 0;
+								border-right: 2px solid #DBC9E5; border-top: 2px solid #DBC9E5; border-bottom: 2px solid #DBC9E5; border-radius: 0 20px 20px 0;
 								transition: opacity 0.4s 1.3s ease-out;
 
 								@include respond-to(xs) {
@@ -1208,7 +1354,7 @@
 						&:before {
 							content: '';
 							display: block; width: 108px; height: 108px; position: absolute; left: 80px; top: 0; z-index: 10;
-							background: $white url(../img/coins.svg) center center no-repeat; border: 2px solid #9ec2ff; border-radius: 50%;
+							background: $white url(../img/coins.svg) center center no-repeat; border: 2px solid #DBC9E5; border-radius: 50%;
 							transition: opacity 0.4s 1.5s ease-out, background-position 0.4s 1.5s ease-out;
 
 							@include respond-to(lg) {
@@ -1235,7 +1381,7 @@
 								&:before {
 									content: '';
 									display: block; width: 50px; height: calc(100% + 75px); position: absolute; left: -65px; top: 10px; transform: translateY(-100%);
-									border-left: 2px solid #9fc2ff; border-bottom: 2px solid #9fc2ff; border-radius: 0 0 0 20px;
+									border-left: 2px solid #DBC9E5; border-bottom: 2px solid #DBC9E5; border-radius: 0 0 0 20px;
 
 									@include respond-to(md) {
 										bottom: -30px; top: auto; transform: translateY(0); left: -61px; width: 45px;
@@ -1277,9 +1423,9 @@
 					}
 
 					.percent {
-						color: #3a82ff; font-family: $ms-700; font-size: 18px; line-height: 19px;
+						color: #924691; font-family: $ms-700; font-size: 18px; line-height: 19px;
 						display: flex; align-items: center; justify-content: center; padding-top: 2px; padding-left: 4px; width: 67px; height: 67px; position: absolute; top: 109px; right: -27px;
-						background-color: #ffffff; border: 2px solid #9ec2ff; border-radius: 50%;
+						background-color: #ffffff; border: 2px solid #DBC9E5; border-radius: 50%;
 						transition: opacity 0.4s 1.3s ease-out;
 
 						@include respond-to(lg) {
@@ -1298,7 +1444,7 @@
 						&:before {
 							content: '';
 							display: block; width: 160px; height: 132px; position: absolute; right: 31px; bottom: 0; transform: translateY(100%);
-							border-right: 2px solid #9fc2ff; border-bottom: 2px solid #9fc2ff; border-radius: 0 0 20px 0;
+							border-right: 2px solid #DBC9E5; border-bottom: 2px solid #DBC9E5; border-radius: 0 0 20px 0;
 							transition: opacity 0.4s 1.3s ease-out;
 							display: none;
 
@@ -1315,7 +1461,7 @@
 						&:after {
 							content: '';
 							display: block; width: 87px; height: 55px; position: absolute; left: 30px; top: 0; transform: translateY(-100%);
-							border-left: 2px solid #9fc2ff; border-top: 2px solid #9fc2ff; border-radius: 20px 0 0 0;
+							border-left: 2px solid #DBC9E5; border-top: 2px solid #DBC9E5; border-radius: 20px 0 0 0;
 							transition: opacity 0.4s 1.5s ease-out;
 
 							@include respond-to(lg) {
@@ -1333,6 +1479,7 @@
 
 					.check-card {
 						width: 187px; height: 112px; margin-top: 32px;
+						box-shadow: 0 2px 30px 0 rgba(0,61,169,0.4);
 						transition: opacity 0.4s 0.5s ease-out, transform 0.4s 0.5s ease-out;
 
 						@include respond-to(md) {
@@ -2665,14 +2812,9 @@
 
 /*Command */
 .team {
-	margin-bottom: 82px;
 
-	&:last-child {
-		margin-bottom: 0;
-	}
-
-	& > header {
-		display: flex; flex-direction: column; align-items: center; margin-bottom: 37px;
+	hgroup {
+		display: flex; flex-direction: column; align-items: center; margin-bottom: 21px;
 
 		h2 {
 			color: #000000; font-family: $ms-700; font-size: 38px; line-height: 72px;
@@ -2683,59 +2825,80 @@
 			}
 		}
 
-		p {
+		h3 {
 			color: #000000; font-family: $ms-300; font-size: 24px; line-height: 19px;
 		}
 	}
 
-	& > section {
+	& > ul {
+		display: flex; align-items: flex-start; justify-content: flex-start; flex-wrap: wrap; margin-bottom: 23px; position: relative; z-index: 2;
 
-		& > ul {
-			display: flex; align-items: flex-start; justify-content: flex-start; flex-wrap: wrap; margin-bottom: -50px;
+		&:last-child {
+			margin-bottom: 0;
+		}
 
-			 & > li {
-				width: 20%; margin-bottom: 25px; padding: 0 15px;
+		&:hover {
+			z-index: 5;
+		}
 
-				article {
+		& > li {
+			width: 20%; margin-bottom: 7px; height: 283px; position: relative;
 
-					header {
+			article {
+				padding: 15px 18px 20px;
+				border-radius: 10px;
 
-						figure {
-							text-align: center;
-							margin-bottom: 18px;
+				&.hovered {
+					background: $white; box-shadow: 0 2px 34px rgba(0, 0, 0, 0.1);
 
-							img {
-								width: 160px;
-							}
-						}
+					section {
+						opacity: 1;
+						pointer-events: auto;
+					}
+				}
 
-						h3 {
-							color: #000000; font-family: $ms-700; font-size: 18px; line-height: 19px; text-align: center;
-							margin-bottom: 6px;
-						}
+				header {
+					margin-bottom: 19px;
+					cursor: pointer;
 
-						p {
-							color: #000000; font-family: $ms-500; font-size: 12px; line-height: 19px; text-transform: uppercase; letter-spacing: 0.9px; text-align: center;
-							margin-bottom: 2px;
-							opacity: 0.5;
-						}
+					figure {
+						text-align: center;
+						margin-bottom: 18px;
 
-						ul.socials {
-							display: flex; align-items: center; justify-content: center;
-
-							li {
-
-								a {
-									color: #2b2c5c; font-size: 18px;
-								}
-							}
+						img {
+							width: 160px;
 						}
 					}
 
-					section {
-						p {
-							 font-family: $ms-300;
+					h3 {
+						color: #000000; font-family: $ms-700; font-size: 18px; line-height: 19px; text-align: center;
+						margin-bottom: 6px;
+					}
+
+					p {
+						color: #000000; font-family: $ms-500; font-size: 12px; line-height: 19px; text-transform: uppercase; letter-spacing: 0.9px; text-align: center;
+						margin-bottom: 2px;
+						opacity: 0.5;
+					}
+
+					ul.socials {
+						display: flex; align-items: center; justify-content: center;
+
+						li {
+
+							a {
+								color: #2b2c5c; font-size: 18px;
+							}
 						}
+					}
+				}
+
+				section {
+					opacity: 0;
+					pointer-events: none;
+
+					p {
+						color: #000000; font-family: $ms-300; font-size: 14px; line-height: 22px;
 					}
 				}
 			}
