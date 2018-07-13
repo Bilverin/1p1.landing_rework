@@ -141,12 +141,16 @@ $(document).ready(function() {
 	// news carousel
 	$('.owl-news').owlCarousel({
 		margin: 20,
-		stagePadding: 20,
+		nav: true,
+		navText: ['',''],
+		stagePadding: 10,
 		responsive: {
 			320: {
+				stagePadding: 20,
 				items: 1
 			},
 			768: {
+				stagePadding: 10,
 				items: 2
 			},
 			991: {
@@ -178,11 +182,15 @@ $(document).ready(function() {
 	// media carousel
 	$('.owl-media').owlCarousel({
 		margin: 20,
+		nav: true,
+		navText: ['',''],
 		responsive: {
 			420: {
+				stagePadding: 20,
 				items: 2
 			},
 			768: {
+				stagePadding: 10,
 				items: 3
 			},
 			991: {
@@ -282,6 +290,15 @@ $(document).ready(function() {
 			this_.addClass('active');
 		}
 	});
+
+	if($('a.btn, a.btn-gradient, a.btn-transparent').hasClass('js-scrollTo')) {
+		$('.js-scrollTo').click(function(e){
+			e.preventDefault();
+
+			var miniOffset = ($(this).attr('href') == '#restr' ? 35 : 0);
+			$('html, body').animate({scrollTop: $($(this).attr('href')).offset().top - miniOffset}, 1000);
+		});
+	}
 
 });
 

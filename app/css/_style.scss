@@ -105,6 +105,13 @@
 				content: '';
 				display: block; width: 1436px; height: 693px; position: absolute; right: -136px; bottom: -54px; z-index: 1;
 				background: url('../img/map.svg') center center no-repeat;
+
+				@include respond-to(lg) {
+					right: auto; left: -10%;
+				}
+				@include respond-to(md) {
+					left: 0;
+				}
 			}
 
 			& > * {

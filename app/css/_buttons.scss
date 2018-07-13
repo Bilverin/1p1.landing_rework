@@ -7,6 +7,11 @@
 		color: #ffffff; font-size: 15px; line-height: 18px; font-family: $ms-500;
 		display: inline-block; padding: 13px 16px;
 		background: radial-gradient(circle 113px at 12.2198% 8.0911%, #dd669b 0%, #6024af 100%); border-radius: 100px;
+		transition: background 0.3s ease-out;
+
+		&:hover {
+			background: radial-gradient(circle 113px at 82.2198% 98.0911%, #dd669b 0%, #6024af 100%);
+		}
 
 		@include respond-to(xs) {
 			text-align: center;

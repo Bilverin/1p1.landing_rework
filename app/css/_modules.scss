@@ -728,10 +728,16 @@
 			text-transform: uppercase; text-align: left;
 			margin-left: 45px; padding: 8px 19px;
 
+			&:hover {
+				color: #722dac;
+				background: $white;
+			}
+
 			@include respond-to(600px) {
 				margin-left: 30px;
 			}
 			@include respond-to(xs) {
+				text-align: center;
 				margin-left: 0;
 			}
 		}
@@ -779,7 +785,7 @@
 	}
 
 	&-partners {
-		width: 100%; height: 150px; display: flex; align-items: center; position: relative;
+		width: 100%; padding: 30px 0; min-height: 150px; display: flex; align-items: center; position: relative;
 
 		&:before {
 			content: '';
@@ -790,12 +796,27 @@
 		ul {
 			display: flex; justify-content: space-between; width: 100%; position: relative; z-index: 2;
 
+			@include respond-to(sm) {
+				flex-wrap: wrap; margin-bottom: -20px;
+			}
+
 			li {
 				text-align: center;
-				width: 16.66667%;
+				width: 16.66667%; display: flex; justify-content: center; align-items: center;
+
+				@include respond-to(sm) {
+					width: 33.33333%; margin-bottom: 20px;
+				}
+				@include respond-to(xs) {
+					width: 50%;
+				}
 
 				img {
 					max-width: 60%;
+
+					@include respond-to(md) {
+						max-width: 80%;
+					}
 				}
 			}
 		}
@@ -828,7 +849,7 @@
 				width: 160px; margin-right: 40px;
 			}
 			@include respond-to(xs) {
-				width: 100%; margin-right: 0; margin-bottom: 30px;
+				width: 70%; margin: 0 auto 30px;
 			}
 		}
 
@@ -1141,13 +1162,13 @@
 	display: flex; justify-content: space-between;
 
 	figure {
-		position: relative; left: 54px; z-index: 1;
+		position: relative; left: -50px; z-index: 1;
 
 		@include respond-to(lg) {
 			left: 0; width: 480px;
 		}
 		@include respond-to(md) {
-			width: 250px; left: -60px;
+			width: 250px; left: -60px; 
 		}
 		@include respond-to(sm) {
 			display: none;
@@ -1157,7 +1178,7 @@
 			width: 100%;
 			
 			@include respond-to(md) {
-				width: 480px;
+				width: 380px;
 			}
 		}
 	}
@@ -2058,6 +2079,20 @@
 					padding: 7px 16px 6px; margin-bottom: 27px;
 					border-width: 1px;
 
+					&:hover {
+						color: #722dac;
+						background: $white;
+
+						@include respond-to(md) {
+							color: $white;
+							background: $black;
+						}
+					}
+
+					@include respond-to(xs) {
+						width: 255px;
+					}
+
 					&:last-child {
 						margin-bottom: 0;
 					}
@@ -2131,9 +2166,39 @@
 		&.active {
 			cursor: default;
 
+			&:before {
+				content: '';
+			}
+
 			& > * {
 				pointer-events: auto; opacity: 1;
 			}
+		}
+
+		&:first-child {
+			&:before {
+				right: 10px; top: 50%; transform: translate(100%, -50%) rotate(45deg) skew(15deg, 15deg);
+
+				@include respond-to(xs) {
+					right: 15px;
+				}
+			}
+		}
+		&:last-child {
+			&:before {
+				left: 10px; top: 50%; transform: translate(-100%, -50%) rotate(-135deg) skew(15deg, 15deg);
+
+				@include respond-to(xs) {
+					left: 15px;
+				}
+			}
+		}
+
+		&:before {
+			content: none;
+			display: block; width: 40px; height: 40px; position: absolute;
+			border-right: solid 1px #6923c5; border-top: solid 1px #6923c5;
+			opacity: 0.4; pointer-events: none;
 		}
 
 		& > * {
@@ -2304,6 +2369,13 @@
 
 					a {
 						font-family: $ms-500; font-size: 14px; line-height: 18px;
+
+						&:not(.btn):not(.btn-gradient):not(.btn-transparent) {
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+
 						&.btn-gradient {
 							padding: 9px 19px 8px;
 						}
@@ -2393,6 +2465,11 @@
 					color: #6923c5;
 					padding: 8px 19px 7px;
 					border-color: #6923c5; border-width: 1px;
+
+					&:hover {
+						color: $white;
+						background: #6923c5;
+					}
 				}
 			}
 
@@ -2523,6 +2600,11 @@
 				color: #6923c5; font-size: 14px; line-height: 18px;
 				padding: 8px 18px;
 				border-color: #6923c5; border-width: 1px;
+
+				&:hover {
+					color: $white;
+					background: #6923c5;
+				}
 			}
 		}
 	}
@@ -3556,6 +3638,12 @@
 
 							a {
 								color: #2b2c5c; font-size: 18px;
+								display: inline-block;
+
+								&:hover {
+									color: #5d25a8;
+									transform: scale(1.115);
+								}
 							}
 						}
 					}
@@ -3582,7 +3670,73 @@
 		}
 
 		&-dots {
-			display: none;
+			display: none; padding: 0 15px; align-items: center; justify-content: center; margin: 20px -10px -10px;
+
+			@include respond-to(sm) {
+				display: flex;
+			}
+
+			.owl-dot {
+				display: block; width: 30px; height: 10px; margin: 10px; position: relative;
+				background: linear-gradient(to right, #722dac 0%, #d9649c 100%); border-radius: 100px;
+				outline: none;
+
+				&.active {
+					&:before {
+						content: none;
+					}
+				}
+
+				&:before {
+					content: '';
+					display: block; width: calc(100% - 4px); height: calc(100% - 4px); position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+					background: $white; border-radius: 100px;
+				}
+			}
+		}
+
+		&-nav {
+			width: calc(100% + 80px); position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; justify-content: space-between; align-items: center;
+
+			@include respond-to(sm) {
+				display: none;
+			}
+
+			.owl {
+				&-prev, &-next {
+					display: block; width: 40px; height: 70px; position: relative;
+					opacity: 0.4;
+					outline: none;
+
+					&:hover {
+						opacity: 0.8;
+					}
+
+					&.disabled {
+						opacity: 0; pointer-events: none;
+
+						&:hover {
+							opacity: 0;
+						}
+					}
+
+					&:before {
+						content: '';
+						display: block; width: 60px; height: 60px; position: absolute; left: 50%; top: 50%;
+						border-top: solid 1px #6923c5; border-right: solid 1px #6923c5;
+					}
+				}
+				&-prev {
+					&:before {
+						transform: translate(-50%, -50%) rotate(-135deg) skew(10deg, 10deg);
+					}
+				}
+				&-next {
+					&:before {
+						transform: translate(-50%, -50%) rotate(45deg) skew(10deg, 10deg);
+					}
+				}
+			}
 		}
 	}
 
@@ -3596,6 +3750,13 @@
 
 	& > section {
 		margin: 0 -20px;
+
+		@include respond-to(1350px) {
+			margin: 0 auto; width: 90%;
+		}
+		@include respond-to(sm) {
+			width: auto; margin: 0 -15px; 
+		}
 
 		ul {
 			display: flex; justify-content: space-between;
@@ -3638,6 +3799,11 @@
 
 						a {
 							color: #8e64ff; font-family: $ms-500; font-size: 16px;
+							display: inline-block;
+
+							&:hover {
+								text-decoration: underline;
+							}
 						}
 					}
 				}
@@ -3648,6 +3814,71 @@
 
 /* Massmedia */
 .massmedia {
+
+	.owl {
+
+		&-dots {
+			display: none; padding: 0 15px; align-items: center; justify-content: center; margin: 20px -10px -10px;
+
+			@include respond-to(sm) {
+				display: flex;
+			}
+
+			.owl-dot {
+				display: block; width: 30px; height: 10px; margin: 10px; position: relative;
+				background: linear-gradient(to right, #722dac 0%, #d9649c 100%); border-radius: 100px;
+				outline: none;
+
+				&.active {
+					&:before {
+						content: none;
+					}
+				}
+
+				&:before {
+					content: '';
+					display: block; width: calc(100% - 4px); height: calc(100% - 4px); position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+					background: $white; border-radius: 100px;
+				}
+			}
+		}
+
+		&-nav {
+			width: calc(100% + 80px); position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; justify-content: space-between; align-items: center;
+			.owl {
+				&-prev, &-next {
+					display: block; width: 40px; height: 70px; position: relative;
+					opacity: 0.4;
+					outline: none;
+
+					&.disabled {
+						opacity: 0; pointer-events: none;
+					}
+
+					&:hover {
+						opacity: 0.8;
+					}
+
+					&:before {
+						content: '';
+						display: block; width: 60px; height: 60px; position: absolute; left: 50%; top: 50%;
+						border-top: solid 1px #6923c5; border-right: solid 1px #6923c5;
+					}
+				}
+				&-prev {
+					&:before {
+						transform: translate(-50%, -50%) rotate(-135deg) skew(10deg, 10deg);
+					}
+				}
+				&-next {
+					&:before {
+						transform: translate(-50%, -50%) rotate(45deg) skew(10deg, 10deg);
+					}
+				}
+			}
+		}
+	}
+
 	h2 {
 		color: #000000; font-family: $ms-700; font-size: 38px; line-height: 46px; text-align: center;
 		margin-bottom: 90px;
@@ -3714,6 +3945,7 @@
 			width: 142px; height: 50px; position: absolute; right: 0; top: 0; padding: 13px 10px;
 			background: $white; border: 2px solid $white; border-radius: 31px;
 			transition: 0.3s ease-out;
+			cursor: pointer;
 			@include respond-to(xs) {
 				text-align: center;
 				position: relative; width: 100%;

@@ -84,6 +84,11 @@
 					a {
 						color: $black; font-family: $ms-700; font-size: 14px; line-height: 17px;
 						display: inline-flex; align-items: center;
+
+						&:hover {
+							transform: scale(1.115);
+						}
+
 						i {
 							margin-right: 7px;
 						}

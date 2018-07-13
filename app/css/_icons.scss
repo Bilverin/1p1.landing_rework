@@ -1,3 +1,8 @@
 .icon {
-	
+	&.bitcoin {
+		&:before {
+			display: inline-block; width: 23px; height: 23px;
+			background: url('../img/bitcoin.svg') center center no-repeat;
+		}
+	}
 }
