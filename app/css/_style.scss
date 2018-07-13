@@ -45,15 +45,27 @@
 
 		&-about {
 			padding: 92px 0 82px;
+
+			@include respond-to(xs) {
+				padding-bottom: 60px;
+			}
 		}
 
 		&-for-clients {
 			padding: 110px 0 75px;
 			background: #fbfbfe;
+
+			@include respond-to(xs) {
+				padding: 60px 0;
+			}
 		}
 
 		&-benefits {
 			padding: 82px 0 111px;
+
+			@include respond-to(xs) {
+				padding: 60px 0;
+			}
 		}
 
 		&-why-need {
@@ -63,6 +75,10 @@
 
 		&-problems-solutions {
 			padding: 102px 0 65px;
+
+			@include respond-to(xs) {
+				padding: 60px 0;
+			}
 		}
 
 		&-scheme {
@@ -80,6 +96,9 @@
 
 			@include respond-to(md) {
 				padding: 570px 0 160px; margin-top: -560px;
+			}
+			@include respond-to(xs) {
+				padding-bottom: 80px;
 			}
 
 			&:before {
@@ -100,15 +119,27 @@
 		&-mvp {
 			padding: 27px 0 74px;
 			background: linear-gradient(180deg, #f8f8ff 0%, #fbfbfe 100%);
+
+			@include respond-to(xs) {
+				padding-bottom: 60px;
+			}
 		}
 
 		&-testimonials {
 			padding: 96px 0;
+
+			@include respond-to(xs) {
+				padding: 60px 0;
+			}
 		}
 
 		&-ico {
 			padding: 71px 0 103px; position: relative;
 			background-image: radial-gradient(circle 1005px at 74.76% 14.1684%, #dd669b 0%, #5e25a8 100%); background-size: cover;
+
+			@include respond-to(xs) {
+				padding-bottom: 60px;
+			}
 		}
 
 		&-discount {
@@ -140,11 +171,19 @@
 			padding: 79px 0 81px;
 			background: $white;
 			// background: linear-gradient(225deg, #816bff 0%, #4956c6 52%, #4956c6 52%, #144290 100%);
+
+			@include respond-to(xs) {
+				padding: 60px 0;
+			}
 		}
 
 		&-goals {
 			padding: 15px 0 60px;
 			background: #fafafa;
+
+			@include respond-to(xs) {
+				padding-top: 45px;
+			}
 		}
 
 		&-team {
@@ -162,6 +201,10 @@
 		&-massmedia {
 			padding: 70px 0 81px;
 			background: $white;
+
+			@include respond-to(xs) {
+				padding: 60px 0;
+			}
 		}
 
 		&-subscription {

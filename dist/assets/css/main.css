@@ -4576,6 +4576,7 @@ fieldset {
   top: 0;
   width: 100%;
   height: 100%;
+  pointer-events: none;
   opacity: 0.4; }
 
 #subscribe-particles {
@@ -4584,6 +4585,7 @@ fieldset {
   top: 0;
   width: 100%;
   height: 100%;
+  pointer-events: none;
   opacity: 0.4; }
 
 /*********************************/
@@ -5894,6 +5896,8 @@ fieldset {
       font-size: 24px;
       line-height: 31px;
       margin-bottom: 31px; }
+      .for-clients section > div p:last-child {
+        margin-bottom: 0; }
       @media (max-width: 991px) {
         .for-clients section > div p {
           font-size: 20px;
@@ -6323,6 +6327,14 @@ fieldset {
     font-size: 48px;
     line-height: 52px;
     text-align: center; }
+    @media (max-width: 767px) {
+      .scheme > header h2 {
+        font-size: 42px;
+        line-height: 54px; } }
+    @media (max-width: 480px) {
+      .scheme > header h2 {
+        font-size: 28px;
+        line-height: 38px; } }
 
 .scheme > section ul.tabs {
   display: -webkit-box;
@@ -7697,7 +7709,10 @@ fieldset {
   -ms-flex-align: start;
   align-items: flex-start;
   padding-right: 133px; }
-  @media (max-width: 991px) {
+  @media (max-width: 1199px) {
+    .ico {
+      padding-right: 0; } }
+  @media (max-width: 767px) {
     .ico {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -7729,11 +7744,16 @@ fieldset {
     align-items: flex-end; }
     @media (max-width: 1199px) {
       .ico header {
-        width: 50%; } }
-    @media (max-width: 991px) {
+        width: 45%; } }
+    @media (max-width: 767px) {
       .ico header {
         width: 100%;
-        padding-top: 0; } }
+        padding-top: 0;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-bottom: 40px; } }
     @media (max-width: 480px) {
       .ico header {
         margin-bottom: 30px; } }
@@ -7751,7 +7771,7 @@ fieldset {
           left: 0; } }
       @media (max-width: 480px) {
         .ico header h2 {
-          font-size: 54px;
+          font-size: 50px;
           line-height: 66px; } }
     .ico header > p {
       color: white;
@@ -7766,6 +7786,9 @@ fieldset {
       @media (max-width: 1199px) {
         .ico header > p {
           margin-bottom: 60px; } }
+      @media (max-width: 767px) {
+        .ico header > p {
+          text-align: center; } }
       @media (max-width: 480px) {
         .ico header > p {
           font-size: 20px;
@@ -7795,23 +7818,31 @@ fieldset {
           -ms-flex-direction: column;
           flex-direction: column;
           margin-bottom: 30px; } }
-      @media (max-width: 991px) {
+      @media (max-width: 767px) {
         .ico header ul {
           -webkit-box-orient: horizontal;
           -webkit-box-direction: normal;
           -webkit-flex-direction: row;
           -ms-flex-direction: row;
-          flex-direction: row; } }
-      @media (max-width: 767px) {
+          flex-direction: row;
+          max-width: none;
+          width: 100%;
+          -webkit-box-align: start;
+          -webkit-align-items: flex-start;
+          -ms-flex-align: start;
+          align-items: flex-start; } }
+      @media (max-width: 480px) {
         .ico header ul {
           -webkit-box-orient: vertical;
           -webkit-box-direction: normal;
           -webkit-flex-direction: column;
           -ms-flex-direction: column;
-          flex-direction: column; } }
-      @media (max-width: 480px) {
-        .ico header ul {
-          margin-bottom: 20px; } }
+          flex-direction: column;
+          margin-bottom: 20px;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center; } }
       .ico header ul:last-child {
         margin-bottom: 0; }
         .ico header ul:last-child li:first-child {
@@ -7840,15 +7871,18 @@ fieldset {
         @media (max-width: 1199px) {
           .ico header ul li {
             margin-bottom: 30px; } }
-        @media (max-width: 991px) {
-          .ico header ul li {
-            margin-bottom: 0; } }
         @media (max-width: 767px) {
           .ico header ul li {
-            margin-bottom: 30px; } }
+            margin-bottom: 0;
+            width: 50%;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center; } }
         @media (max-width: 480px) {
           .ico header ul li {
-            margin-bottom: 20px; } }
+            margin-bottom: 20px;
+            width: 100%; } }
         .ico header ul li:last-child {
           margin-bottom: 0; }
         .ico header ul li p {
@@ -7858,16 +7892,26 @@ fieldset {
           line-height: 33px;
           text-align: right;
           margin-bottom: 9px; }
+          @media (max-width: 767px) {
+            .ico header ul li p {
+              text-align: center; } }
           @media (max-width: 480px) {
             .ico header ul li p {
-              font-size: 34px;
-              line-height: 40px; } }
+              font-size: 30px;
+              line-height: 38px; } }
         .ico header ul li span {
           color: white;
           font-family: museosanscyrl-300, sans-serif;
           font-size: 24px;
           line-height: 29px;
           text-align: right; }
+          @media (max-width: 767px) {
+            .ico header ul li span {
+              text-align: center; } }
+          @media (max-width: 480px) {
+            .ico header ul li span {
+              font-size: 20px;
+              line-height: 26px; } }
   .ico section {
     position: relative; }
     @media (max-width: 1199px) {
@@ -7876,7 +7920,11 @@ fieldset {
         right: 0; } }
     @media (max-width: 991px) {
       .ico section {
-        width: auto; } }
+        width: 350px; } }
+    @media (max-width: 767px) {
+      .ico section {
+        width: 100%;
+        max-width: 555px; } }
     @media (max-width: 585px) {
       .ico section {
         display: -webkit-box;
@@ -7889,9 +7937,12 @@ fieldset {
     .ico section figure {
       -webkit-transition: opacity 0.4s 0.9s ease-out;
       transition: opacity 0.4s 0.9s ease-out; }
-      @media (max-width: 767px) {
+      @media (max-width: 991px) {
         .ico section figure {
           width: 100%; } }
+      @media (max-width: 585px) {
+        .ico section figure {
+          margin-bottom: 20px; } }
       @media (max-width: 1199px) {
         .ico section figure img {
           position: relative;
@@ -7899,7 +7950,7 @@ fieldset {
           -webkit-transform: translateX(-50%);
           -ms-transform: translateX(-50%);
           transform: translateX(-50%); } }
-      @media (max-width: 767px) {
+      @media (max-width: 991px) {
         .ico section figure img {
           width: 100%;
           max-width: 555px; } }
@@ -7945,6 +7996,10 @@ fieldset {
         font-size: 82px;
         line-height: 98px;
         margin-bottom: 4px; }
+        @media (max-width: 991px) {
+          .ico section .main p {
+            font-size: 70px;
+            line-height: 84px; } }
         @media (max-width: 480px) {
           .ico section .main p {
             font-size: 62px;
@@ -7952,6 +8007,9 @@ fieldset {
       .ico section .main span {
         font-family: museosanscyrl-300, sans-serif;
         font-size: 24px; }
+        @media (max-width: 1199px) {
+          .ico section .main span {
+            font-size: 20px; } }
     .ico section .command {
       right: 5px;
       bottom: -7px;
@@ -7964,7 +8022,12 @@ fieldset {
           right: 25px; } }
       @media (max-width: 991px) {
         .ico section .command {
-          right: 60px; } }
+          right: -10px;
+          bottom: -20px; } }
+      @media (max-width: 767px) {
+        .ico section .command {
+          right: 25px;
+          bottom: 0; } }
       @media (max-width: 585px) {
         .ico section .command {
           position: relative;
@@ -7984,7 +8047,7 @@ fieldset {
         position: absolute;
         left: 0;
         top: 13px;
-        background: #9b5eff;
+        background: #0089ff;
         border: solid 2px white;
         -webkit-border-radius: 50%;
         border-radius: 50%; }
@@ -8008,6 +8071,9 @@ fieldset {
           right: 175px; } }
       @media (max-width: 991px) {
         .ico section .bounty {
+          right: 120px; } }
+      @media (max-width: 767px) {
+        .ico section .bounty {
           right: 210px; } }
       @media (max-width: 585px) {
         .ico section .bounty {
@@ -8028,7 +8094,7 @@ fieldset {
         position: absolute;
         left: 0;
         top: 13px;
-        background: #ffbb29;
+        background: #11d7ed;
         border: solid 2px white;
         -webkit-border-radius: 50%;
         border-radius: 50%; }
@@ -8047,6 +8113,10 @@ fieldset {
   font-size: 38px;
   line-height: 45px;
   margin-bottom: 80px; }
+  @media (max-width: 767px) {
+    .discount h4 {
+      font-size: 30px;
+      line-height: 36px; } }
 
 .discount figure figcaption li {
   color: black; }
@@ -8226,8 +8296,7 @@ fieldset {
       -ms-transform: scale(1);
       transform: scale(1);
       left: 0;
-      width: 100%;
-      margin-bottom: 50px; } }
+      width: 100%; } }
   .road-map figure:before {
     content: none;
     display: block;
@@ -8239,7 +8308,8 @@ fieldset {
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
-    background: rgba(255, 255, 255, 0.5); }
+    background: -webkit-gradient(linear, left top, left bottom, from(#722dac), to(#d9649c));
+    background: linear-gradient(to bottom, #722dac 0%, #d9649c 100%); }
     @media (max-width: 767px) {
       .road-map figure:before {
         content: ''; } }
@@ -8692,7 +8762,7 @@ fieldset {
       width: 406px; }
       @media (max-width: 480px) {
         .goals > ul > li span {
-          font-size: 21px;
+          font-size: 30px;
           line-height: 42px;
           margin-bottom: 5px; } }
     .goals > ul > li p {
@@ -8786,6 +8856,10 @@ fieldset {
         -webkit-align-items: flex-start;
         -ms-flex-align: start;
         align-items: flex-start; }
+        @media (max-width: 991px) {
+          .goals > ul > li div:first-child {
+            padding-left: 60px;
+            width: 280px; } }
         @media (max-width: 767px) {
           .goals > ul > li div:first-child {
             padding-left: 0;
@@ -8807,9 +8881,6 @@ fieldset {
           z-index: 1;
           background: url("../img/icon-plus.svg") center center no-repeat;
           background-size: cover; }
-          @media (max-width: 767px) {
-            .goals > ul > li div:first-child p:before {
-              content: ''; } }
           @media (max-width: 480px) {
             .goals > ul > li div:first-child p:before {
               content: none; } }
@@ -8822,22 +8893,18 @@ fieldset {
           position: absolute;
           right: 0;
           top: 15px;
-          background: white;
-          opacity: 0.3; }
-          @media (max-width: 767px) {
-            .goals > ul > li div:first-child p:after {
-              content: ''; } }
+          background: #515151;
+          opacity: 0.1; }
           @media (max-width: 480px) {
             .goals > ul > li div:first-child p:after {
-              display: block;
+              content: '';
               width: 100%;
               height: 2px;
               position: absolute;
               top: auto;
               bottom: -4px;
               left: 0;
-              right: auto;
-              background: rgba(255, 255, 255, 0.45); } }
+              right: auto; } }
       @media (max-width: 480px) {
         .goals > ul > li div:last-child {
           margin-top: -6px; } }
@@ -8860,6 +8927,10 @@ fieldset {
             left: 40px; } }
         @media (max-width: 767px) {
           .goals > ul > li div:last-child:before {
+            left: 220px;
+            top: -41px; } }
+        @media (max-width: 480px) {
+          .goals > ul > li div:last-child:before {
             content: none; } }
       .goals > ul > li div:last-child:after {
         content: '';
@@ -8875,6 +8946,12 @@ fieldset {
           .goals > ul > li div:last-child:after {
             width: 100%; } }
         @media (max-width: 767px) {
+          .goals > ul > li div:last-child:after {
+            width: -webkit-calc(100% - 200px);
+            width: calc(100% - 200px);
+            left: 200px;
+            top: -28px; } }
+        @media (max-width: 480px) {
           .goals > ul > li div:last-child:after {
             content: none; } }
   .goals > p {
@@ -8924,13 +9001,17 @@ fieldset {
     font-size: 38px;
     line-height: 72px;
     margin-bottom: 4px; }
+    @media (max-width: 480px) {
+      .team hgroup h2 {
+        line-height: 50px; } }
     .team hgroup h2:last-child {
       margin-bottom: 0; }
   .team hgroup h3 {
     color: #000000;
     font-family: museosanscyrl-300, sans-serif;
     font-size: 24px;
-    line-height: 19px; }
+    line-height: 28px;
+    text-align: center; }
 
 .team > ul {
   display: -webkit-box;
@@ -8951,6 +9032,9 @@ fieldset {
   margin-bottom: 23px;
   position: relative;
   z-index: 2; }
+  @media (max-width: 480px) {
+    .team > ul {
+      margin-bottom: 40px; } }
   .team > ul:last-child {
     margin-bottom: 0; }
   .team > ul:hover {
@@ -8960,11 +9044,26 @@ fieldset {
     margin-bottom: 7px;
     height: 283px;
     position: relative; }
+    @media (max-width: 991px) {
+      .team > ul > li {
+        width: 25%; } }
+    @media (max-width: 767px) {
+      .team > ul > li {
+        width: 33.33333%; } }
+    @media (max-width: 620px) {
+      .team > ul > li {
+        width: 50%; } }
+    @media (max-width: 480px) {
+      .team > ul > li {
+        width: 100%; } }
     .team > ul > li article {
       padding: 15px 18px 20px;
+      position: relative;
+      z-index: 1;
       -webkit-border-radius: 10px;
       border-radius: 10px; }
       .team > ul > li article.hovered {
+        z-index: 2;
         background: white;
         -webkit-box-shadow: 0 2px 34px rgba(0, 0, 0, 0.1);
         box-shadow: 0 2px 34px rgba(0, 0, 0, 0.1); }
@@ -9024,6 +9123,9 @@ fieldset {
 .news .owl-stage {
   padding-top: 20px;
   padding-bottom: 20px; }
+
+.news .owl-dots {
+  display: none; }
 
 .news > header {
   padding-left: 14px;
@@ -9126,20 +9228,9 @@ fieldset {
   -ms-flex-pack: center;
   justify-content: center;
   margin-bottom: 35px; }
-  @media (max-width: 767px) {
-    .massmedia ul {
-      margin: 0 -15px 35px; } }
   .massmedia ul li {
-    text-align: center; }
-    @media (max-width: 991px) {
-      .massmedia ul li {
-        width: 25%; } }
-    @media (max-width: 640px) {
-      .massmedia ul li {
-        width: 33.33333%; } }
-    @media (max-width: 480px) {
-      .massmedia ul li {
-        width: 50%; } }
+    text-align: center;
+    width: 100%; }
     .massmedia ul li a {
       display: inline-block; }
     .massmedia ul li img {
@@ -9594,16 +9685,28 @@ fieldset {
     background-size: cover; }
   .app .wr-about {
     padding: 92px 0 82px; }
+    @media (max-width: 480px) {
+      .app .wr-about {
+        padding-bottom: 60px; } }
   .app .wr-for-clients {
     padding: 110px 0 75px;
     background: #fbfbfe; }
+    @media (max-width: 480px) {
+      .app .wr-for-clients {
+        padding: 60px 0; } }
   .app .wr-benefits {
     padding: 82px 0 111px; }
+    @media (max-width: 480px) {
+      .app .wr-benefits {
+        padding: 60px 0; } }
   .app .wr-why-need {
     padding: 38px 0 58px;
     background: radial-gradient(circle 1200px at -14.27% 3.6643%, #dd669b 0%, #553d97 100%); }
   .app .wr-problems-solutions {
     padding: 102px 0 65px; }
+    @media (max-width: 480px) {
+      .app .wr-problems-solutions {
+        padding: 60px 0; } }
   .app .wr-scheme {
     padding: 68px 0 70px;
     background: #fbfbfe; }
@@ -9618,6 +9721,9 @@ fieldset {
       .app .wr-worldmap {
         padding: 570px 0 160px;
         margin-top: -560px; } }
+    @media (max-width: 480px) {
+      .app .wr-worldmap {
+        padding-bottom: 80px; } }
     .app .wr-worldmap:before {
       content: '';
       display: block;
@@ -9635,13 +9741,22 @@ fieldset {
     padding: 27px 0 74px;
     background: -webkit-gradient(linear, left top, left bottom, from(#f8f8ff), to(#fbfbfe));
     background: linear-gradient(180deg, #f8f8ff 0%, #fbfbfe 100%); }
+    @media (max-width: 480px) {
+      .app .wr-mvp {
+        padding-bottom: 60px; } }
   .app .wr-testimonials {
     padding: 96px 0; }
+    @media (max-width: 480px) {
+      .app .wr-testimonials {
+        padding: 60px 0; } }
   .app .wr-ico {
     padding: 71px 0 103px;
     position: relative;
     background-image: radial-gradient(circle 1005px at 74.76% 14.1684%, #dd669b 0%, #5e25a8 100%);
     background-size: cover; }
+    @media (max-width: 480px) {
+      .app .wr-ico {
+        padding-bottom: 60px; } }
   .app .wr-discount {
     padding: 86px 0 78px;
     background: white; }
@@ -9666,9 +9781,15 @@ fieldset {
   .app .wr-road-map {
     padding: 79px 0 81px;
     background: white; }
+    @media (max-width: 480px) {
+      .app .wr-road-map {
+        padding: 60px 0; } }
   .app .wr-goals {
     padding: 15px 0 60px;
     background: #fafafa; }
+    @media (max-width: 480px) {
+      .app .wr-goals {
+        padding-top: 45px; } }
   .app .wr-team {
     padding: 62px 0 40px;
     background: white; }
@@ -9680,6 +9801,9 @@ fieldset {
   .app .wr-massmedia {
     padding: 70px 0 81px;
     background: white; }
+    @media (max-width: 480px) {
+      .app .wr-massmedia {
+        padding: 60px 0; } }
   .app .wr-subscription {
     padding: 45px 0 49px;
     position: relative;
