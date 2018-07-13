@@ -38,7 +38,9 @@
 
 		&-intro {
 			padding: 128px 0 0; position: relative;
-			background: radial-gradient(circle 700px at 68.53% 28%, #dd669b 0%, #5d25a8 100%);
+			// background: radial-gradient(circle 700px at 68.53% 28%, #dd669b 0%, #5d25a8 100%);
+			background: url('../img/main.png') center center no-repeat;
+			background-size: cover;
 		}
 
 		&-about {

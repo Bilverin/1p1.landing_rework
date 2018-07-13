@@ -1150,9 +1150,8 @@
 		}
 
 		img {
-			@include respond-to(lg) {
-				width: 100%;
-			}
+			width: 100%;
+			
 			@include respond-to(md) {
 				width: 480px;
 			}
@@ -2275,9 +2274,7 @@
 				padding-left: 18px;
 
 				img {
-					@include respond-to(lg) {
-						width: 100%;
-					}
+					width: 100%;
 				}
 			}
 		}

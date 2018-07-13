@@ -6107,12 +6107,11 @@ fieldset {
     @media (max-width: 767px) {
       .why-need figure {
         display: none; } }
-    @media (max-width: 1199px) {
-      .why-need figure img {
-        width: 100%; } }
-    @media (max-width: 991px) {
-      .why-need figure img {
-        width: 480px; } }
+    .why-need figure img {
+      width: 100%; }
+      @media (max-width: 991px) {
+        .why-need figure img {
+          width: 480px; } }
   .why-need section {
     width: 580px;
     -webkit-flex-shrink: 0;
@@ -7492,9 +7491,8 @@ fieldset {
     margin-bottom: 12px; }
     .mvp-cba header figure {
       padding-left: 18px; }
-      @media (max-width: 1199px) {
-        .mvp-cba header figure img {
-          width: 100%; } }
+      .mvp-cba header figure img {
+        width: 100%; }
   .mvp-cba section {
     margin-bottom: 40px; }
     .mvp-cba section p {
@@ -9592,7 +9590,8 @@ fieldset {
   .app .wr-intro {
     padding: 128px 0 0;
     position: relative;
-    background: radial-gradient(circle 700px at 68.53% 28%, #dd669b 0%, #5d25a8 100%); }
+    background: url("../img/main.png") center center no-repeat;
+    background-size: cover; }
   .app .wr-about {
     padding: 92px 0 82px; }
   .app .wr-for-clients {
