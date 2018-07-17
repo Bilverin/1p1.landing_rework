@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="65px" height="65px" viewBox="0 0 65 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="55px" height="55px" viewBox="0 0 55 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
     <title>Group 9</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="ICO2018-4-01" transform="translate(-817.000000, -484.000000)">
-            <g id="Group-62" transform="translate(818.000000, 485.000000)">
-                <g id="Group-9">
-                    <circle id="Oval-8" stroke="#FFFFFF" stroke-width="2" cx="31.5" cy="31.5" r="31.5"></circle>
-                    <path d="M40.5948963,33.4381035 L28.3215602,40.6612016 C27.3696122,41.2214415 26.1437417,40.9038995 25.5835017,39.9519515 C25.4025681,39.6445129 25.307156,39.2942761 25.307156,38.9375473 L25.307156,24.4913512 C25.307156,23.3867817 26.2025865,22.4913512 27.307156,22.4913512 C27.6638848,22.4913512 28.0141216,22.5867633 28.3215602,22.7676969 L40.5948963,29.990795 C41.5468443,30.5510349 41.8643863,31.7769055 41.3041464,32.7288535 C41.1318135,33.0216778 40.8877206,33.2657707 40.5948963,33.4381035 Z" id="Triangle" fill="#FFFFFF"></path>
+        <g id="ICO2018-5-01" transform="translate(-807.000000, -484.000000)">
+            <g id="Group-62" transform="translate(808.000000, 483.000000)">
+                <g id="Group-9" transform="translate(0.000000, 2.000000)">
+                    <circle id="Oval-8" stroke="#FFFFFF" stroke-width="2" cx="26.5" cy="26.5" r="26.5"></circle>
+                    <path d="M33.6863735,28.404064 L24.3045513,33.9254496 C23.3526033,34.4856896 22.1267328,34.1681475 21.5664928,33.2161995 C21.3855592,32.9087609 21.2901471,32.5585242 21.2901471,32.2017953 L21.2901471,21.1590241 C21.2901471,20.0544546 22.1855776,19.1590241 23.2901471,19.1590241 C23.6468759,19.1590241 23.9971127,19.2544362 24.3045513,19.4353698 L33.6863735,24.9567554 C34.6383215,25.5169954 34.9558636,26.7428659 34.3956236,27.6948139 C34.2232908,27.9876383 33.9791979,28.2317311 33.6863735,28.404064 Z" id="Triangle" fill="#FFFFFF"></path>
                 </g>
             </g>
         </g>

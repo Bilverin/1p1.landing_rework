@@ -121,7 +121,7 @@ $(document).ready(function() {
 	});
 
 	// owl carousel
-	$('.owl-carousel:not(.carousel-massmedia, .carousel-testimonials, .owl-news, .owl-media)').owlCarousel({
+	$('.owl-carousel:not(.carousel-massmedia, .carousel-testimonials, .owl-news, .owl-media, .owl-partners)').owlCarousel({
 		responsive: {
 			320: {
 				items: 2
@@ -136,6 +136,11 @@ $(document).ready(function() {
 				items: 6
 			}
 		}
+	});
+
+	// partners carousel
+	$('.owl-partners').owlCarousel({
+		autoWidth: true
 	});
 
 	// news carousel
@@ -246,11 +251,11 @@ $(document).ready(function() {
 	});
 
 	// scroll to top
-	$('.to-top').click(function(e) {
-		e.preventDefault();
+	// $('.to-top').click(function(e) {
+	// 	e.preventDefault();
 		
-		$('html, body').animate({scrollTop: 0}, 500);
-	})
+	// 	$('html, body').animate({scrollTop: 0}, 500);
+	// })
 
 	// to top hide/show
 	var introScreenHeight = $('.wr-intro').outerHeight(),
@@ -279,17 +284,17 @@ $(document).ready(function() {
 	}
 
 	// partners switch
-	var slideWidth = 0;
-	$('.js-partners > div').click(function(e) {
-		var this_ = $(this);
-		if(!$(this).hasClass('active')) {
+	// var slideWidth = 0;
+	// $('.js-partners > div').click(function(e) {
+	// 	var this_ = $(this);
+	// 	if(!$(this).hasClass('active')) {
 
-			$('.js-partners').toggleClass('first second');
+	// 		$('.js-partners').toggleClass('first second');
 
-			$('.js-partners > div.active').removeClass('active');
-			this_.addClass('active');
-		}
-	});
+	// 		$('.js-partners > div.active').removeClass('active');
+	// 		this_.addClass('active');
+	// 	}
+	// });
 
 	if($('a.btn, a.btn-gradient, a.btn-transparent').hasClass('js-scrollTo')) {
 		$('.js-scrollTo').click(function(e){
@@ -300,6 +305,21 @@ $(document).ready(function() {
 		});
 	}
 
+	// partners item width on mobile
+	if($(window).width() < 768) {
+		$('.wr-partners .partners-item').css('width', $(window).width() - 30)
+	} else {
+		$('.wr-partners .partners-item').css('width', '');
+	}
+
+});
+
+$(window).resize(function() {
+	if($(window).width() < 768) {
+		$('.wr-partners .partners-item').css('width', $(window).width() - 30)
+	} else {
+		$('.wr-partners .partners-item').css('width', '');
+	}
 });
 
 $(window).scroll(function () {
@@ -363,10 +383,9 @@ $(document).mouseup(function (e) {
 particlesJS("ico-particles", {
 	"particles": {
 		"number": {
-			"value": 200,
+			"value": 100,
 			"density": {
-				"enable": true,
-				"value_area": 800
+				"enable": false
 			}
 		},
 		"color": {
@@ -473,10 +492,9 @@ particlesJS("ico-particles", {
 particlesJS("subscribe-particles", {
 	"particles": {
 		"number": {
-			"value": 200,
+			"value": 50,
 			"density": {
-				"enable": true,
-				"value_area": 800
+				"enable": false
 			}
 		},
 		"color": {
@@ -490,11 +508,6 @@ particlesJS("subscribe-particles", {
 			},
 			"polygon": {
 				"nb_sides": 5
-			},
-			"image": {
-				"src": "img/github.svg",
-				"width": 100,
-				"height": 100
 			}
 		},
 		"opacity": {
@@ -580,20 +593,3 @@ particlesJS("subscribe-particles", {
 	},
 	"retina_detect": true
 });
-
-
-/* ---- stats.js config ---- */
-
-var count_particles, stat, update;
-stat = new Stats;
-stat.setMode(0);
-stat.domElement.style.position = 'absolute';
-stat.domElement.style.left = '0px';
-stat.domElement.style.top = '0px';
-document.body.appendChild(stat.domElement);
-update = function() {
-  stat.begin();
-  stat.end();
-  requestAnimationFrame(update);
-};
-requestAnimationFrame(update);

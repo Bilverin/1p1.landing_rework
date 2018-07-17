@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="65px" height="65px" viewBox="0 0 65 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="39px" height="39px" viewBox="0 0 39 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
     <title>Group 9</title>
     <desc>Created with Sketch.</desc>
@@ -8,18 +8,16 @@
             <stop stop-color="#DD669B" offset="0%"></stop>
             <stop stop-color="#6923C5" offset="100%"></stop>
         </radialGradient>
-        <radialGradient cx="-30.71675%" cy="-63.30888%" fx="-30.71675%" fy="-63.30888%" r="389.870956%" gradientTransform="translate(-0.307168,-0.633089),scale(1.000000,0.875087),rotate(85.481156),translate(0.307168,0.633089)" id="radialGradient-2">
+        <radialGradient cx="-30.71675%" cy="-63.30888%" fx="-30.71675%" fy="-63.30888%" r="385.53063%" gradientTransform="translate(-0.307168,-0.633089),scale(1.000000,0.885002),rotate(85.430175),translate(0.307168,0.633089)" id="radialGradient-2">
             <stop stop-color="#DD669B" offset="0%"></stop>
             <stop stop-color="#6923C5" offset="100%"></stop>
         </radialGradient>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="ICO2018-4-01" transform="translate(-138.000000, -2101.000000)">
-            <g id="Group-62" transform="translate(139.000000, 2102.000000)">
-                <g id="Group-9">
-                    <circle id="Oval-8" stroke="url(#radialGradient-1)" stroke-width="2" cx="31.5" cy="31.5" r="31.5"></circle>
-                    <path d="M43.9712396,32.7235577 L27.3215602,42.5222193 C26.3696122,43.0824592 25.1437417,42.7649172 24.5835017,41.8129692 C24.4025681,41.5055306 24.307156,41.1552938 24.307156,40.798565 L24.307156,21.2012419 C24.307156,20.0966724 25.2025865,19.2012419 26.307156,19.2012419 C26.6638848,19.2012419 27.0141216,19.296654 27.3215602,19.4775876 L43.9712396,29.2762491 C44.9231876,29.8364891 45.2407296,31.0623597 44.6804897,32.0143076 C44.5081568,32.307132 44.264064,32.5512249 43.9712396,32.7235577 Z" id="Triangle" fill="url(#radialGradient-2)"></path>
-                </g>
+        <g id="ICO2018-5-01" transform="translate(-182.000000, -1963.000000)">
+            <g id="Group-9" transform="translate(183.000000, 1964.000000)">
+                <circle id="Oval-8" stroke="url(#radialGradient-1)" stroke-width="2" cx="18.5" cy="18.5" r="18.5"></circle>
+                <path d="M24.2757825,19.7142555 L17.0300506,24.0677835 C16.0832413,24.6366648 14.8545313,24.3302935 14.28565,23.3834842 C14.0987436,23.0724091 14,22.7163409 14,22.3534336 L14,13.6463776 C14,12.5418081 14.8954305,11.6463776 16,11.6463776 C16.3629073,11.6463776 16.7189756,11.7451212 17.0300506,11.9320276 L24.2757825,16.2855556 C25.2225918,16.8544369 25.5289631,18.0831468 24.9600818,19.0299562 C24.791439,19.3106344 24.5564607,19.5456127 24.2757825,19.7142555 Z" id="Triangle" fill="url(#radialGradient-2)"></path>
             </g>
         </g>
     </g>

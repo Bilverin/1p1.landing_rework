@@ -14,12 +14,6 @@
 			@include respond-to(lg) {
 				padding: 0 15px;
 			}
-			@include respond-to(md) {
-				padding: 0 30px;
-			}
-			@include respond-to(sm) {
-				padding: 0 15px;
-			}
 
 			&:before {
 				content: '';
@@ -52,7 +46,7 @@
 		}
 
 		&-for-clients {
-			padding: 110px 0 75px;
+			padding: 63px 0 75px;
 			background: #fbfbfe;
 
 			@include respond-to(xs) {
@@ -61,7 +55,7 @@
 		}
 
 		&-benefits {
-			padding: 82px 0 111px;
+			padding: 66px 0 81px;
 
 			@include respond-to(xs) {
 				padding: 60px 0;
@@ -69,12 +63,16 @@
 		}
 
 		&-why-need {
-			padding: 38px 0 58px;
-			background: radial-gradient(circle 1200px at -14.27% 3.6643%, #dd669b 0%, #553d97 100%);
+			padding: 14px 0 5px;
+			background: radial-gradient(circle 1126px at -14.27% 3.5438%, #dd669b 0%, #553d97 100%);
+
+			@include respond-to(lg) {
+				padding: 60px 0;
+			}
 		}
 
 		&-problems-solutions {
-			padding: 102px 0 65px;
+			padding: 92px 0 65px;
 
 			@include respond-to(xs) {
 				padding: 60px 0;
@@ -82,12 +80,12 @@
 		}
 
 		&-scheme {
-			padding: 68px 0 70px;
+			padding: 78px 0 70px;
 			background: #fbfbfe;
 		}
 
 		&-market {
-			padding: 66px 0 20px;
+			padding: 44px 0 20px;
 		}
 
 		&-worldmap {
@@ -103,7 +101,7 @@
 
 			&:before {
 				content: '';
-				display: block; width: 1436px; height: 693px; position: absolute; right: -136px; bottom: -54px; z-index: 1;
+				display: block; width: 1436px; height: 693px; position: absolute; right: -136px; bottom: -44px; z-index: 1;
 				background: url('../img/map.svg') center center no-repeat;
 
 				@include respond-to(lg) {
@@ -124,7 +122,7 @@
 		}
 
 		&-mvp {
-			padding: 27px 0 74px;
+			padding: 22px 0 60px;
 			background: linear-gradient(180deg, #f8f8ff 0%, #fbfbfe 100%);
 
 			@include respond-to(xs) {
@@ -133,7 +131,7 @@
 		}
 
 		&-testimonials {
-			padding: 96px 0;
+			padding: 96px 0 76px;
 
 			@include respond-to(xs) {
 				padding: 60px 0;
@@ -175,17 +173,16 @@
 		}
 
 		&-road-map {
-			padding: 79px 0 81px;
+			padding: 76px 0 105px;
 			background: $white;
-			// background: linear-gradient(225deg, #816bff 0%, #4956c6 52%, #4956c6 52%, #144290 100%);
 
 			@include respond-to(xs) {
-				padding: 60px 0;
+				padding: 60px 0 120px;
 			}
 		}
 
 		&-goals {
-			padding: 15px 0 60px;
+			padding: 64px 0 60px;
 			background: #fafafa;
 
 			@include respond-to(xs) {
@@ -194,7 +191,7 @@
 		}
 
 		&-team {
-			padding: 62px 0 40px;
+			padding: 45px 0 40px;
 			background: $white;
 			@include respond-to(sm) {
 				padding: 60px 0;

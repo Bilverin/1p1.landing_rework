@@ -6,7 +6,7 @@
       display: inline-block;
       background-image: url("../img/sprite.svg");
       background-repeat: no-repeat;
-      background-size: 6.5em 41.3em;
+      background-size: 5.5em 39.5em;
 
       .no-svg & {
         background-image: url("../img/sprite.png");
@@ -85,8 +85,8 @@
 .icon.how_chek_works {
   &:before {
       background-position: 0em -12.3em;
-      width: 6.5em;
-      height: 6.5em;
+      width: 3.9em;
+      height: 3.9em;
     }
   }
 
@@ -97,7 +97,7 @@
 
 .icon.illigal_of_crypto {
   &:before {
-      background-position: 0em -18.8em;
+      background-position: 0em -16.2em;
       width: 3.6em;
       height: 3.7em;
     }
@@ -110,7 +110,7 @@
 
 .icon.limited_opportunites {
   &:before {
-      background-position: 0em -22.5em;
+      background-position: 0em -19.9em;
       width: 2.9em;
       height: 2.6em;
     }
@@ -123,7 +123,7 @@
 
 .icon.loyality_system {
   &:before {
-      background-position: 0em -25.1em;
+      background-position: 0em -22.5em;
       width: 3.5em;
       height: 3.6em;
     }
@@ -134,9 +134,22 @@
   }
 
 
+.icon.mail-ico {
+  &:before {
+      background-position: 0em -26.1em;
+      width: 2.1em;
+      height: 2.2em;
+    }
+  }
+
+  @mixin icon-mail-ico(){
+    @extend .mail-ico;
+  }
+
+
 .icon.more_then_150k {
   &:before {
-      background-position: 0em -28.7em;
+      background-position: 0em -28.3em;
       width: 3.2em;
       height: 3.1em;
     }
@@ -149,9 +162,9 @@
 
 .icon.play {
   &:before {
-      background-position: 0em -31.8em;
-      width: 6.5em;
-      height: 6.5em;
+      background-position: 0em -31.4em;
+      width: 5.5em;
+      height: 5.5em;
     }
   }
 
@@ -162,9 +175,9 @@
 
 .icon.whyblockchain {
   &:before {
-      background-position: 0em -38.3em;
-      width: 2.7em;
-      height: 3em;
+      background-position: 0em -36.9em;
+      width: 3.5em;
+      height: 2.6em;
     }
   }
 

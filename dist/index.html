@@ -49,7 +49,7 @@
 
 		<header class="wr-header">
 			<div class="header">
-				<a href="#" class="logo"></a>
+				<a href="/" class="logo"></a>
 				<nav>
 					<ul>
 						<li><a href="#whitepaper" class="">White paper</a></li>
@@ -84,30 +84,20 @@
 		<div class="mobile-menu">
 			<nav>
 				<ul>
-					<li>
-						<a href="#how_it_works" class="anchor">Как работает Chek</a>
-					</li>
-					<li>
-						<a href="#ico" class="anchor">Token Sale</a>
-					</li>
-					<li>
-						<a href="#roadmap" class="anchor">Дорожная карта</a>
-					</li>
-					<li>
-						<a href="#team" class="anchor">Команда</a>
-					</li>
-					<li>
-						<a href="#whitepaper" class="anchor">White paper</a>
-					</li>
-					<li>
-						<a href="/docs/One+One-Onepager-RU.pdf">Onepager</a>
-					</li>
-					<li>
+					<li><a href="#whitepaper" class="">White paper</a></li>
+					<li><a href="/docs/One+One-Onepager-RU.pdf">Onepager</a></li>
+					<li><a href="#roadmap" class="anchor">Roadmap</a></li>
+					<li><a href="#team" class="anchor">Team</a></li>
+					<li><a href="#" class="">GitHub</a></li>
+					<li><a href="#" class="">Presentation</a></li>
+					<li><a href="#" class="">Tokenomic</a></li>
+					<li><a href="#" class="">FAQ</a></li>
+					<!-- <li>
 						<div class="languages">
 							<a href="#" class="active">Ru</a>
 							<a href="#">En</a>
 						</div>
-					</li>
+					</li> -->
 				</ul>
 			</nav>
 		</div>
@@ -171,6 +161,11 @@
 									<i class="fab fa-medium"></i>
 								</a>
 							</li>
+							<li>
+								<a href="#subscription" class="js-scrollTo">
+									<i class="icon mail-ico"></i>
+								</a>
+							</li>
 						</ul>
 					</div>
 					<div class="intro-progress">
@@ -200,12 +195,18 @@
 								<a href="#" class="btn-gradient js-salePopup">Buy now</a>
 							</footer>
 						</div>
-						<a href="#" class="play_me js-videoPopup" data-bpopup="<iframe width='100%' height='315' src='https://www.youtube.com/embed/rvdRIoOcVME' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>">
-							<i class="icon play"></i>
-							<h4>How Chek works</h4>
-							<span>In 90 seconds</span>
-						</a>
-						<a href="#mvpready" class="btn-transparent js-scrollTo">mvp is ready</a>
+						<ul>
+							<li>
+								<a href="#" class="play_me js-videoPopup" data-bpopup="<iframe width='100%' height='315' src='https://www.youtube.com/embed/rvdRIoOcVME' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>">
+									<i class="icon play"></i>
+									<h4>How Chek works</h4>
+									<span>In 90 seconds</span>
+								</a>
+							</li>
+							<li>
+								<a href="#mvpready" class="btn-transparent js-scrollTo">mvp is ready</a>
+							</li>
+						</ul>
 					</div>
 					<div class="timeline-discount">
 						<h4>Discount from the base cost</h4>
@@ -241,12 +242,12 @@
 					</div>
 					<div class="intro-partners">
 						<ul>
-							<li><img src="assets/img/head-logo1.svg"></li>
-							<li><img src="assets/img/head-logo2.svg"></li>
-							<li><img src="assets/img/head-logo3.svg"></li>
-							<li><img src="assets/img/head-logo4.svg"></li>
-							<li><img src="assets/img/head-logo5.svg"></li>
-							<li><img src="assets/img/head-logo6.svg"></li>
+							<li><img src="assets/img/head-logo1.svg?v={{ ver }}"></li>
+							<li><img src="assets/img/head-logo2.svg?v={{ ver }}"></li>
+							<li><img src="assets/img/head-logo3.svg?v={{ ver }}"></li>
+							<li><img src="assets/img/head-logo4.svg?v={{ ver }}"></li>
+							<li><img src="assets/img/head-logo5.svg?v={{ ver }}"></li>
+							<li><img src="assets/img/head-logo6.svg?v={{ ver }}"></li>
 						</ul>
 					</div>
 				</div>
@@ -290,7 +291,7 @@
 								</div>
 							</a>
 							<div class="why-tooltip">
-								<span><i class="icon whyblockchain"></i>Why blockchain</span>
+								<span><i class="icon whyblockchain"></i>Why Blockchain</span>
 								<div>
 									<p>Blockchain is used:</p>
 									<ul>
@@ -363,10 +364,8 @@
 			<div class="container">
 
 				<div class="problems-solutions">
+					<h2>Problems that Chek solves</h2>
 					<ul class="problems">
-						<li>
-							<h2>Problems</h2>
-						</li>
 						<li>
 							<h3><i class="icon illigal_of_crypto"></i>Legal issues</h3>
 							<p>In many countries, the use of crypto currency for the purchase of goods and services is expressly prohibited.</p>
@@ -381,9 +380,6 @@
 						</li>
 					</ul>
 					<ul class="solutions">
-						<li>
-							<h2>Solutions</h2>
-						</li>
 						<li>
 							<h3><i class="icon loyality_system"></i>Loyalty systems</h3>
 							<p>Loyalty systems are completely legal in all jurisdictions and allow you to purchase goods and services at a significant discount. Unified loyalty point and the social component of loyalty give the system a capability for global coverage.</p>
@@ -546,9 +542,9 @@
 		<div class="wr-partners">
 			<div class="container">
 
-				<div class="partners js-partners first">
-					<div class="with-us active">
-						<h4>Already with us</h4>
+				<div class="partners owl-partners owl-carousel">
+					<div class="partners-item active">
+						<h4>Already joined</h4>
 						<ul>
 							<li><img src="assets/img/partner1.svg"></li>
 							<li><img src="assets/img/partner2.svg"></li>
@@ -563,8 +559,8 @@
 						</ul>
 						<a href="#"><i class="icon documents"></i>Documents</a>
 					</div>
-					<div class="perspective">
-						<h4>perspective</h4>
+					<div class="partners-item">
+						<h4>PROSPECTIVE</h4>
 						<ul>
 							<li><img src="assets/img/partner1.svg"></li>
 							<li><img src="assets/img/partner2.svg"></li>
@@ -615,9 +611,9 @@
 						<header>
 							<h2>MVP</h2>
 							<h3>The loyalty program is based on the partner networks of 2can company and Charity Blockchain Association</h3>
-							<!-- <ul>
+							<ul>
 								<li><a href="#" class="btn-gradient">Go to App Page</a></li>
-							</ul> -->
+							</ul>
 						</header>
 						<section>
 							<p><strong>2can</strong> is Eastern Europe’s leading mPOS provider.</p>
@@ -787,109 +783,68 @@
 			<div class="container">
 				<div class="road-map animate js-scrollAnimate">
 					<h2>Road Map</h2>
-					<figure>
-						<img src="assets/img/roadmap-line.svg">
-						<figcaption>
-							<ul>
-								<li class="checked">
-									<p>Creation of One⁺¹ <br>Marketplace</p>
-									<span>July 2017</span>
-									<!-- <img src="assets/img/roadmap-logo-one.svg"> -->
-								</li>
-								<li class="checked top">
-									<p>All donations are registered in Blockchain</p>
-									<span>October 2017</span>
-								</li>
-								<li class="checked">
-									<p>"Fighting Leukemia Foundation" - the first foundation in the world to begin publishing its financials on the blockchain</p>
-									<span>December 2017</span>
-								</li>
-								<li class="checked top">
-									<p>Creation of Charity Blockchain Association (CBA)</p>
-									<span>December 2017</span>
-									<!-- <img src="assets/img/roadmap-logo-CBA.svg"> -->
-								</li>
-								<li>
-									<p>Add 5 foundation to CBA and 30 business that will be accepting loyalty reward points</p>
-									<span>March 2018</span>
-								</li>
-								<li class="top">
-									<p>Launch of the loyaly program on 1+1 Marketplace</p>
-									<span>Appril 2018</span>
-								</li>
-								<li>
-									<p>Exchange of Rewards Points ⇔ CHK</p>
-									<span>April 2018</span>
-								</li>
-								<li>
-									<p>DAO</p>
-									<span>May 2018</span>
-								</li>
-								<li>
-									<p>20 foundations<br> and 50 businesses</p>
-									<span>May 2018</span>
-								</li>
-								<li>
-									<p>CBA Governance</p>
-									<span>June 2018</span>
-								</li>
-								<li>
-									<p>Loyalty API</p>
-									<span>July 2018</span>
-								</li>
-								<li class="top">
-									<p>Loyalty Engagement Services Core & API</p>
-									<span>July 2018</span>
-								</li>
-								<li>
-									<p>50 foundations and 100 businesses</p>
-									<span>July 2018</span>
-								</li>
-								<li class="top">
-									<!-- <img src="assets/img/roadmap-logo-getone.svg"> -->
-									<p>Getone Blockchain</p>
-									<span>August 2018</span>
-								</li>
-								<li>
-									<p>Rollout Own or White-labeled Marketplaces for CIS/Asia/US and other regions</p>
-									<span>August 2018</span>
-								</li>
-								<li>
-									<p>Clients for Loyalty Engagement (Chat bots, mobile, sms & email)</p>
-									<span>September 2018</span>
-								</li>
-								<li>
-									<p>Loyalty Processing</p>
-									<span>September 2018</span>
-								</li>
-								<li>
-									<p>POS Integration</p>
-									<span>October 2018</span>
-								</li>
-								<li class="top">
-									<p>Global Charity Database & Charity API</p>
-									<span>October 2018</span>
-								</li>
-								<li>
-									<p>Good Deeds Rating</p>
-									<span>October 2018</span>
-								</li>
-								<li class="top">
-									<p>News & Info Portal</p>
-									<span>November 2018</span>
-								</li>
-								<li>
-									<p>5+ countries<br>300+ foundations<br>1000+ businesses </p>
-									<span>January 2019</span>
-								</li>
-								<li class="top">
-									<p>Payment API</p>
-									<span>February 2019</span>
-								</li>
-							</ul>
-							<p>* Date of pilot launch of software solutions</p>
-						</figcaption>
-					</figure>
+					<div>
+						<div class="progress" style="height: 59%;"></div>
+						<ul>
+							<li>
+								<p>The creation of 2can company, 2can is recognized as the startup of the year</p>
+								<span>2012</span>
+							</li>
+							<li>
+								<p>2can received more than $15 million from venture funds</p>
+								<span>2016</span>
+							</li>
+							<li>
+								<p>Monthly turnover 2can & Ibox more than $100 million</p>
+								<span>2017</span>
+							</li>
+							<li>
+								<p>The creation of One+1  Marketplace within Charity Blockchain Association</p>
+								<span>2017</span>
+							</li>
+							<li>
+								<p>Charity Blockchain Association is recognized as the best social project of 2017</p>
+								<span>2017</span>
+							</li>
+							<li>
+								<p>Market leaders of mPOS acquiring 2can & Ibox and the world's first Charity Blockchain Association announce cooperation to create a new generation loyalty program</p>
+								<span>FEB 2018</span>
+							</li>
+							<li>
+								<p>2can is reached a breakeven point</p>
+								<span>JUL 2018</span>
+							</li>
+							<li>
+								<p>The creation of MVP</p>
+								<span>MAY 2018</span>
+							</li>
+							<li class="next">
+								<p>Beginning of Token Sale</p>
+								<span>SEP 2018</span>
+							</li>
+							<li>
+								<p>Creating an application for the management of Charity Blockchain Association</p>
+								<span>OCT 2018</span>
+							</li>
+							<li>
+								<p>Adding Chek token to the exchanges</p>
+								<span>DEC 2018</span>
+							</li>
+							<li>
+								<p>Creation of own blockchain network Getone</p>
+								<span>JAN 2019</span>
+							</li>
+							<li>
+								<p>Launching the loyalty program</p>
+								<span>FEB 2019</span>
+							</li>
+							<li>
+								<p>The number of users of the program is 15 million people</p>
+								<span>DEC 2019</span>
+							</li>
+						</ul>
+						<!-- <p>* Date of pilot launch of software solutions</p> -->
+					</div>
 				</div>
 			</div>
 		</div>
@@ -898,80 +853,40 @@
 			<div class="container">
 
 				<div class="goals animate js-scrollAnimate">
+					<h2>Finance plan</h2>
 					<ul>
 						<li>
-							<div></div>
 							<div>
-								<span>Finance plan</span>
-							</div>
-						</li>
-						<li>
-							<div>
-								<p>
-									$4<small>000 000</small><span>млн.</span>
-								</p>
+								<p>$4-8 mln</p>
 							</div>
 							<div>
 								<ul>
-									<li>Launch of the loyalty program on One⁺¹ Marketplace</li>
-									<li>Exchange of Rewards Points ⇔ CHK</li>
-									<li>DAO</li>
 									<li>Getone Blockchain</li>
-									<li>CBA Governance</li>
+									<li>The industrial version of the loyalty processing</li>
+									<li>POS integration of the loyalty processing</li>
+									<li>User clients for the loyalty system (Chatbots, mobile, SMS, and email) </li>
 								</ul>
 							</div>
 						</li>
 						<li>
 							<div>
-								<p>
-									$6<small>000 000</small><span>млн.</span>
-								</p>
+								<p>$8-15 mln</p>
 							</div>
 							<div>
 								<ul>
-									<li>Loyalty API</li>
-									<li>Loyalty Processing</li>
-									<li>Loyalty Engagement Services Core & API</li>
-									<li>Clients for Loyalty Engagement (Chatbots, mobile, sms & email)	</li>
-								</ul>
-							</div>
-						</li>
-						<li>
-							<div>
-								<p>
-									$10<small>000 000</small><span>млн.</span>
-								</p>
-							</div>
-							<div>
-								<ul>
-									<li>POS Integration	</li>
-									<li>Rollout Own or White-labeled Marketplaces for CIS/Asia/US and other regions</li>
-								</ul>
-							</div>
-						</li>
-						<li>
-							<div>
-								<p>
-									$15<small>000 000</small><span>млн.</span>
-								</p>
-							</div>
-							<div>
-								<ul>
-									<li>Global Charity Database & Charity API</li>
+									<li>Global Charity Database, Charity Services, APIs</li>
 									<li>Good Deeds Rating</li>
-									<li>News & Info Portal</li>
+									<li>Media Portal for Charity</li>
 								</ul>
 							</div>
 						</li>
 						<li>
 							<div>
-								<p>
-									$18<small>000 000</small><span>млн.</span>
-								</p>
+								<p>$15 mln</p>
 							</div>
 							<div>
 								<ul>
-									<li>Payment API</li>
+									<li>Charity Payment System</li>
 								</ul>
 							</div>
 						</li>
@@ -1508,7 +1423,7 @@
 			</div>
 		</div>
 
-		<div class="wr-subscription">
+		<div class="wr-subscription" id="subscription">
 			<div id="subscribe-particles"></div>
 			<div class="container">
 
@@ -1575,7 +1490,7 @@
 							</ul>
 						</div>
 						<div>
-							<h3>Поделиться</h3>
+							<h3>Share</h3>
 							<ul class="socials">
 								<li>
 									<a href="#" data-social="twitter">
@@ -1600,7 +1515,7 @@
 							</ul>
 						</div>
 						<div>
-							<h3>Сообщества</h3>
+							<h3>Communities</h3>
 							<ul>
 								<li>
 									<a href="https://t.me/oneplusone_en" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram-plane"></i>Telegram</a>
