@@ -261,9 +261,9 @@
 
 					ul {
 						&.dates-1 {
-							width: 460px; padding: 0 0 0 3px;
+							width: 443px; padding: 0 0 0 3px;
 							@include respond-to(lg) {
-								padding: 0 18px 0 11px;
+								padding: 0 0 0 11px; width: 358px;
 							}
 							@include respond-to(md) {
 								width: 19.6%; padding: 0 0px 0 2px;
@@ -276,9 +276,9 @@
 							}
 						}
 						&.dates-2 {
-							width: 700px; padding: 0 2px 0 0;
+							width: 687px; padding: 0 2px 0 0;
 							@include respond-to(lg) {
-								padding: 0 12px 0 20px;
+								padding: 0 12px 0 0; width: 552px;
 							}
 							@include respond-to(md) {
 								width: 74.1%; padding: 0 2px 0 0;
@@ -932,8 +932,12 @@
 				}
 			}
 
-			span {
-				text-decoration: underline;
+			a {
+				color: $black; text-decoration: underline;
+
+				&:hover {
+					text-decoration: none;
+				}
 			}
 		}
 	}
@@ -1176,8 +1180,12 @@
 						font-size: 18px; line-height: 25px;
 					}
 
-					span {
-						text-decoration: underline;
+					a {
+						color: $black; text-decoration: underline;
+
+						&:hover {
+							text-decoration: none;
+						}
 					}
 				}
 			}
@@ -1361,8 +1369,12 @@
 			p {
 				color: #000000; font-family: $ms-300; font-size: 18px; line-height: 28px;
 
-				span {
-					text-decoration: underline;
+				a {
+					color: $black; text-decoration: underline;
+
+					&:hover {
+						text-decoration: none;
+					}
 				}
 			}
 		}
@@ -2107,6 +2119,15 @@
 					@include respond-to(md) {
 						max-width: none;
 					}
+
+					br {
+						@include respond-to(lg) {
+							display: none;
+						}
+						@include respond-to(md) {
+							display: block;
+						}
+					}
 				}
 			}
 		}
@@ -2277,122 +2298,153 @@
 }
 
 .mvp {
-	padding-left: 41px; display: flex; align-items: flex-start; justify-content: space-between;
+	padding-left: 41px;
 
 	@include respond-to(md) {
-		flex-direction: column; padding-left: 0;
+		padding-left: 0;
 	}
 
-	& > div {
-		width: 540px;
+	header {
+		display: flex; align-items: flex-start; margin-bottom: 28px;
 
-		@include respond-to(lg) {
-			width: 440px;
-		}
-		@include respond-to(md) {
-			width: 100%; margin-bottom: 100px;
+		@include respond-to(sm) {
+			flex-direction: column; align-items: center; margin-bottom: 50px;
 		}
 
-		&:last-child {
-			margin-right: 0; margin-bottom: 0;
+		figure {
+			position: relative; left: -11px; width: 540px; flex-shrink: 0;
+
+			@include respond-to(lg) {
+				width: 440px;
+			}
+			@include respond-to(md) {
+				text-align: center;
+				left: 0; width: 350px;
+			}
+			@include respond-to(sm) {
+				width: 100%; order: 1; left: 0;
+			}
+
+			img {
+				width: 588px;
+
+				@include respond-to(lg) {
+					width: 470px;
+				}
+				@include respond-to(md) {
+					width: 100%; max-width: 470px;
+				}
+			}
+		}
+
+		div {
+			width: 100%; padding-top: 178px; padding-left: 59px;
+
+			@include respond-to(lg) {
+				padding-left: 32px; padding-top: 80px;
+			}
+			@include respond-to(md) {
+				padding-left: 30px; padding-top: 60px;
+			}
+			@include respond-to(sm) {
+				padding-left: 0; padding-top: 0; order: 0; margin-bottom: 30px;
+			}
+		}
+
+		h2 {
+			color: #000000; font-family: $ms-300; font-size: 58px; line-height: 52px; text-transform: uppercase; letter-spacing: 9.16px;
+			margin-bottom: 38px;
+
+			@include respond-to(xs) {
+				font-size: 48px;
+			}
+		}
+
+		h3 {
+			color: #000000; font-family: $ms-700; font-size: 28px; line-height: 41px;
+			margin-bottom: 49px;
+
+			@include respond-to(md) {
+				font-size: 22px; line-height: 32px;
+			}
+			@include respond-to(sm) {
+				font-size: 24px; line-height: 36px;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		a {
+			font-size: 14px;
+			padding: 9px 14px 8px;
 		}
 	}
 
 	section {
+		display: flex; align-items: flex-start; justify-content: space-between;
+
+		@include respond-to(sm) {
+			flex-direction: column; justify-content: flex-start; align-items: flex-start;
+		}
+
+		& > div {
+			width: 540px;
+
+			@include respond-to(lg) {
+				width: 440px;
+			}
+			@include respond-to(md) {
+				width: 350px;
+			}
+			@include respond-to(sm) {
+				width: 100%; margin-bottom: 40px;
+			}
+
+			&:last-child {
+				margin-right: 0; margin-bottom: 0;
+			}
+		}
 
 		p {
 			color: #000000; font-family: $ms-300; font-size: 20px; line-height: 30px;
+			margin-bottom: 19px;
 
+			@include respond-to(md) {
+				font-size: 18px; line-height: 28px;
+			}
+			@include respond-to(sm) {
+				font-size: 22px; line-height: 32px;
+			}
 			@include respond-to(xs) {
-				font-size: 20px; line-height: 28px;
+				font-size: 16px; line-height: 22px;
 			}
 
 			strong {
-				 font-family: $ms-700;
+				font-family: $ms-700;
 			}
 		}
 
 		ul {
-			@include respond-to(xs) {
-				flex-direction: column;
-			}
-
-			li {
-				margin-right: 28px;
+			&.btns {
+				display: flex; align-items: center; margin-top: 42px; margin-bottom: 30px;
 
 				@include respond-to(xs) {
-					text-align: center;
-					margin-right: 0; margin-bottom: 15px; width: 100%;
-				}
-			}
-		}
-	}
-
-	footer {
-
-		ul {
-			display: flex; align-items: flex-start;
-
-			@include respond-to(xs) {
-				flex-wrap: wrap;
-			}
-
-			li {
-				margin-right: 27px; max-width: 140px;
-
-				@include respond-to(xs) {
-					margin-right: 0; margin-bottom: 15px; max-width: none; width: auto;
+					flex-direction: column;
 				}
 
 				&:last-child {
-					margin-right: 0;
+					margin-bottom: 0;
 				}
-
-				p {
-					color: #000000; font-family: $ms-700; font-size: 13px; line-height: 15px; text-transform: uppercase;
-					opacity: 0.6;
-				}
-			}
-		}
-	}
-
-	&-cba {
-		
-		header {
-			margin-bottom: 28px;
-
-			figure {
-				position: relative; left: -29px;
-
-				@include respond-to(md) {
-					text-align: center;
-					left: 0;
-				}
-
-				img {
-					width: 588px;
-
-					@include respond-to(lg) {
-						width: 470px;
-					}
-					@include respond-to(md) {
-						width: 100%; max-width: 470px;
-					}
-				}
-			}
-		}
-
-		section {
-			margin-bottom: 30px;
-
-			p {
-				margin-bottom: 42px;
-			}
-
-			ul {
-				display: flex; align-items: center;
 
 				li {
+					margin-right: 28px;
+
+					@include respond-to(xs) {
+						text-align: center;
+						margin-right: 0; margin-bottom: 15px; width: 100%;
+					}
 
 					a {
 						font-family: $ms-500; font-size: 14px; line-height: 18px;
@@ -2403,128 +2455,49 @@
 							}
 						}
 
-						&.btn-gradient {
+						&.btn-gradient, &.btn-transparent {
+							font-size: 14px; line-height: 18px;
 							padding: 9px 19px 8px;
+						}
+
+						&.btn-transparent {
+							color: #6923c5;
+							padding: 8px 19px 7px;
+							border-color: #6923c5; border-width: 1px;
+
+							&:hover {
+								color: $white;
+								background: #6923c5;
+							}
 						}
 					}
 				}
 			}
-		}
 
-		footer {
+			&:not(.btns) {
+				display: flex; align-items: flex-start;
 
-			ul {
+				@include respond-to(lg) {
+					flex-wrap: wrap; margin-bottom: -10px;
+				}
 
 				li {
+					margin-right: 27px; max-width: 140px;
 
+					@include respond-to(lg) {
+						max-width: none; width: 50%; margin-bottom: 10px; margin-right: 0; padding-right: 25px;
+					}
 					@include respond-to(xs) {
-						margin-right: 10px; max-width: 130px
-					}
-
-					p {
-
-					}
-
-					img {
-
-					}
-				}
-			}
-		}
-	}
-
-	&-twocan {
-		padding-top: 178px;
-
-		@include respond-to(md) {
-			padding-top: 0;
-		}
-		
-		header {
-			margin-bottom: 161px;
-
-			@include respond-to(md) {
-				margin-bottom: 80px;
-			}
-
-			h2 {
-				color: #000000; font-family: $ms-300; font-size: 58px; line-height: 52px; text-transform: uppercase; letter-spacing: 9.16px;
-				margin-bottom: 38px;
-
-				@include respond-to(xs) {
-					font-size: 48px;
-				}
-			}
-
-			h3 {
-				color: #000000; font-family: $ms-700; font-size: 28px; line-height: 41px;
-				margin-bottom: 49px;
-
-				@include respond-to(sm) {
-					font-size: 24px; line-height: 36px;
-				}
-			}
-
-			a {
-				font-size: 14px;
-				padding: 9px 14px 8px;
-			}
-		}
-
-		section {
-			margin-bottom: 27px;
-
-			&:last-child {
-				margin-bottom: 0;
-			}
-
-			p {
-				margin-bottom: 19px;
-			}
-
-			a {
-				&.btn-gradient, &.btn-transparent {
-					font-size: 14px; line-height: 18px;
-					padding: 9px 19px 8px;
-				}
-
-				&.btn-transparent {
-					color: #6923c5;
-					padding: 8px 19px 7px;
-					border-color: #6923c5; border-width: 1px;
-
-					&:hover {
-						color: $white;
-						background: #6923c5;
-					}
-				}
-			}
-
-			ul {
-				display: flex; align-items: center; padding-top: 25px;
-
-				li {
-					margin-right: 10px;
-
-					@include respond-to(xs) {
-						margin-right: 0;
+						margin-right: 0; margin-bottom: 15px; max-width: none; width: auto;
 					}
 
 					&:last-child {
 						margin-right: 0;
 					}
-				}
-			}
-		}
-
-		footer {
-
-			ul {
-
-				li {
 
 					p {
-
+						color: #000000; font-family: $ms-700; font-size: 13px; line-height: 15px; text-transform: uppercase;
+						opacity: 0.6;
 					}
 				}
 			}
@@ -3659,7 +3632,7 @@
 
 		h2 {
 			color: #000000; font-family: $ms-700; font-size: 38px; line-height: 40px;
-			
+
 			@include respond-to(xs) {
 				font-size: 28px; line-height: 38px;
 			}

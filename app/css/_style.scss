@@ -125,8 +125,8 @@
 			padding: 22px 0 60px;
 			background: linear-gradient(180deg, #f8f8ff 0%, #fbfbfe 100%);
 
-			@include respond-to(xs) {
-				padding-bottom: 60px;
+			@include respond-to(sm) {
+				padding: 60px 0;
 			}
 		}
 
