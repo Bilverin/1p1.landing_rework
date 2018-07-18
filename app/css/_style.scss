@@ -103,6 +103,7 @@
 				content: '';
 				display: block; width: 1436px; height: 693px; position: absolute; right: -136px; bottom: -44px; z-index: 1;
 				background: url('../img/map.svg') center center no-repeat;
+				transition: opacity 0.4s ease-out;
 
 				@include respond-to(lg) {
 					right: auto; left: -10%;
