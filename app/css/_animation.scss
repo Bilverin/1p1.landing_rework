@@ -272,91 +272,68 @@
 		}
 	}
 
-	// &.road-map {
-	// 	h2 {
-	// 		opacity: 0;
-	// 	}
-	// 	figure {
-	// 		figcaption {
-	// 			ul {
-	// 				li {
-	// 					opacity: 0;
-	// 				}
-	// 			}
-	// 		}
-	// 	}
-	// }
+	&.road-map {
+		h2 {
+			opacity: 0;
+		}
+		& > div {
+			ul {
+				li {
+					opacity: 0;
+				}
+			}
 
-	// &.goals {
-	// 	ul {
-	// 		li {
-	// 			&:first-child {
-	// 				& > div {
-	// 					&:last-child {
-	// 						opacity: 0; transform: translateY(20px);
-	// 					}
-	// 				}
-	// 			}
-	// 			& > div {
-	// 				opacity: 0;
-	// 				&:first-child {
-	// 					transform: translateX(-20px);
-	// 				}
-	// 				&:last-child {
-	// 					transform: translateX(20px);
-	// 				}
-	// 			}
-	// 		}
-	// 	}
-	// 	p {
-	// 		opacity: 0 !important; transform: translateX(20px);
-	// 	}
-	// }
-	// .team > & {
-	// 	h2 {
-	// 		opacity: 0; transform: translateY(20px);
-	// 	}
-	// 	h3 {
-	// 		span {
-	// 			opacity: 0;
-	// 		}
-	// 		em {
-	// 			opacity: 0; transform: translateX(20px);
-	// 		}
-	// 	}
-	// 	p {
-	// 		opacity: 0; transform: translateY(20px);
-	// 	}
-	// 	.team-video {
-	// 		opacity: 0; transform: translateX(20px);
-	// 	}
-	// }
-	// .team > section > & {
-	// 	&:not(h3) {
-	// 		li {
-	// 			opacity: 0; transform: translateY(20px);
-	// 		}
-	// 	}
-	// 	&:not(ul) {
-	// 		opacity: 0;
-	// 	}
-	// }
+			.progress {
+				height: 0% !important;
+			}
+		}
+	}
 
-	// &.massmedia {
-	// 	h2 {
-	// 		opacity: 0;
-	// 	}
-	// 	ul {
-	// 		li {
-	// 			opacity: 0; transform: translateY(20px);
-	// 		}
-	// 	}
-	// 	.carousel-massmedia {
-	// 		.owl-item .item {
-	// 			opacity: 0;
-	// 		}
-	// 	}
-	// }
+	&.goals {
+		h2 {
+			opacity: 0;
+		}
+		& > ul {
+			& > li {
+				& > div {
+					opacity: 0;
+					&:first-child {
+						transform: translateX(-20px);
+					}
+					&:last-child {
+						transform: translateX(20px);
+					}
+				}
+			}
+		}
+		p {
+			opacity: 0 !important; transform: translateX(20px);
+		}
+	}
+
+	.team > & {
+		&:not(ul), & > li {
+			opacity: 0;
+		}
+		& > li {
+			transform: translateY(20px);
+		}
+	}
+
+	&.news {
+		h2, .item {
+			opacity: 0;
+		}
+		.item {
+			transform: translateY(20px);
+		}
+	}
+
+	&.massmedia {
+		h2, .item {
+			opacity: 0;
+		}
+	}
 
 	&.subscription {
 		h2 {
@@ -417,6 +394,34 @@
 	}
 	.scheme .scheme-simple section ul li:nth-child(#{$i}) {
 		transition: opacity 0.4s ($i+18)*0.1s ease-out;
+	}
+}
+@for $i from 1 through 20 {
+	.road-map > div ul li:nth-child(#{$i}) {
+		transition: opacity 0.4s ($i+1)*0.1s ease-out;
+	}
+}
+@for $i from 1 through 3 {
+	.goals > ul > li:nth-child(#{$i}) > div:first-child {
+		transition: opacity 0.4s (2*$i+1)*0.1s ease-out, transform 0.4s (2*$i+1)*0.1s ease-out;
+	}
+	.goals > ul > li:nth-child(#{$i}) > div:last-child {
+		transition: opacity 0.4s (2*$i+2)*0.1s ease-out, transform 0.4s (2*$i+2)*0.1s ease-out;
+	}
+}
+@for $i from 1 through 15 {
+	.team > ul > li:nth-child(#{$i}) {
+		transition: opacity 0.4s ($i+1)*0.1s ease-out, transform 0.4s ($i+1)*0.1s ease-out;
+	}
+}
+@for $i from 1 through 5 {
+	.news .owl-item:nth-child(#{$i}) .item {
+		transition: opacity 0.4s ($i+1)*0.1s ease-out, transform 0.4s ($i+1)*0.1s ease-out;
+	}
+}
+@for $i from 1 through 6 {
+	.massmedia .owl-item:nth-child(#{$i}) .item {
+		transition: opacity 0.4s ($i+1)*0.1s ease-out;
 	}
 }
 // @for $i from 1 through 10 {
