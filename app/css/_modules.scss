@@ -960,6 +960,10 @@
 
 				&:hover {
 					text-decoration: none;
+
+					@include respond-to(md) {
+						text-decoration: underline;
+					}
 				}
 			}
 		}
@@ -1214,6 +1218,10 @@
 
 						&:hover {
 							text-decoration: none;
+
+							@include respond-to(md) {
+								text-decoration: underline;
+							}
 						}
 					}
 				}
@@ -1408,6 +1416,10 @@
 
 					&:hover {
 						text-decoration: none;
+
+						@include respond-to(md) {
+							text-decoration: underline;
+						}
 					}
 				}
 			}

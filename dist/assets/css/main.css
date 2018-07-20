@@ -6648,6 +6648,9 @@ fieldset {
       text-decoration: underline; }
       .about section p a:hover {
         text-decoration: none; }
+        @media (max-width: 991px) {
+          .about section p a:hover {
+            text-decoration: underline; } }
 
 .for-clients header {
   margin-bottom: 39px; }
@@ -6949,6 +6952,9 @@ fieldset {
         text-decoration: underline; }
         .benefits section ul li p a:hover {
           text-decoration: none; }
+          @media (max-width: 991px) {
+            .benefits section ul li p a:hover {
+              text-decoration: underline; } }
 
 .why-need {
   display: -webkit-box;
@@ -7162,6 +7168,9 @@ fieldset {
         text-decoration: underline; }
         .problems-solutions ul li p a:hover {
           text-decoration: none; }
+          @media (max-width: 991px) {
+            .problems-solutions ul li p a:hover {
+              text-decoration: underline; } }
 
 .scheme > header {
   margin-bottom: 45px; }
