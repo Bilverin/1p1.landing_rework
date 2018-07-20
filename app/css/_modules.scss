@@ -2267,9 +2267,7 @@
 					}
 
 					ul {
-						li {
-							opacity: 1;
-						}
+						opacity: 1;
 					}
 				}
 			}
@@ -2309,6 +2307,7 @@
 			.owl-dot {
 				position: relative;
 				pointer-events: auto;
+				transition: 0.4s ease-out;
 
 				&:after {
 					content: none;
@@ -2331,6 +2330,7 @@
 
 	&-item {
 		width: 1180px; padding: 120px 0 63px;
+		transition: opacity 0.4s 1.4s ease-out;
 
 		@include respond-to(lg) {
 			width: 850px;
@@ -2344,6 +2344,7 @@
 			display: block; width: 3px; height: 100%; position: absolute; right: 0; top: 0;
 			background: #e8e8f3;
 			pointer-events: none;
+			transition: opacity 0.4s 1.2s ease-out;
 		}
 	}
 
@@ -2355,6 +2356,7 @@
 
 	ul {
 		display: flex; align-items: center; flex-wrap: wrap; justify-content: center; margin-bottom: 20px;
+		opacity: 0.3;
 
 		&:last-child {
 			margin-bottom: 0;
@@ -2362,7 +2364,6 @@
 
 		li {
 			width: 20%; height: 120px; display: flex; align-items: center; justify-content: center;
-			opacity: 0.3;
 
 			@include respond-to(md) {
 				width: 25%;
@@ -2383,6 +2384,7 @@
 	a {
 		color: #af47a4; font-family: $ms-500; font-size: 14px; line-height: 30px;
 		display: inline-flex; align-items: center; margin-left: 63px;
+		transition: opacity 0.4s 1.2s ease-out;
 
 		@include respond-to(xs) {
 			margin-left: 20px;
@@ -2728,7 +2730,7 @@
 	display: flex; justify-content: space-between; align-items: flex-start; padding-right: 133px;
 
 	@include respond-to(lg) {
-		padding-right: 0;
+		padding-right: 0; justify-content: flex-start;
 	}
 	@include respond-to(sm) {
 		flex-direction: column; align-items: center;
@@ -2844,20 +2846,20 @@
 	section {
 		position: relative;
 		@include respond-to(lg) {
-			width: 50%; right: 0;
+			width: 45%; right: 0; margin-left: 5%;
 		}
 		@include respond-to(md) {
-			width: 350px;
+			width: 300px;
 		}
 		@include respond-to(sm) {
-			width: 100%; max-width: 555px;
+			width: 80%; max-width: 555px; margin-left: 0;
 		}
 		@include respond-to(585px) {
-			display: flex; flex-wrap: wrap;
+			display: flex; flex-wrap: wrap; width: 100%;
 		}
 		figure {
 			transition: opacity 0.4s 0.1s ease-out;
-			@include respond-to(md) {
+			@include respond-to(lg) {
 				width: 100%;
 			}
 			@include respond-to(585px) {
@@ -2865,10 +2867,10 @@
 			}
 			img {
 				@include respond-to(lg) {
-					position: relative; left: 50%; transform: translateX(-50%);
+					width: 100%; position: relative; left: 50%; transform: translateX(-50%);
 				}
 				@include respond-to(md) {
-					width: 100%; max-width: 555px;
+					max-width: 555px;
 				}
 				@include respond-to(xs) {
 					width: 290px;
@@ -2879,10 +2881,18 @@
 			position: absolute;
 			p {
 				color: $white; font-family: $ms-500; font-size: 34px; line-height: 40px; text-align: center; text-shadow: 0 2px 20px rgba(255, 255, 255, 0.3);
+
+				@include respond-to(xs) {
+					font-size: 24px; line-height: 32px;
+				}
 			}
 			span {
 				color: $white; font-family: $ms-500; font-size: 14px; line-height: 16px; text-align: center;
 				display: block;
+
+				@include respond-to(xs) {
+					font-size: 13px;
+				}
 			}
 		}
 		.main {
@@ -2913,20 +2923,62 @@
 				}
 			}
 		}
-		.command {
-			right: 5px; bottom: -7px;
+		.advisors {
+			right: -60px; bottom: 100px;
 			transition: opacity 0.4s 0.5s ease-out, transform 0.4s 0.5s ease-out;
-			@include respond-to(lg) {
-				right: 25px;
-			}
+
 			@include respond-to(md) {
-				right: -10px; bottom: -20px;
+				right: -70px; bottom: 60px;
 			}
 			@include respond-to(sm) {
-				right: 25px; bottom: 0;
+				right: -14%; bottom: 22%;
 			}
 			@include respond-to(585px) {
-				position: relative; right: 0; bottom: 0; width: 50%; padding-left: 40px; order: 2;
+				position: relative; right: 0; bottom: 0; width: 33.33333%; padding-left: 40px; order: 1;
+			}
+			@include respond-to(xs) {
+				padding-left: 20px;
+			}
+
+			&:before {
+				content: none;
+				display: block; width: 20px; height: 20px; position: absolute; left: 0; top: 13px;
+				background: #f8e71c; border: solid 2px $white; border-radius: 50%;
+				@include respond-to(585px) {
+					content: '';
+				}
+				@include respond-to(xs) {
+					width: 11px; height: 11px;
+					border-width: 1px;
+				}
+
+			}
+			p {
+				margin-bottom: 2px;
+			}
+			p, span {
+				@include respond-to(585px) {
+					text-align: left;
+				}
+			}
+		}
+		.command {
+			right: 5px; bottom: -7px;
+			transition: opacity 0.4s 0.6s ease-out, transform 0.4s 0.6s ease-out;
+			@include respond-to(lg) {
+				right: 0;
+			}
+			@include respond-to(md) {
+				right: -15px; bottom: -20px;
+			}
+			@include respond-to(sm) {
+				right: 4%; bottom: -4%;
+			}
+			@include respond-to(585px) {
+				position: relative; right: 0; bottom: 0; width: 33.33333%; padding-left: 40px; order: 2;
+			}
+			@include respond-to(xs) {
+				padding-left: 20px;
 			}
 			&:before {
 				content: none;
@@ -2935,6 +2987,11 @@
 				@include respond-to(585px) {
 					content: '';
 				}
+				@include respond-to(xs) {
+					width: 11px; height: 11px;
+					border-width: 1px;
+				}
+
 			}
 			p {
 				margin-bottom: 1px;
@@ -2947,18 +3004,21 @@
 		}
 		.bounty {
 			right: 163px; bottom: -66px;
-			transition: opacity 0.4s 0.6s ease-out, transform 0.4s 0.6s ease-out;
+			transition: opacity 0.4s 0.7s ease-out, transform 0.4s 0.7s ease-out;
 			@include respond-to(lg) {
-				right: 175px;
+				right: 160px;
 			}
 			@include respond-to(md) {
-				right: 120px;
+				right: 105px;
 			}
 			@include respond-to(sm) {
-				right: 210px;
+				right: 39%;
 			}
 			@include respond-to(585px) {
-				position: relative; right: 0; bottom: 0; width: 50%; padding-left: 40px; order: 1;
+				position: relative; right: 0; bottom: 0; width: 33.33333%; padding-left: 40px; order: 1;
+			}
+			@include respond-to(xs) {
+				padding-left: 20px;
 			}
 			&:before {
 				content: none;
@@ -2967,6 +3027,11 @@
 				@include respond-to(585px) {
 					content: '';
 				}
+				@include respond-to(xs) {
+					width: 11px; height: 11px;
+					border-width: 1px;
+				}
+
 			}
 			p {
 				margin-bottom: 2px;
@@ -2985,12 +3050,14 @@
 	h4 {
 		color: $black; font-size: 38px; line-height: 45px;
 		margin-bottom: 80px;
+		transition: opacity 0.4s ease-out;
 
 		@include respond-to(sm) {
 			font-size: 30px; line-height: 36px;
 		}
 	}
 	figure {
+		transition: opacity 0.4s 0.2s ease-out;
 
 		figcaption {
 
@@ -3527,7 +3594,7 @@
 
 	hgroup {
 		display: flex; flex-direction: column; align-items: center; margin-bottom: 33px;
-		transition: opaicty 0.4s ease-out;
+		transition: opacity 0.4s ease-out;
 
 		h2 {
 			color: #000000; font-family: $ms-700; font-size: 38px; line-height: 50px;
@@ -3776,7 +3843,7 @@
 						width: 100%; margin-bottom: 22px;
 						
 						figure {
-							width: 100%; height: 207px;
+							width: 100%; min-height: 207px;
 							overflow: hidden;
 						}
 					}

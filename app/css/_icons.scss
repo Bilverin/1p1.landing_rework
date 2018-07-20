@@ -4,5 +4,11 @@
 			display: inline-block; width: 23px; height: 23px;
 			background: url('../img/bitcoin.svg') center center no-repeat;
 		}
+		&-black {
+			&:before {
+				display: inline-block; width: 17px; height: 17px;
+				background: url('../img/bitcoin_black.svg') center center no-repeat; background-size: contain;
+			}
+		}
 	}
 }

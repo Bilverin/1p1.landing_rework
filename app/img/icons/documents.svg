@@ -3,10 +3,15 @@
     <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
     <title>if_icon-54-document_315177</title>
     <desc>Created with Sketch.</desc>
-    <defs></defs>
+    <defs>
+        <radialGradient cx="100%" cy="-34.2875278%" fx="100%" fy="-34.2875278%" r="391.010599%" gradientTransform="translate(1.000000,-0.342875),scale(1.000000,0.703704),rotate(120.217097),translate(-1.000000,0.342875)" id="radialGradient-1">
+            <stop stop-color="#D75F9E" offset="0%"></stop>
+            <stop stop-color="#7021AE" offset="100%"></stop>
+        </radialGradient>
+    </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="ICO2018-4-01" transform="translate(-190.000000, -7190.000000)" fill="#000000" fill-rule="nonzero">
-            <g id="Group-23" transform="translate(190.000000, 7183.000000)">
+        <g id="Updates" transform="translate(-85.000000, -1639.000000)" fill="url(#radialGradient-1)" fill-rule="nonzero">
+            <g id="Group-23-Copy" transform="translate(85.000000, 1632.000000)">
                 <g id="Group-22">
                     <g id="if_icon-54-document_315177" transform="translate(0.000000, 7.000000)">
                         <path d="M1.05712116,0 C0.473289263,0 0,0.472809642 0,1.05648944 L0,13.1540369 C0,13.7375199 0.4689081,14.2105263 1.05127469,14.2105263 L8.94872532,14.2105263 C9.52932832,14.2105263 10,13.7416182 10,13.1592516 C10,10.0186873 10,7.66326404 10,6.09298187 C10,5.89688064 10,5.60272878 10,5.21052632 L7.37153637,5.21052632 C5.51869693,5.21052632 5.31578947,3.74383874 5.31578947,3.15889403 L5.31578947,0 L1.05712116,0 Z M6.84210526,0 L6.84210526,3.15635298 C6.84210526,3.44788065 7.07946063,3.68421053 7.36356737,3.68421053 L10,3.68421053 L6.84210526,0 Z" id="document"></path>

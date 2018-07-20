@@ -262,7 +262,7 @@ $(window).scroll(function () {
 
 	$('.header ul li').removeClass('active');
 	$('.header ul li a.anchor').reverse().each(function () {
-		if ($($(this).attr('href')).offset().top < $(window).scrollTop() + 10) {
+		if ($($(this).attr('href')).offset().top < $(window).scrollTop() + 65) {
 			$(this).parent().addClass('active');
 			return false;
 		}
