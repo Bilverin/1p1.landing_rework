@@ -1606,7 +1606,17 @@
 			}
 
 			&-full {
-				display: none; align-items: flex-start; justify-content: center; position: relative; padding: 30px 0 0;
+				display: none; align-items: flex-start; justify-content: center; position: relative; padding: 60px 0; width: 906px; margin: 0 auto;
+
+				@include respond-to(lg) {
+					width: 880px;
+				}
+				@include respond-to(md) {
+					width: 90%;
+				}
+				@include respond-to(sm) {
+					width: 100%; flex-direction: column;
+				}
 
 				@include respond-to(sm) {
 					padding-top: 0;
@@ -1616,59 +1626,506 @@
 					display: flex;
 				}
 
-				figure {
-					text-align: center;
-					position: relative;
+				ul {
+					width: 100%; height: 305px;
 
-					img {
-						max-width: 100%;
+					@include respond-to(sm) {
+						height: 500px;
+					}
+					@include respond-to(xs) {
+						height: 410px;
+					}
 
-						@include respond-to(sm) {
-							margin-bottom: 20px;
+					&.chart {
+						position: relative;
+
+						li {
+							position: absolute; height: 99px; width: 98px; z-index: 5;
+
+							@include respond-to(sm) {
+								width: 50%;
+							}
+							@include respond-to(xs) {
+								height: 75px;
+							}
+
+							&:after {
+								content: '';
+								display: block; width: 350px; height: 9px; position: absolute; left: 85px; top: 50%; transform: translateY(-50%); z-index: 1;
+								background: #f4f4f4;
+
+								@include respond-to(lg) {
+									width: 320px;
+								}
+								@include respond-to(md) {
+									width: 210px;
+								}
+							}
+
+							&:first-child, &:nth-child(6) {
+								text-align: left;
+							}
+							&:nth-child(3), &:nth-child(4) {
+								text-align: right;
+							}
+
+							&:nth-child(even) {
+								text-align: right;
+							}
+							&:nth-child(odd) {
+								text-align: left;
+							}
+
+							&:nth-child(4), &:nth-child(5) {
+								figure {
+									&:after {
+										right: auto; left: 1px; transform: translate(-100%, -50%);
+										border-left: none; border-right: solid 10px #ac5494;
+									}
+
+									figcaption {
+										.label {
+											left: auto; right: 125px;
+
+											@include respond-to(lg) {
+												right: 115px;
+											}
+											@include respond-to(md) {
+												right: 60px;
+											}
+										}
+									}
+								}
+							}
+
+							&:nth-child(5), &:nth-child(6) {
+								figure {
+									&:before {
+										left: auto; right: -2px;
+										border-left: none; border-right: 10px solid #f4f4f4;
+									}
+								}
+							}
+
+							&:first-child {
+								left: 0; top: 0;
+
+								&:after {
+									@include respond-to(sm) {
+										width: 150%;
+									}
+									@include respond-to(xs) {
+										left: 70px; width: 140%;
+									}
+								}
+
+								figure {
+									&:before {
+										content: none;
+									}
+									&:after {
+										@include respond-to(sm) {
+											right: auto; left: 98px; transform: translateY(-50%);
+										}
+										@include respond-to(xs) {
+											left: 74px;
+											border-left: solid 7px #ac5494;
+										}
+									}
+
+									figcaption {
+										.label {
+											@include respond-to(sm) {
+												left: 100%;
+											}
+										}
+									}
+								}
+							}
+							&:nth-child(2) {
+								left: 50%; top: 0; transform: translateX(-50%);
+
+								@include respond-to(sm) {
+									left: auto; right: 0; transform: none;
+								}
+
+								&:after {
+									width: 306px;
+
+									@include respond-to(lg) {
+										width: 292px;
+									}
+									@include respond-to(md) {
+										width: 190px;
+									}
+									@include respond-to(sm) {
+										width: 9px; height: 90px; left: auto; right: 45px; top: auto; bottom: 10px; transform: translate(0,100%);
+									}
+									@include respond-to(xs) {
+										right: 34px; height: 70px;
+									}
+								}
+
+								figure {
+									&:before {
+										left: auto; right: 99px; transform: translate(100%,-50%);
+
+										@include respond-to(xs) {
+											right: 76px;
+											border-left: solid 7px #f4f4f4;
+										}
+									}
+									&:after {
+										@include respond-to(sm) {
+											right: 41px; top: auto; bottom: 1px; transform: translate(0, 100%);
+											border-bottom: none; border-left: solid 9px transparent; border-right: solid 9px transparent; border-top: solid 10px #ac5494;
+										}
+										@include respond-to(xs) {
+											right: 29px;
+											border-top: solid 7px #ac5494;
+										}
+									}
+
+									figcaption {
+										.label {
+											@include respond-to(sm) {
+												left: auto; top: 130px; right: 0; transform: none;
+											}
+											@include respond-to(xs) {
+												top: 100px;
+											}
+										}
+									}
+								}
+							}
+							&:nth-child(3) {
+								right: 0; top: 0;
+
+								@include respond-to(sm) {
+									text-align: right;
+									top: 50%; transform: translateY(-50%);
+								}
+
+								&:after {
+									width: 9px; height: 120px; left: 50%; top: auto; bottom: 3px; transform: translate(-50%,100%);
+
+									@include respond-to(sm) {
+										width: 140%; height: 9px; right: 150px; left: auto; bottom: auto; top: 50%; transform: translate(0,-50%);
+									}
+									@include respond-to(xs) {
+										right: 110px; width: 120%;
+									}
+								}
+
+								figure {
+									padding-right: 26px;
+
+									@include respond-to(sm) {
+										padding-right: 70px;
+									}
+									@include respond-to(xs) {
+										padding-right: 54px;
+									}
+
+									&:before {
+										left: -16px;
+
+										@include respond-to(md) {
+											left: -8px;
+										}
+										@include respond-to(sm) {
+											left: auto; right: 41px; top: -20px;
+											border-bottom: none; border-left: solid 9px transparent; border-right: solid 9px transparent; border-top: solid 10px #f4f4f4;
+										}
+										@include respond-to(xs) {
+											right: 29px; top: -30px;
+											border-top: solid 7px #f4f4f4;
+										}
+									}
+									&:after {
+										content: none;
+									}
+
+									img {
+										@include respond-to(xs) {
+											width: 45px;
+										}
+									}
+
+									figcaption {
+										.label {
+											left: 67%; top: 147px;
+
+											@include respond-to(sm) {
+												top: 50%; left: 0;
+											}
+										}
+									}
+								}
+							}
+							&:nth-child(4) {
+								right: 0; bottom: 0;
+
+								@include respond-to(sm) {
+									text-align: left;
+									right: auto; left: 0; bottom: auto; top: 50%; transform: translateY(-50%);
+								}
+
+								&:after {
+									right: 85px; left: auto;
+
+									@include respond-to(sm) {
+										width: 9px; height: 140px; right: auto; left: 45px; top: auto; bottom: 10px; transform: translateY(100%);
+									}
+									@include respond-to(xs) {
+										left: 33px; height: 110px;
+									}
+								}
+
+								figure {
+									&:before {
+										left: 50%; top: 0; transform: translate(-50%, 0);
+										border-bottom: none; border-left: solid 9px transparent; border-right: solid 9px transparent; border-top: solid 10px #f4f4f4;
+
+										@include respond-to(sm) {
+											left: 99px; top: 50%; transform: translate(-100%,-50%);
+											border-left: none; border-bottom: solid 9px transparent; border-top: solid 9px transparent; border-right: solid 10px #f4f4f4;
+										}
+										@include respond-to(xs) {
+											left: 75px;
+											border-right: solid 7px #f4f4f4;
+										}
+									}
+									&:after {
+										@include respond-to(sm) {
+											top: calc(100% - 1px); left: 41px; transform: none;
+											border-bottom: none; border-left: solid 9px transparent; border-right: solid 9px transparent; border-top: solid 10px #ac5494;
+										}
+										@include respond-to(xs) {
+											left: 28px;
+											border-top: solid 7px #ac5494;
+										}
+									}
+
+									figcaption {
+										.label {
+											@include respond-to(sm) {
+												left: 0; top: 140px; right: 0; transform: none;
+											}
+
+											@include respond-to(xs) {
+												top: 110px;
+											}
+										}
+									}
+								}
+							}
+							&:nth-child(5) {
+								left: 50%; bottom: 0; transform: translateX(-50%);
+
+								@include respond-to(sm) {
+									left: 0; transform: none;
+								}
+
+								&:after {
+									right: 85px; left: auto;
+									@include respond-to(sm) {
+										width: 150%; right: auto; left: 85px;
+									}
+									@include respond-to(xs) {
+										left: 70px; width: 140%;
+									}
+								}
+
+								figure {
+
+									&:before {
+										@include respond-to(sm) {
+											left: 40px; right: auto; top: 0; transform: none;
+											border-bottom: none; border-left: solid 9px transparent; border-right: solid 9px transparent; border-top: solid 10px #f4f4f4;
+										}
+										@include respond-to(xs) {
+											left: 28px;
+											border-top: solid 7px #f4f4f4;
+										}
+									}
+									&:after {
+										@include respond-to(sm) {
+											left: 98px; transform: translate(0, -50%);
+											border-right: none; border-left: solid 10px #ac5494;
+										}
+										@include respond-to(xs) {
+											left: 74px;
+											border-left: solid 7px #ac5494;
+										}
+									}
+
+									figcaption {
+										.label {
+											@include respond-to(sm) {
+												right: 0; transform: translate(50%, -50%);
+											}
+										}
+									}
+								}
+							}
+							&:nth-child(6) {
+								left: 0; bottom: 0;
+
+								@include respond-to(sm) {
+									left: auto; right: 0;
+								}
+
+								&:after {
+									content: none;
+								}
+
+								figure {
+									&:before {
+										@include respond-to(sm) {
+											right: 100px; transform: translate(100%, -50%);
+											border-left: solid 10px #f4f4f4; border-right: none;
+										}
+										@include respond-to(xs) {
+											right: 76px;
+											border-left: solid 7px #f4f4f4;
+										}
+									}
+									&:after {
+										content: none;
+									}
+								}
+							}
+
+							figure {
+								position: relative; z-index: 2; height: 100%;
+
+								&:before {
+									content: '';
+									display: block; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+									border-top: solid 9px transparent; border-bottom: solid 9px transparent; border-left: solid 10px #f4f4f4;
+								}
+
+								&:after {
+									content: '';
+									display: block; position: absolute; right: 1px; top: 50%; transform: translate(100%,-50%);
+									border-top: solid 9px transparent; border-bottom: solid 9px transparent; border-left: solid 10px #ac5494;
+								}
+
+								img {
+									@include respond-to(xs) {
+										width: 75px;
+									}
+								}
+
+								figcaption {
+									.label {
+										color: #bf5894; font-family: $ms-700; font-size: 10px; text-transform: uppercase; letter-spacing: 1.54px; white-space: nowrap;
+										position: absolute; top: 50%; left: 250px; transform: translate(-50%, -50%);
+
+										@include respond-to(lg) {
+											left: 245px;
+										}
+										@include respond-to(md) {
+											left: 190px;
+										}
+										@include respond-to(xs) {
+											font-size: 9px;
+										}
+
+										i {
+											display: inline-block; margin-right: 7px;
+											&:not(.icon) {
+												color: #a44aa4; font-family: $ms-500; font-size: 20px; line-height: 22px; text-transform: uppercase;
+												position: relative;
+
+												&:after {
+													content: '';
+													display: block; width: 1px; height: 18px; position: absolute; left: 6px; top: 4px;
+													background: #a44aa4;
+												}
+											}
+										}
+									}
+
+									.growth {
+										color: #bc006d; font-family: $ms-500; font-size: 11px; line-height: 13px; text-align: left;
+										width: 60px; position: absolute; right: 15px; top: 8px; transform: translateX(100%);
+
+										@include respond-to(sm) {
+											transform: none; right: 0;
+										}
+										@include respond-to(xs) {
+											font-size: 9px; line-height: 11px;
+											width: 48px; top: 4px;
+										}
+									}
+								}
+							}
 						}
 					}
-				}
 
-				ul {
-					li {
-						color: $black; font-family: $ms-500; font-size: 14px; text-align: left;
-						position: absolute; max-width: 270px;
+					&.description {
+						position: absolute; left: 50%; top: 60px; transform: translateX(-50%);
 
-						@include respond-to(md) {
-							font-size: 12px;
-							max-width: 220px;
-						}
 						@include respond-to(sm) {
-							font-size: 14px;
-							position: relative; max-width: none; margin-bottom: 10px;
+							margin-top: 40px; position: relative; left: 0; top: 0; transform: none; height: auto;
 						}
 
-						&:first-child {
-							left: 13%; top: -35px;
+						li {
+							color: $black; font-family: $ms-500; font-size: 14px; line-height: 17px;
+							position: absolute; max-width: 270px;
 
-							@include respond-to(sm) {
-								left: 0; top: 0;
+							@include respond-to(md) {
+								font-size: 12px; line-height: 15px;
+								max-width: 160px;
 							}
-						}
-						&:nth-child(2) {
-							left: 55%; top: -35px;
-
 							@include respond-to(sm) {
-								left: 0; top: 0;
+								font-size: 14px; line-height: 17px;
+								margin-bottom: 10px; position: relative; max-width: none;
 							}
-						}
-						&:nth-child(3) {
-							left: 55%; bottom: 25px; transform: translateY(100%);
 
-							@include respond-to(sm) {
-								left: 0; bottom: 0; transform: none;
+							&:last-child {
+								margin-bottom: 0;
 							}
-						}
-						&:last-child {
-							left: 13%; bottom: 25px; transform: translateY(100%);
+							
+							&:first-child, &:last-child {
+								left: 118px;
 
-							@include respond-to(sm) {
-								left: 0; bottom: 0; transform: none;
+								@include respond-to(lg) {
+									left: 110px;
+								}
+								@include respond-to(sm) {
+									left: 0;
+								}
+							}
+							&:nth-child(2), &:nth-child(3) {
+								right: 121px;
+
+								@include respond-to(lg) {
+									right: 110px;
+								}
+								@include respond-to(sm) {
+									right: 0;
+								}
+							}
+
+							&:first-child, &:nth-child(2) {
+								top: -25px;
+
+								@include respond-to(md) {
+									top: -45px;
+								}
+								@include respond-to(sm) {
+									top: 0;
+								}
+							}
+							&:nth-child(3), &:last-child {
+								bottom: 21px; transform: translateY(100%);
+
+								@include respond-to(sm) {
+									bottom: 0; transform: none;
+								}
 							}
 						}
 					}
@@ -1972,14 +2429,6 @@
 					&:after {
 						content: none;
 					}
-
-					ul {
-						li {
-							img {
-								width: auto;
-							}
-						}
-					}
 				}
 			}
 
@@ -2002,7 +2451,7 @@
 				ul {
 					li {
 						img {
-							width: auto;
+							width: 165px;
 						}
 					}
 				}
@@ -2094,14 +2543,14 @@
 				width: 25%;
 			}
 			@include respond-to(sm) {
-				width: 33%;
+				width: 50%;
 			}
 			@include respond-to(xs) {
-				width: 50%;
+				width: 100%;
 			}
 
 			img {
-				max-width: 90%;
+				width: 160px;
 			}
 		}
 	}
@@ -3707,7 +4156,7 @@
 				// -webkit-filter: grayscale(100%);
 				// filter: grayscale(100%);
 
-				max-width: 160px;
+				max-width: 165px;
 
 			}
 		}
