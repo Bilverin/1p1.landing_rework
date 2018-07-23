@@ -6,7 +6,7 @@
       display: inline-block;
       background-image: url("../img/sprite.svg");
       background-repeat: no-repeat;
-      background-size: 5.5em 39.5em;
+      background-size: 5.5em 43.1em;
 
       .no-svg & {
         background-image: url("../img/sprite.png");
@@ -17,9 +17,22 @@
 
 
 
-.icon.blockchain_system {
+.icon.bitcoin_black {
   &:before {
       background-position: 0em 0em;
+      width: 2.1em;
+      height: 2.1em;
+    }
+  }
+
+  @mixin icon-bitcoin_black(){
+    @extend .bitcoin_black;
+  }
+
+
+.icon.blockchain_system {
+  &:before {
+      background-position: 0em -2.1em;
       width: 3.3em;
       height: 2.9em;
     }
@@ -32,7 +45,7 @@
 
 .icon.documents {
   &:before {
-      background-position: 0em -2.9em;
+      background-position: 0em -5em;
       width: 1em;
       height: 1.5em;
     }
@@ -45,7 +58,7 @@
 
 .icon.for_cryptomarket {
   &:before {
-      background-position: 0em -4.4em;
+      background-position: 0em -6.5em;
       width: 2.2em;
       height: 2.3em;
     }
@@ -58,7 +71,7 @@
 
 .icon.for_retail {
   &:before {
-      background-position: 0em -6.7em;
+      background-position: 0em -8.8em;
       width: 2.2em;
       height: 2.6em;
     }
@@ -71,7 +84,7 @@
 
 .icon.hight_cost {
   &:before {
-      background-position: 0em -9.3em;
+      background-position: 0em -11.4em;
       width: 3.6em;
       height: 3em;
     }
@@ -84,7 +97,7 @@
 
 .icon.how_chek_works {
   &:before {
-      background-position: 0em -12.3em;
+      background-position: 0em -14.4em;
       width: 3.9em;
       height: 3.9em;
     }
@@ -95,9 +108,22 @@
   }
 
 
+.icon.icon-doc {
+  &:before {
+      background-position: 0em -18.3em;
+      width: 1em;
+      height: 1.5em;
+    }
+  }
+
+  @mixin icon-icon-doc(){
+    @extend .icon-doc;
+  }
+
+
 .icon.illigal_of_crypto {
   &:before {
-      background-position: 0em -16.2em;
+      background-position: 0em -19.8em;
       width: 3.6em;
       height: 3.7em;
     }
@@ -110,7 +136,7 @@
 
 .icon.limited_opportunites {
   &:before {
-      background-position: 0em -19.9em;
+      background-position: 0em -23.5em;
       width: 2.9em;
       height: 2.6em;
     }
@@ -123,7 +149,7 @@
 
 .icon.loyality_system {
   &:before {
-      background-position: 0em -22.5em;
+      background-position: 0em -26.1em;
       width: 3.5em;
       height: 3.6em;
     }
@@ -136,7 +162,7 @@
 
 .icon.mail-ico {
   &:before {
-      background-position: 0em -26.1em;
+      background-position: 0em -29.7em;
       width: 2.1em;
       height: 2.2em;
     }
@@ -149,7 +175,7 @@
 
 .icon.more_then_150k {
   &:before {
-      background-position: 0em -28.3em;
+      background-position: 0em -31.9em;
       width: 3.2em;
       height: 3.1em;
     }
@@ -162,7 +188,7 @@
 
 .icon.play {
   &:before {
-      background-position: 0em -31.4em;
+      background-position: 0em -35em;
       width: 5.5em;
       height: 5.5em;
     }
@@ -175,7 +201,7 @@
 
 .icon.whyblockchain {
   &:before {
-      background-position: 0em -36.9em;
+      background-position: 0em -40.5em;
       width: 3.5em;
       height: 2.6em;
     }
