@@ -82,6 +82,10 @@
 		&-scheme {
 			padding: 78px 0 70px;
 			background: #fbfbfe;
+
+			@include respond-to(xs) {
+				padding: 60px 0;
+			}
 		}
 
 		&-market {

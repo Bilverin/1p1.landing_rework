@@ -140,30 +140,6 @@ $(document).ready(function () {
 		dots: true
 	});
 
-	// news carousel
-	$('.owl-news').owlCarousel({
-		margin: 20,
-		nav: true,
-		navText: ['', ''],
-		stagePadding: 10,
-		responsive: {
-			320: {
-				stagePadding: 20,
-				items: 1
-			},
-			768: {
-				stagePadding: 10,
-				items: 2
-			},
-			991: {
-				items: 3
-			},
-			1199: {
-				items: 4
-			}
-		}
-	});
-
 	// testimonials carousel
 	$('.carousel-testimonials').owlCarousel({
 		margin: 20,
@@ -286,7 +262,7 @@ $(window).scroll(function () {
 
 	$('.header ul li').removeClass('active');
 	$('.header ul li a.anchor').reverse().each(function () {
-		if ($($(this).attr('href')).offset().top < $(window).scrollTop() + 10) {
+		if ($($(this).attr('href')).offset().top < $(window).scrollTop() + 65) {
 			$(this).parent().addClass('active');
 			return false;
 		}

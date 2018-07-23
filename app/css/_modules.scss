@@ -960,6 +960,10 @@
 
 				&:hover {
 					text-decoration: none;
+
+					@include respond-to(md) {
+						text-decoration: underline;
+					}
 				}
 			}
 		}
@@ -1214,6 +1218,10 @@
 
 						&:hover {
 							text-decoration: none;
+
+							@include respond-to(md) {
+								text-decoration: underline;
+							}
 						}
 					}
 				}
@@ -1408,6 +1416,10 @@
 
 					&:hover {
 						text-decoration: none;
+
+						@include respond-to(md) {
+							text-decoration: underline;
+						}
 					}
 				}
 			}
@@ -1594,344 +1606,69 @@
 			}
 
 			&-full {
-				display: none; align-items: flex-start;
+				display: none; align-items: flex-start; justify-content: center; position: relative; padding: 30px 0 0;
+
+				@include respond-to(sm) {
+					padding-top: 0;
+				}
 
 				&.active {
 					display: flex;
 				}
 
-				@include respond-to(md) {
-					flex-wrap: wrap;
+				figure {
+					text-align: center;
+					position: relative;
+
+					img {
+						max-width: 100%;
+
+						@include respond-to(sm) {
+							margin-bottom: 20px;
+						}
+					}
 				}
 
-				& > div {
-
-					&:first-child {
-						width: 187px; flex-shrink: 0; padding-top: 20px; z-index: 1; position: relative;
+				ul {
+					li {
+						color: $black; font-family: $ms-500; font-size: 14px; text-align: left;
+						position: absolute; max-width: 270px;
 
 						@include respond-to(md) {
-							width: 100%; margin-bottom: 49px;
-						}
-
-						h3 {
-							transition: opacity 0.4s 0.2s ease-out, transform 0.4s 0.2s ease-out;
-						}
-
-						p {
-							transition: opacity 0.4s 0.35s ease-out, transform 0.4s 0.35s ease-out;
-						}
-
-					}
-
-					&:nth-child(2) {
-						padding-left: 112px; padding-top: 114px; width: 483px; flex-shrink: 0; position: relative;
-
-						@include respond-to(lg) {
-							padding-left: 30px; width: 398px; padding-top: 129px;
-						}
-						@include respond-to(md) {
-							padding-left: 215px; padding-top: 0; width: 100%; margin-bottom: 63px;
+							font-size: 12px;
+							max-width: 220px;
 						}
 						@include respond-to(sm) {
-							padding-left: 200px;
-						}
-						@include respond-to(xs) {
-							padding-left: 63px; padding-top: 95px; margin-bottom: 80px;
+							font-size: 14px;
+							position: relative; max-width: none; margin-bottom: 10px;
 						}
 
-						h3 {
-							transition: opacity 0.4s 0.7s ease-out, transform 0.4s 0.7s ease-out;
-						}
-
-						p {
-							max-width: 230px;
-							transition: opacity 0.4s 0.85s ease-out, transform 0.4s 0.85s ease-out;
-
-							@include respond-to(md) {
-								max-width: none;
-							}
-						}
-
-						& > p {
-
-							&:not(.growth) {
-								position: relative;
-
-								&:after {
-									content: '';
-									display: block; width: 160px; height: calc(100% + 30px); position: absolute; right: -135px; bottom: -39px;
-									border-right: 2px solid #DBC9E5; border-bottom: 2px solid #DBC9E5; border-radius: 0 0 20px 0;
-									transition: opacity 0.4s 1.3s ease-out;
-
-									@include respond-to(md) {
-										display: none;
-									}
-								}
-							}
-						}
-
-						ul {
-							margin-top: 29px;
-
-							@include respond-to(md) {
-								margin-top: 38px;
-							}
-
-							li {
-								margin-bottom: 30px; position: relative;
-
-								&:before {
-									content: '';
-									display: block; width: 184px; height: calc(100% + 75px); position: absolute; left: -209px; top: 10px; transform: translateY(-100%);
-									border-left: 2px solid #DBC9E5; border-bottom: 2px solid #DBC9E5; border-radius: 0 0 0 20px;
-
-									@include respond-to(lg) {
-										left: - 124px; width: 99px;
-									}
-									@include respond-to(sm) {
-										height: calc(100% + 100px); width: 99px; left: -109px;
-									}
-									@include respond-to(xs) {
-										height: calc(100% + 250px); width: 20px; left: -30px;
-									}
-								}
-
-								&:first-child {
-
-									&:after {
-										content: none;
-										display: block; width: calc( 100% - 200px); height: 141px; position: absolute; right: 0; top: 8px;
-										border-right: 2px solid #DBC9E5; border-top: 2px solid #DBC9E5; border-bottom: 2px solid #DBC9E5; border-radius: 0 20px 20px 0;
-										transition: opacity 0.4s 1.3s ease-out;
-
-										@include respond-to(md) {
-											content: '';
-										}
-										@include respond-to(xs) {
-											content: none;
-										}
-									}
-								}
-								&:last-child {
-									margin-bottom: 0;
-								}
-							}
-						}
-
-						& > div {
-
-							@include respond-to(md) {
-								position: relative;
-							}
-
-							&:after {
-								content: none;
-								display: block; width: calc( 100% - 200px); height: 133px; position: absolute; right: 0; top: -32px; transform: translateY(-100%);
-								border-right: 2px solid #DBC9E5; border-top: 2px solid #DBC9E5; border-bottom: 2px solid #DBC9E5; border-radius: 0 20px 20px 0;
-								transition: opacity 0.4s 1.3s ease-out;
-
-								@include respond-to(xs) {
-									content: '';
-								}
-							}
-						}
-					}
-
-					&:last-child {
-						padding-left: 85px; position: relative;
-
-						@include respond-to(lg) {
-							padding-left: 50px;
-						}
-						@include respond-to(md) {
-							width: 100%; padding-left: 36px;
-						}
-						@include respond-to(xs) {
-							padding-left: 0 ;
-						}
-
-						&:before {
-							content: '';
-							display: block; width: 108px; height: 108px; position: absolute; left: 80px; top: 0; z-index: 10;
-							background: $white url(../img/coins.svg) center center no-repeat; border: 2px solid #DBC9E5; border-radius: 50%;
-							transition: opacity 0.4s 1.5s ease-out, background-position 0.4s 1.5s ease-out;
-
-							@include respond-to(lg) {
-								left: 50px;
-							}
-							@include respond-to(md) {
-								width: 80px; height: 80px;
-							}
-							@include respond-to(xs) {
-								left: -8px; top: -25px;
-							}
-						}
-
-						ul {
-							padding-left: 115px; padding-top: 36px;
-
-							@include respond-to(xs) {
-								padding-top: 0; padding-left: 90px;
-							}
-
-							li {
-								margin-bottom: 20px; position: relative;
-
-								&:before {
-									content: '';
-									display: block; width: 50px; height: calc(100% + 75px); position: absolute; left: -65px; top: 10px; transform: translateY(-100%);
-									border-left: 2px solid #DBC9E5; border-bottom: 2px solid #DBC9E5; border-radius: 0 0 0 20px;
-
-									@include respond-to(md) {
-										bottom: -30px; top: auto; transform: translateY(0); left: -61px; width: 45px;
-									}
-									@include respond-to(xs) {
-										width: 42px; left: -58px;
-									}
-								}
-
-								&:first-child {
-
-									&:before {
-										content: none;
-
-										@include respond-to(md) {
-											content: '';
-										}
-									}
-								}
-								&:last-child {
-									margin-bottom: 0;
-
-									&:before {
-
-										@include respond-to(md) {
-											content: none;
-										}
-									}
-								}
-								p {
-									margin-bottom: 8px;
-
-									&:last-child {
-										margin-bottom: 0;
-									}
-								}
-							}
-						}
-					}
-
-					.percent {
-						color: #924691; font-family: $ms-700; font-size: 18px; line-height: 19px;
-						display: flex; align-items: center; justify-content: center; padding-top: 2px; padding-left: 4px; width: 67px; height: 67px; position: absolute; top: 109px; right: -27px;
-						background-color: #ffffff; border: 2px solid #DBC9E5; border-radius: 50%;
-						transition: opacity 0.4s 1.3s ease-out;
-
-						@include respond-to(lg) {
-							top: 126px;
-						}
-						@include respond-to(md) {
-							top: 0; right: auto; left: -157px;
-						}
-						@include respond-to(sm) {
-							left: -142px;
-						}
-						@include respond-to(xs) {
-							left: -63px; top: 0px; bottom: auto;
-						}
-
-						&:before {
-							content: '';
-							display: block; width: 160px; height: 132px; position: absolute; right: 31px; bottom: 0; transform: translateY(100%);
-							border-right: 2px solid #DBC9E5; border-bottom: 2px solid #DBC9E5; border-radius: 0 0 20px 0;
-							transition: opacity 0.4s 1.3s ease-out;
-							display: none;
-
-							@include respond-to(md) {
-								display: block;
-								border-bottom: none; border-radius: 0; width: 0; height: 53px;
-								transition: opacity 0.4s 1.5s ease-out;
-							}
-							@include respond-to(xs) {
-								height: 50px;
-							}
-						}
-
-						&:after {
-							content: '';
-							display: block; width: 87px; height: 55px; position: absolute; left: 30px; top: 0; transform: translateY(-100%);
-							border-left: 2px solid #DBC9E5; border-top: 2px solid #DBC9E5; border-radius: 20px 0 0 0;
-							transition: opacity 0.4s 1.5s ease-out;
-
-							@include respond-to(lg) {
-								height: 75px; width: 70px;
-							}
-							@include respond-to(md) {
-								width: 325px; height: 32px;
-								transition: opacity 0s 0s ease-out;
-							}
-							@include respond-to(xs) {
-								width: 230px; height: 34px;
-							}
-						}
-					}
-
-					.check-card {
-						width: 187px; height: 112px; margin-top: 32px;
-						box-shadow: 0 2px 30px 0 rgba(0,61,169,0.4);
-						transition: opacity 0.4s 0.5s ease-out, transform 0.4s 0.5s ease-out;
-
-						@include respond-to(md) {
-							position: absolute; bottom: -40px; transform: translateY(100%);
-						}
-						@include respond-to(sm) {
-							width: 171px; height: 102px;
-						}
-						@include respond-to(xs) {
-							bottom: -20px; width: 187px; height: 112px;
-						}
-
-						img {
+						&:first-child {
+							left: 13%; top: -35px;
 
 							@include respond-to(sm) {
-								left: 15px; top: 17px; width: 136px; height: 70px; max-height: none;
-							}
-							@include respond-to(xs) {
-								width: 149px; height: 76px; left: 17px; top: 18px;
+								left: 0; top: 0;
 							}
 						}
-					}
+						&:nth-child(2) {
+							left: 55%; top: -35px;
 
-					h3 {
-						color: #3b4f72; font-family: $ms-500; font-size: 18px;
-						margin-bottom: 14px;
-					}
-
-					p {
-						color: #3b4f72; font-family: $ms-300; font-size: 13px; line-height: 17px;
-
-						&.growth {
-							width: 160px; position: absolute; right: 3px; bottom: -2px;
-							transition: opacity 0.4s 1.3s ease-out;
-
-							@include respond-to(md) {
-								max-width: 240px; position: relative; margin-top: 83px; margin-left: -50px; width: auto; margin-top: 66px;
-							}
-							@include respond-to(xs) {
-								margin-left: 0; padding-left: 28px; margin-top: 60px;
+							@include respond-to(sm) {
+								left: 0; top: 0;
 							}
 						}
-					}
+						&:nth-child(3) {
+							left: 55%; bottom: 25px; transform: translateY(100%);
 
-					ul {
+							@include respond-to(sm) {
+								left: 0; bottom: 0; transform: none;
+							}
+						}
+						&:last-child {
+							left: 13%; bottom: 25px; transform: translateY(100%);
 
-						li {
-
-							p {
-
-								strong {
-									font-size: 14px; line-height: 19px; font-family: $ms-700;
-								}
+							@include respond-to(sm) {
+								left: 0; bottom: 0; transform: none;
 							}
 						}
 					}
@@ -2255,9 +1992,7 @@
 					}
 
 					ul {
-						li {
-							opacity: 1;
-						}
+						opacity: 1;
 					}
 				}
 			}
@@ -2297,6 +2032,7 @@
 			.owl-dot {
 				position: relative;
 				pointer-events: auto;
+				transition: 0.4s ease-out;
 
 				&:after {
 					content: none;
@@ -2319,6 +2055,7 @@
 
 	&-item {
 		width: 1180px; padding: 120px 0 63px;
+		transition: opacity 0.4s 1.4s ease-out;
 
 		@include respond-to(lg) {
 			width: 850px;
@@ -2332,6 +2069,7 @@
 			display: block; width: 3px; height: 100%; position: absolute; right: 0; top: 0;
 			background: #e8e8f3;
 			pointer-events: none;
+			transition: opacity 0.4s 1.2s ease-out;
 		}
 	}
 
@@ -2343,6 +2081,7 @@
 
 	ul {
 		display: flex; align-items: center; flex-wrap: wrap; justify-content: center; margin-bottom: 20px;
+		opacity: 0.3;
 
 		&:last-child {
 			margin-bottom: 0;
@@ -2350,7 +2089,6 @@
 
 		li {
 			width: 20%; height: 120px; display: flex; align-items: center; justify-content: center;
-			opacity: 0.3;
 
 			@include respond-to(md) {
 				width: 25%;
@@ -2371,6 +2109,7 @@
 	a {
 		color: #af47a4; font-family: $ms-500; font-size: 14px; line-height: 30px;
 		display: inline-flex; align-items: center; margin-left: 63px;
+		transition: opacity 0.4s 1.2s ease-out;
 
 		@include respond-to(xs) {
 			margin-left: 20px;
@@ -2716,7 +2455,7 @@
 	display: flex; justify-content: space-between; align-items: flex-start; padding-right: 133px;
 
 	@include respond-to(lg) {
-		padding-right: 0;
+		padding-right: 0; justify-content: flex-start;
 	}
 	@include respond-to(sm) {
 		flex-direction: column; align-items: center;
@@ -2832,20 +2571,20 @@
 	section {
 		position: relative;
 		@include respond-to(lg) {
-			width: 50%; right: 0;
+			width: 45%; right: 0; margin-left: 5%;
 		}
 		@include respond-to(md) {
-			width: 350px;
+			width: 300px;
 		}
 		@include respond-to(sm) {
-			width: 100%; max-width: 555px;
+			width: 80%; max-width: 555px; margin-left: 0;
 		}
 		@include respond-to(585px) {
-			display: flex; flex-wrap: wrap;
+			display: flex; flex-wrap: wrap; width: 100%;
 		}
 		figure {
 			transition: opacity 0.4s 0.1s ease-out;
-			@include respond-to(md) {
+			@include respond-to(lg) {
 				width: 100%;
 			}
 			@include respond-to(585px) {
@@ -2853,10 +2592,10 @@
 			}
 			img {
 				@include respond-to(lg) {
-					position: relative; left: 50%; transform: translateX(-50%);
+					width: 100%; position: relative; left: 50%; transform: translateX(-50%);
 				}
 				@include respond-to(md) {
-					width: 100%; max-width: 555px;
+					max-width: 555px;
 				}
 				@include respond-to(xs) {
 					width: 290px;
@@ -2867,10 +2606,18 @@
 			position: absolute;
 			p {
 				color: $white; font-family: $ms-500; font-size: 34px; line-height: 40px; text-align: center; text-shadow: 0 2px 20px rgba(255, 255, 255, 0.3);
+
+				@include respond-to(xs) {
+					font-size: 24px; line-height: 32px;
+				}
 			}
 			span {
 				color: $white; font-family: $ms-500; font-size: 14px; line-height: 16px; text-align: center;
 				display: block;
+
+				@include respond-to(xs) {
+					font-size: 13px;
+				}
 			}
 		}
 		.main {
@@ -2901,20 +2648,62 @@
 				}
 			}
 		}
-		.command {
-			right: 5px; bottom: -7px;
+		.advisors {
+			right: -60px; bottom: 100px;
 			transition: opacity 0.4s 0.5s ease-out, transform 0.4s 0.5s ease-out;
-			@include respond-to(lg) {
-				right: 25px;
-			}
+
 			@include respond-to(md) {
-				right: -10px; bottom: -20px;
+				right: -70px; bottom: 60px;
 			}
 			@include respond-to(sm) {
-				right: 25px; bottom: 0;
+				right: -14%; bottom: 22%;
 			}
 			@include respond-to(585px) {
-				position: relative; right: 0; bottom: 0; width: 50%; padding-left: 40px; order: 2;
+				position: relative; right: 0; bottom: 0; width: 33.33333%; padding-left: 40px; order: 1;
+			}
+			@include respond-to(xs) {
+				padding-left: 20px;
+			}
+
+			&:before {
+				content: none;
+				display: block; width: 20px; height: 20px; position: absolute; left: 0; top: 13px;
+				background: #f8e71c; border: solid 2px $white; border-radius: 50%;
+				@include respond-to(585px) {
+					content: '';
+				}
+				@include respond-to(xs) {
+					width: 11px; height: 11px;
+					border-width: 1px;
+				}
+
+			}
+			p {
+				margin-bottom: 2px;
+			}
+			p, span {
+				@include respond-to(585px) {
+					text-align: left;
+				}
+			}
+		}
+		.command {
+			right: 5px; bottom: -7px;
+			transition: opacity 0.4s 0.6s ease-out, transform 0.4s 0.6s ease-out;
+			@include respond-to(lg) {
+				right: 0;
+			}
+			@include respond-to(md) {
+				right: -15px; bottom: -20px;
+			}
+			@include respond-to(sm) {
+				right: 4%; bottom: -4%;
+			}
+			@include respond-to(585px) {
+				position: relative; right: 0; bottom: 0; width: 33.33333%; padding-left: 40px; order: 2;
+			}
+			@include respond-to(xs) {
+				padding-left: 20px;
 			}
 			&:before {
 				content: none;
@@ -2923,6 +2712,11 @@
 				@include respond-to(585px) {
 					content: '';
 				}
+				@include respond-to(xs) {
+					width: 11px; height: 11px;
+					border-width: 1px;
+				}
+
 			}
 			p {
 				margin-bottom: 1px;
@@ -2935,18 +2729,21 @@
 		}
 		.bounty {
 			right: 163px; bottom: -66px;
-			transition: opacity 0.4s 0.6s ease-out, transform 0.4s 0.6s ease-out;
+			transition: opacity 0.4s 0.7s ease-out, transform 0.4s 0.7s ease-out;
 			@include respond-to(lg) {
-				right: 175px;
+				right: 160px;
 			}
 			@include respond-to(md) {
-				right: 120px;
+				right: 105px;
 			}
 			@include respond-to(sm) {
-				right: 210px;
+				right: 39%;
 			}
 			@include respond-to(585px) {
-				position: relative; right: 0; bottom: 0; width: 50%; padding-left: 40px; order: 1;
+				position: relative; right: 0; bottom: 0; width: 33.33333%; padding-left: 40px; order: 1;
+			}
+			@include respond-to(xs) {
+				padding-left: 20px;
 			}
 			&:before {
 				content: none;
@@ -2955,6 +2752,11 @@
 				@include respond-to(585px) {
 					content: '';
 				}
+				@include respond-to(xs) {
+					width: 11px; height: 11px;
+					border-width: 1px;
+				}
+
 			}
 			p {
 				margin-bottom: 2px;
@@ -2973,12 +2775,14 @@
 	h4 {
 		color: $black; font-size: 38px; line-height: 45px;
 		margin-bottom: 80px;
+		transition: opacity 0.4s ease-out;
 
 		@include respond-to(sm) {
 			font-size: 30px; line-height: 36px;
 		}
 	}
 	figure {
+		transition: opacity 0.4s 0.2s ease-out;
 
 		figcaption {
 
@@ -3515,7 +3319,7 @@
 
 	hgroup {
 		display: flex; flex-direction: column; align-items: center; margin-bottom: 33px;
-		transition: opaicty 0.4s ease-out;
+		transition: opacity 0.4s ease-out;
 
 		h2 {
 			color: #000000; font-family: $ms-700; font-size: 38px; line-height: 50px;
@@ -3764,7 +3568,7 @@
 						width: 100%; margin-bottom: 22px;
 						
 						figure {
-							width: 100%; height: 207px;
+							width: 100%; min-height: 207px;
 							overflow: hidden;
 						}
 					}
