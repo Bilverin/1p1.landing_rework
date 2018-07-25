@@ -2498,12 +2498,16 @@
 			button {
 				color: $black; font-family: $ms-500; font-size: 12px; line-height: 25px; text-transform: uppercase; letter-spacing: 2px;
 				outline: none;
+
+				@include respond-to(xs) {
+					font-size: 11px;
+				}
 			}
 		}
 	}
 
 	&-item {
-		width: 1180px; padding: 120px 0 63px;
+		width: 1180px; padding: 120px 0;
 		transition: opacity 0.4s 1.4s ease-out;
 
 		@include respond-to(lg) {
@@ -2519,6 +2523,10 @@
 			background: #e8e8f3;
 			pointer-events: none;
 			transition: opacity 0.4s 1.2s ease-out;
+
+			@include respond-to(xs) {
+				content: none;
+			}
 		}
 	}
 
@@ -2529,44 +2537,44 @@
 	}
 
 	ul {
-		display: flex; align-items: center; flex-wrap: wrap; justify-content: center; margin-bottom: 20px;
+		display: flex; align-items: center; flex-wrap: wrap; justify-content: center;
 		opacity: 0.3;
 
+		@include respond-to(sm) {
+			opacity: 0;
+		}
+
+		&:first-child {
+			@include respond-to(sm) {
+				animation: partnersAnimation 6s ease-out infinite;
+			}
+		}
 		&:last-child {
 			margin-bottom: 0;
+
+			@include respond-to(sm) {
+				position: absolute; left: 0; top: 120px; width: 100%;
+				animation: partnersAnimation 6s 3s ease-out infinite;
+			}
 		}
 
 		li {
 			width: 20%; height: 120px; display: flex; align-items: center; justify-content: center;
+			overflow: hidden;
 
 			@include respond-to(md) {
-				width: 25%;
+				width: 33.33333%;
 			}
 			@include respond-to(sm) {
 				width: 50%;
 			}
 			@include respond-to(xs) {
-				width: 100%;
+				// width: 100%;
 			}
 
 			img {
 				width: 160px;
 			}
-		}
-	}
-
-	a {
-		color: #af47a4; font-family: $ms-500; font-size: 14px; line-height: 30px;
-		display: inline-flex; align-items: center; margin-left: 63px;
-		transition: opacity 0.4s 1.2s ease-out;
-
-		@include respond-to(xs) {
-			margin-left: 20px;
-		}
-
-		i {
-			line-height: 15px3;
-			margin-right: 8px;
 		}
 	}
 }
@@ -3998,52 +4006,48 @@
 			width: auto; margin: 0 -15px; 
 		}
 
-		div {
-			display: flex; justify-content: space-between;
+		.item {
 
-			.item {
-				
 
-				article {
-					display: flex; flex-wrap: wrap; height: 100%; padding-bottom: 19px;
-					background: #ffffff; border-radius: 6px; box-shadow: 0 2px 34px rgba(0, 0, 0, 0.1);
-					overflow: hidden;
+			article {
+				display: flex; flex-wrap: wrap; height: 100%; padding-bottom: 19px;
+				background: #ffffff; border-radius: 6px; box-shadow: 0 2px 34px rgba(0, 0, 0, 0.1);
+				overflow: hidden;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				header {
+					width: 100%; margin-bottom: 22px;
+
+					figure {
+						width: 100%;
+						overflow: hidden;
+					}
+				}
+
+				section {
+					width: 100%; padding: 0 15px; margin-bottom: 13px;
 
 					&:last-child {
 						margin-bottom: 0;
 					}
 
-					header {
-						width: 100%; margin-bottom: 22px;
-						
-						figure {
-							width: 100%; min-height: 207px;
-							overflow: hidden;
-						}
+					p {
+						color: #000000; font-family: $ms-500; font-size: 14px; line-height: 20px;
 					}
+				}
 
-					section {
-						width: 100%; padding: 0 15px; margin-bottom: 13px;
+				footer {
+					display: flex; justify-content: flex-end; width: 100%; align-self: flex-end; padding: 0 24px 0 15px;
 
-						&:last-child {
-							margin-bottom: 0;
-						}
+					a {
+						color: #8e64ff; font-family: $ms-500; font-size: 16px;
+						display: inline-block;
 
-						p {
-							color: #000000; font-family: $ms-500; font-size: 14px; line-height: 20px;
-						}
-					}
-
-					footer {
-						display: flex; justify-content: flex-end; width: 100%; align-self: flex-end; padding: 0 24px 0 15px;
-
-						a {
-							color: #8e64ff; font-family: $ms-500; font-size: 16px;
-							display: inline-block;
-
-							&:hover {
-								text-decoration: underline;
-							}
+						&:hover {
+							text-decoration: underline;
 						}
 					}
 				}

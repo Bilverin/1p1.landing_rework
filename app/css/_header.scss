@@ -3,6 +3,10 @@
 	a.logo {
 		display: block; width: 91px; height: 31px; flex-shrink: 0; margin-bottom: 6px;
 		background: url('../img/logo.svg') center center no-repeat;
+
+		.background.dark & {
+			background: url('../img/logo-pink.svg') center center no-repeat;
+		}
 	}
 
 	nav {
@@ -51,6 +55,10 @@
 							border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 6px solid $white;
 						}
 					}
+
+					.background.dark & {
+						color: #BF5894;
+					}
 				}
 				ul {
 					display: none; padding: 10px; position: absolute; left: -10px; bottom: 10px; transform: translateY(100%);
@@ -75,6 +83,12 @@
 				margin-left: 20px;
 			}
 		}
+		a.btn {
+			.background.dark & {
+				color: $white;
+				background: #BF5894;
+			}
+		}
 		a.burger {
 			display: none; width: 25px; height: 25px; position: relative; margin-left: 20px; align-self: center;
 			@include respond-to(md) {
@@ -96,7 +110,12 @@
 			span {
 				display: block; width: 19px; height: 2px; position: absolute; left: 50%; transform: translate(-50%,-50%);
 				background: $white;
-				transition: 0.3s ease-out;
+				transition: 0.3s ease-out, background 0s linear;
+
+				.background.dark & {
+					background: #BF5894;
+				}
+
 				&:first-child {
 					top: 5px;
 				}

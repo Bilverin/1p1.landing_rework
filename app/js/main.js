@@ -161,7 +161,15 @@ $(document).ready(function() {
 		// autoWidth: true,
 		items: 1,
 		dotsData: true,
-		dots: true
+		dots: true,
+		responsive: {
+			320: {
+				margin: 15
+			},
+			480: {
+				margin: 0
+			}
+		}
 	});
 
 	// testimonials carousel
@@ -263,6 +271,14 @@ $(document).ready(function() {
 		$('.intro.js-scrollAnimate').removeClass('animate js-scrollAnimate');
 	}
 
+	// hovered team card
+	$('.js-teamHover article header').on( "mouseenter", function() {
+		$(this).parent().addClass("hovered");
+	});
+	$('.js-teamHover article').on( "mouseleave", function() {
+		$( this ).removeClass("hovered");
+	});
+
 });
 
 $(window).resize(function() {
@@ -310,14 +326,29 @@ $(window).scroll(function () {
 		$('.wr-header').removeClass('background');
 	}
 
-	// hovered team card
-	$('.js-teamHover article header').hover(
-		function() {
-			$(this).parent().addClass("hovered");
-		}, function() {
-			$( this ).parent().removeClass("hovered");
+	// dark/light header
+	var darkSection = $('.dark-section'),
+		darkSectionArr = [],
+		darkCompare = false;
+	for(var i=0;i<darkSection.length;i++) {
+		darkSectionArr.push(darkSection[i]);
+	}
+	$('.dark-section').each(function(index){
+		var sectionHeight = $(this).outerHeight(),
+			sectionPos = $(this).offset().top,
+			windowPos = $(window).scrollTop();
+
+		if(windowPos > (sectionPos - 64) && windowPos < (sectionPos+sectionHeight - 64)) {
+			darkCompare = true;
 		}
-	);
+
+		if(darkCompare) {
+			$('.wr-header').addClass('dark');
+		} else {
+			$('.wr-header').removeClass('dark');
+		}
+	});
+	
 
 }).scroll();
 
