@@ -1201,8 +1201,12 @@
 					color: #000000; font-family: $ms-700; font-size: 28px; line-height: 28px;
 					margin-bottom: 32px; padding-left: 40px;
 
+					@include respond-to(lg) {
+						padding-left: 20px;
+					}
 					@include respond-to(md) {
 						font-size: 24px;
+						padding-left: 0;
 					}
 				}
 
@@ -2300,6 +2304,9 @@
 					@include respond-to(md) {
 						margin-bottom: 10px;
 					}
+					@include respond-to(xs) {
+						font-size: 42px;
+					}
 
 					img {
 						width: 122px;
@@ -3237,6 +3244,9 @@
 		@include respond-to(sm) {
 			font-size: 30px; line-height: 36px;
 		}
+		@include respond-to(xs) {
+			font-size: 28px; line-height: 38px;
+		}
 	}
 	figure {
 		transition: opacity 0.4s 0.2s ease-out;
@@ -3353,6 +3363,7 @@
 		transition: opacity 0.4s ease-out;
 
 		@include respond-to(lg) {
+			font-size: 28px; line-height: 38px;
 			margin-bottom: 70px;
 		}
 	}
@@ -3588,7 +3599,7 @@
 			margin-bottom: 60px;
 		}
 		@include respond-to(xs) {
-			font-size: 30px; line-height: 42px;
+			font-size: 28px; line-height: 38px;
 			margin-bottom: 45px;
 		}
 	}
@@ -3783,7 +3794,7 @@
 			margin-bottom: 11px;
 
 			@include respond-to(xs) {
-				line-height: 50px;
+				font-size: 28px; line-height: 38px;
 			}
 
 			&:last-child {
@@ -3793,6 +3804,10 @@
 
 		h3 {
 			color: #000000; font-family: $ms-300; font-size: 24px; line-height: 28px; text-align: center;
+
+			@include respond-to(xs) {
+				font-size: 20px; line-height: 26px;
+			}
 		}
 	}
 
@@ -3912,27 +3927,19 @@
 		}
 
 		&-dots {
-			display: none; padding: 0 15px; align-items: center; justify-content: center; margin: 20px -10px -10px;
+			display: none; padding: 0 15px; align-items: center; justify-content: center; flex-wrap: wrap; margin: 15px -5px -5px;
 
 			@include respond-to(sm) {
 				display: flex;
 			}
 
 			.owl-dot {
-				display: block; width: 30px; height: 10px; margin: 10px; position: relative;
-				background: linear-gradient(to right, #722dac 0%, #d9649c 100%); border-radius: 100px;
+				display: block; width: 12px; height: 12px; margin: 5px; position: relative;
+				background: rgba(0,0,0,0.08); border-radius: 100px;
 				outline: none;
 
 				&.active {
-					&:before {
-						content: none;
-					}
-				}
-
-				&:before {
-					content: '';
-					display: block; width: calc(100% - 4px); height: calc(100% - 4px); position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
-					background: $white; border-radius: 100px;
+					background: linear-gradient(225deg, #d75f9e 0%, #7021ae 100%);
 				}
 			}
 		}
@@ -4034,6 +4041,17 @@
 						margin-bottom: 0;
 					}
 
+					h3 {
+						color: $black; font-size: 20px; font-family: $ms-700; line-height: 26px;
+						margin-bottom: 5px;
+					}
+
+					span {
+						color: #3b4f72; font-size: 12px; font-family: $ms-300; line-height: 16px;
+						display: block; margin-bottom: 15px;
+						opacity: 0.5;
+					}
+
 					p {
 						color: #000000; font-family: $ms-500; font-size: 14px; line-height: 20px;
 					}
@@ -4062,27 +4080,19 @@
 	.owl {
 
 		&-dots {
-			display: none; padding: 0 15px; align-items: center; justify-content: center; margin: 20px -10px -10px;
+			display: none; padding: 0 15px; align-items: center; justify-content: center; flex-wrap: wrap; margin: 15px -5px -5px;
 
 			@include respond-to(sm) {
 				display: flex;
 			}
 
 			.owl-dot {
-				display: block; width: 30px; height: 10px; margin: 10px; position: relative;
-				background: linear-gradient(to right, #722dac 0%, #d9649c 100%); border-radius: 100px;
+				display: block; width: 12px; height: 12px; margin: 5px; position: relative;
+				background: rgba(0,0,0,0.08); border-radius: 100px;
 				outline: none;
 
 				&.active {
-					&:before {
-						content: none;
-					}
-				}
-
-				&:before {
-					content: '';
-					display: block; width: calc(100% - 4px); height: calc(100% - 4px); position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
-					background: $white; border-radius: 100px;
+					background: linear-gradient(225deg, #d75f9e 0%, #7021ae 100%);
 				}
 			}
 		}
@@ -4137,6 +4147,10 @@
 		color: #000000; font-family: $ms-700; font-size: 38px; line-height: 46px; text-align: center;
 		margin-bottom: 90px;
 		transition: 0.4s ease-out;
+
+		@include respond-to(xs) {
+			font-size: 28px; line-height: 38px;
+		}
 	}
 	& > div {
 		display: flex; flex-wrap: wrap; align-items: center; justify-content: center; margin-bottom: 35px;
@@ -4297,12 +4311,12 @@
 				display: flex; flex-wrap: wrap; align-items: center; justify-content: center; margin-top: 20px;
 
 				.owl-dot {
-					display: block; width: 20px; height: 8px; margin: 10px;
+					display: block; width: 12px; height: 12px; margin: 5px;
 					background: rgba(255,255,255,0.3); border-radius: 100px;
 					outline: none;
 
 					&.active {
-						background: #dd669b;
+						background: linear-gradient(225deg, #d75f9e 0%, #7021ae 100%);
 					}
 				}
 			}
